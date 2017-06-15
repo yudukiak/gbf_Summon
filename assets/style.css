@@ -1,0 +1,482 @@
+/* ********************
+　バージョン 1.02
+　更新日 2017/06/02
+
+2017/05/22
+　推しキャラ周りのCSSを追加
+　・吹き出し
+　　http://webnonotes.com/css/tooltip/
+　・アニメーション
+　　http://waitanimate.wstone.io/#!/#%2F
+2017/06/02
+　HTML/JavaScript周りの変更に伴い、一部変更
+　（画像発行・矢印あたり）
+
+******************** */
+
+
+
+* {
+	-webkit-appearance: none;
+}
+.button {
+	user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+input[type="text"], textarea {
+	user-select: text;
+	-ms-user-select: text;
+	-webkit-user-select: auto;
+	-moz-user-select: text;
+}
+body {
+	background-color: #231E18;
+	color: #f2eee2;
+}
+h2 {
+	text-align: center;
+	color: #f2eee2;
+	line-height: 1;
+	text-shadow: 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f;
+	background: url(../image/title_h2.png) no-repeat;
+	-webkit-background-size: 508px 36px;
+	background-size: 508px 36px;
+	width: 508px;
+	height: 36px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 6px;
+	margin: 5px auto 5px;
+}
+#menu, .table {
+	width: 960px;
+	margin: 0 auto;
+}
+.breakword {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	word-break: break-all;
+}
+.add {
+	text-align: right;
+	margin: 5px 10px;
+}
+/* ********************
+　メニューの設定
+******************** */
+#menu {
+	height: 50px;
+}
+
+#menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#menu li{ 
+	display: inline;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+#menu li a{
+	display: block;
+	border-bottom: 1px solid #f2eee2;
+	padding: 3px 10px;
+	text-decoration: none;
+	color: #E1E2CF;
+	width: 100px;
+	margin: 5px 10px;
+	text-align: left;
+	font-size: 14px;
+	text-align: center;
+}
+#menu li:first-child a {
+	margin-right: 410px;
+}
+#menu li a:hover{
+	background-color: rgba(71, 70, 85, 0.6);
+}
+/* ********************
+　テーブルの設定
+******************** */
+.table {
+	padding-top: 15px;
+	background-color: #231E18;
+}
+#summon_screeen {
+	background-color: #231E18;
+}
+.box {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.box>div{
+	border: solid 1px #4e4830;
+	width: 310px;
+	margin: 4px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+/*
+.cell{
+	display: flex;
+}
+.cell>div{
+	border: solid 1px #4e4830;
+	width: 100%;
+	margin: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}*/
+.content{
+	display: flex;
+}
+.content>div {
+	margin: 5px 0;
+	padding: 5px;
+}
+/* ********************
+　属性タイトルの設定
+******************** */
+.title {
+	color: #f2eee2;
+	text-align: center;
+	border-bottom: 2px solid #343027;
+	margin: 3px 10px;
+}
+.type_icon:before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../image/icon_type.png);
+	background-size: 100%;
+	position: relative;
+	top: 2px;
+	right: 2px;
+}
+.type1 .type_icon:before {background-position: 0 -36px;}
+.type2 .type_icon:before {background-position: 0 -54px;}
+.type3 .type_icon:before {background-position: 0 -90px;}
+.type4 .type_icon:before {background-position: 0 0;}
+.type5 .type_icon:before {background-position: 0 -72px;}
+.type6 .type_icon:before {background-position: 0 -18px;}
+.type7 .type_icon:before {background-position: 0 -108px;}
+.type8 .type_icon:before {background-position: 0 -108px;}
+.type9 .type_icon:before {display: none;}
+/* ********************
+　召喚石画像の設定
+******************** */
+.image {
+	width: 85px;
+	text-align: center;
+}
+/* ********************
+　召喚石コメントの設定
+******************** */
+.spec {
+	background-color: #191313;
+	width: 200px;
+	font-size: 14px;
+	line-height: 1;
+}
+.job {
+	color: #f2eee2;
+	font-size: 32px;
+	text-align: center;
+	position: relative;
+}
+.job>div {
+	height: 32px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.chara {
+}
+.chara>div {
+}
+.rank0 {
+	color: #f2eee2;
+}
+.rank3 {
+	color: #ffa826;
+	text-shadow: 0 0 1px #694429, 0 0 1px #694429, 0 0 1px #694429, 0 0 2px #694429, 0 0 2px #694429, 0 0 2px #694429;
+}
+.rank4 {
+	color: #e3b7ff;
+	text-shadow: 0 0 1px #7f12b7, 0 0 1px #7f12b7, 0 0 1px #7f12b7, 0 0 2px #7f12b7, 0 0 2px #7f12b7, 0 0 2px #7f12b7;
+}
+/* ********************
+　3凸・4凸切り替えボタン設定
+******************** */
+.radio input {
+	display: none;
+}
+.radio label{
+	display: block;
+	float: left;
+	cursor: pointer;
+	width: 75px;
+	margin: 0;
+	padding: 10px;
+	background: #37332e;
+	color: #869198;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+.radio label:first-of-type{
+	border-radius: 3px 0 0 3px;
+}
+.radio label:last-of-type{
+	border-radius: 0 3px 3px 0;
+}
+.radio input[type="radio"]:checked + .r_rank3 {
+	background-color: #ffa826;
+	color: #fff;
+}
+.radio input[type="radio"]:checked + .r_rank4 {
+	background-color: #7f12b7;
+	color: #fff;
+}
+/* ********************
+　変更ボタン設定
+******************** */
+.button {
+	margin: 10px auto;
+	border-radius: 3px;
+}
+.button {
+	display: inline-block;
+	width: 200px;
+	height: 54px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 54px;
+	outline: none;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.button {
+	background-color: #bdc3c7;
+	color: #fff;
+	border: none;
+}
+.button:hover {
+	background-color: #59b1eb;
+}
+/* ********************
+　召喚石選択設定
+******************** */
+.select {
+	position: relative;
+}
+select{
+	outline: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	background: none transparent;
+	vertical-align: middle;
+	font-size: inherit;
+	color: inherit;
+/*	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;*/
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	height: 40px;
+	padding: 8px 12px;
+	border: 1px solid #4e4830;
+	color: #f2eee2;
+	width: 100%;
+	border-radius: 3px;
+	margin: 3px 2px;
+}
+select option{
+	background-color: #fff;
+	color: #333;
+}
+select::-ms-expand {
+	display: none;
+}
+select:-moz-focusring { 
+	color: transparent; 
+	text-shadow: 0 0 0 #828c9a;
+}
+.c_type, .c_rarity {
+	width: calc( (100% / 2) - 7px);
+}
+
+/* ********************
+　ID設定
+******************** */
+.input, .textarea {
+	position: relative;
+}
+.type8 textarea {
+	font-size: 12px;
+	height: 70px;
+	overflow:hidden;
+	resize: none;
+	margin-top: 5px;
+}
+input, textarea {
+	outline: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	background: #f2eee2;
+	vertical-align: middle;
+	font-size: inherit;
+	color: inherit;
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	height: 20px;
+	padding: 8px 12px;
+	border: none;
+	color: #231E18;
+	width: 166px;
+	border-radius: 3px;
+}
+/* ********************
+　設定の設定
+******************** */
+.setting {
+	text-align: center;
+	width: 630px;
+}
+.setting .box>div {
+	border: none;
+	width: 190px;
+	margin: 10px;
+}
+/* ********************
+　プレビューの設定
+******************** */
+#output_screen {
+	text-align: center;
+}
+/* ********************
+　矢印の設定
+******************** */
+.arrow{
+	position: relative;
+	display: inline-block;
+	padding: 0 0 0 16px;
+	color: #000;
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 15px;
+}
+.arrow::before,
+.arrow::after{
+	position: absolute;
+	top: 45px;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	content: "";
+	vertical-align: middle;
+}
+.arrow::before{
+	left: -12px;
+	width: 20px;
+	height: 20px;
+	border-top: 6px solid #f2eee2;
+	border-right: 6px solid #f2eee2;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+/* ********************
+　吹き出しの設定
+******************** */
+/* アニメーション */
+.float {
+	margin: 0 5px;
+	animation: float 4s linear infinite;
+	transform-origin: 50% 50%;
+	display:inline-flex;
+}
+@keyframes float {
+	0% { transform: translateY(0) }
+	25% { transform: translateY(-6px) }
+	50% { transform: translateY(0) }
+	100% { transform: translateY(0) }
+}
+/* 吹き出しの設定 */
+.float span {
+	display: none;
+	text-align: center;
+}
+.float:hover {
+	/* アニメーション止める */
+	animation-play-state: paused;
+	position: relative;
+}
+/* マウスオーバー時にツールチップを表示 */
+.float:hover span {
+	/* ボックス要素にする */
+	display: block;
+	/* relativeからの絶対位置 */
+	position: absolute;
+	top: 25px;
+	font-size: 90%;
+	color: #fff;
+	background-color: #51A2C1;
+	width: 205px;
+	padding: 5px;
+	border-radius:3px;
+	z-index:100;
+}
+ 
+/* フキダシ部分を作成 */
+.float span:before{
+	content:'';
+	display:block;
+	/* relativeからの絶対位置 */
+	position:absolute;
+	height:0; 
+	width:0; 
+	top:-13px; 
+	left:15px;
+	border:13px transparent solid; 
+	border-right-width:0; 
+	border-left-color:#51A2C1; 
+	/* 傾きをつける */
+	transform:rotate(270deg);
+	-webkit-transform:rotate(270deg);
+	-o-transform:rotate(270deg);
+	z-index:100;
+}
