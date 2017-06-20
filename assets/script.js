@@ -230,7 +230,7 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
 　3凸・4凸ボタンの動作
 　http://hueruwakame.php.xdomain.jp/article/html_css3.php
 ******************** */
-$('div').on('click', '.radio label', function(event) {
+$('div').on('click', '.radio label', function(event){
 	// 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
 	event.preventDefault();
 	var vc_summon=$(this).parent().prev().val();
@@ -238,10 +238,10 @@ $('div').on('click', '.radio label', function(event) {
 		if(
 			filterdata[n].id.match(vc_summon) // 選択中の召喚石
 			&&filterdata[n].rank0.length!==0 // 無凸の文字数
-			&& filterdata[n].rank3.length!==0 // 3凸の文字数
-		) {
+			&&filterdata[n].rank3.length!==0 // 3凸の文字数
+		){
 			var $input=$(this).prev('input');
-			if ( $input.prop('checked') ) {
+			if($input.prop('checked')){
 				$input.prop('checked', false);
 			} else {
 				$input.prop('checked', true);
