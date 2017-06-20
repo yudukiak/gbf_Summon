@@ -233,16 +233,18 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
 $('div').on('click', '.radio label', function(event) {
 	// 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
 	event.preventDefault();
+	var vc_summon=$(this).parent().prev().val();
 	for(var n=0; n<filterdata.length; n++){
-		if (filterdata[n].id.match($(this).parent().parent().find('.c_summon').val())){
-			if (filterdata[n].rank0.length===0 || filterdata[n].rank3.length===0) { // 無凸、3凸がある
+		if(
+			filterdata[n].id.match(vc_summon) // 選択中の召喚石
+			&&filterdata[n].rank0.length!==0 // 無凸の文字数
+			&& filterdata[n].rank3.length!==0 // 3凸の文字数
+		) {
+			var $input=$(this).prev('input');
+			if ( $input.prop('checked') ) {
+				$input.prop('checked', false);
 			} else {
-				var $input = $(this).prev('input');
-				if ( $input.prop('checked') ) {
-					$input.prop('checked', false);
-				} else {
-					$input.prop('checked', true);
-				}
+				$input.prop('checked', true);
 			}
 		}
 	}
