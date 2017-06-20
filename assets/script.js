@@ -1,35 +1,4 @@
-/* ********************
-　バージョン 2.01
-　更新日 2017/06/14
-
-　更新履歴
-2017/04/26
-　公開
-2017/04/27
-　フェニックスの画像がファフニールになってたので修正
-　JavaScriptのキャッシュを保持させるためにクエリー文字列を追加
-2017/05/08
-　画像化される範囲を拡大（名称タイトルを含むようにしました）
-　またURLを画像へ表示させるよう調整
-2017/05/10
-　コードの調整
-　推しキャラ機能実装
-2017/05/16
-　Firefoxだと3凸ボタンが効かなかったため修正
-　http://www.searchlight8.com/firefox-event-preventdefault/
-2017/05/22
-　「推しキャラ分かりづらい」とのコメントがあったので、それっぽく修正
-2017/05/25
-　SSL対応（HTTPS化）により微調整をいたしました
-2017/06/02
-　ソースコードを大幅に変更（Ver2.0）
-　JSONを使って各種リスト生成・テーブル生成するように変更しました
-2017/06/14
-　ソースコードの細かい調整
-　GitHubで管理を始めた…？
-******************** */
 $(function(){
-
 /* ********************
 　初期設定
 ******************** */
@@ -38,7 +7,6 @@ var $summon_screeen=$('#summon_screeen');
 var alldata=[]; // すべてのデータを保持しておく配列
 var filterdata=[]; // フィルターを掛けたデータを保持する配列
 $.getJSON('assets/echo',init); // JSONを取得
-//$.getJSON('https://script.google.com/macros/s/AKfycbxo5Ny0LL8HcNvE4QH8NdrBwYQW8gsX3Nkpp-SHPshtyjqLP6U/exec', init);
 function init(data){
 	alldata=data; // 全データを保持しておく
 	filterdata=alldata; // とりあえず全データを代入しておく
@@ -96,7 +64,7 @@ function radio_display($this_parent_class){
 			$label_1.css('display', 'none');
 			$input_0.prop('checked', true);
 			$input_1.prop('checked', false);
-			if (filterdata[n].rank4.length > 1) { 
+			if (filterdata[n].rank4.length > 1) {
 				$label_1.css('display', ''); // 4凸を表示
 			} else if (filterdata[n].rank3.length===0) {
 				$input_0.prop('checked', false); // 3凸の選択を外す
@@ -166,8 +134,6 @@ function table_display(){
 				$summon_screeen.find('.'+summon_type+' .spec').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
 			}
 		}
-		
-
 		// ユーザーID取得＆書き込み
 		var job_id = parseInt($('input[name="user_id"]').val());
 		$('.type9 .spec').html('<div>'+job_id+'</div>');
@@ -284,8 +250,6 @@ $('div').on('click', '.radio label', function(event) {
 /* ********************
 　画像化の処理
 ******************** */
-// 画像化したい要素をセレクタに指定
-//var $summon_screeen=$('#summon_screeen');
 $('#screenshot').on('click', function () {
 	// 属性アイコンが正常に描写されないので非表示
 	$summon_screeen.find('.title').removeClass('type_icon');
