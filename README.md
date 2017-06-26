@@ -3,4 +3,4 @@
 
 詳細につきましては、以下のサイトをご確認下さい。
 
-[グラブルのフレ募集とかで使えそうな「フレ石編成的ななにか」ができました。 | Pr factory](https://prfac.com/gbf-summon-usage/)
+[https://prfac.com/gbf-summon-usage/(https://prfac.com/gbf-summon-usage/)
