@@ -1,4 +1,5 @@
 <?php
+// クエリ文字を生成
 function getFileUpdateDate($file) {
 	$FUDate = "";
 	$FUDate = filemtime($file);
@@ -6,6 +7,7 @@ function getFileUpdateDate($file) {
 	$FUDate = $file."?date=".$FUDate;
 	return $FUDate;
 }
+// 曜日の設定
 function getLastUpdateDate() {
 	$weekday = array( "日", "月", "火", "水", "木", "金", "土" );
 	chdir("assets");
@@ -329,6 +331,10 @@ function getLastUpdateDate() {
 			<div><span class="arrow"></span></div>
 			<div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div>
 		</div>
+		
+		<div id="tweet_open" class="button">ツイート</div>
+		<textarea type="text" name="tweTxt" class="tweTxt" maxlength="45"></textarea>
+		
 	</div>
 	<div id="output_screen">
 		<p>以下のプレビューからも保存できます</p>
