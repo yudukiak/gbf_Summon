@@ -1,16 +1,20 @@
 $(function(){
 	var $imgUrl = window.opener.$('#screen_image').attr('src');
 	var $imgUrl = $imgUrl.replace('data:image/png;base64,','');
-	var $tweTxt = window.opener.$('textarea[name="tweTxt"]').val();
-	var $oauth_token = $('#oauth_token').text();
-	var $oauth_token_secret = $('#oauth_token_secret').text();
 
 	$('#tweet').on('click', function () {
+		var $api_key = $('#api_key').val();
+		var $api_secret = $('#api_secret').val();
+		var $oauth_token = $('#oauth_token').val();
+		var $oauth_token_secret = $('#oauth_token_secret').val();
+		var $tweTxt = $('textarea[name="tweTxt"]').val();
 		$.ajax({
 			url: 'tweet.php',
 			type: 'post', // getかpostを指定(デフォルトは前者)
 			dataType: 'json', // 「json」を指定するとresponseがJSONとしてパースされたオブジェクトになる
 			data: { // 送信データを指定(getの場合は自動的にurlの後ろにクエリとして付加される)
+				api_key: $api_key,
+				api_secret: $api_secret,
 				oauth_token: $oauth_token,
 				oauth_token_secret: $oauth_token_secret,
 				imgUrl: $imgUrl,
@@ -27,5 +31,9 @@ $(function(){
 		.fail(function () {
 			alert('失敗');
 		});
+	});
+	$('textarea').bind('keydown keyup keypress change',function(){
+		var thisValueLength = $(this).val().length;
+		$('#140tweet p').text(140-thisValueLength);
 	});
 });

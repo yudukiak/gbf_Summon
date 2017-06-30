@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="jp">
-
-<head>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="../image/icon.png">
-	<title>フレ石編成的ななにか - ツイート画面</title>
-</head>
-<body>
-
 <?php
 // クエリ文字を生成
 function getFileUpdateDate($file) {
@@ -17,7 +7,23 @@ function getFileUpdateDate($file) {
 	$FUDate = $file."?date=".$FUDate;
 	return $FUDate;
 }
+?>
+<!DOCTYPE html>
+<html lang="jp">
 
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../image/icon.png">
+	<link rel="stylesheet" href="<?php
+		$file= "../assets/style.css";
+		$FUDate = getFileUpdateDate($file);
+		print $FUDate;
+	?>">
+	<title>フレ石編成的ななにか - ツイート画面</title>
+</head>
+<body>
+<div class="tweet_table">
+<?php
 /* ********************
 　https://syncer.jp/Web/API/Twitter/REST_API/
 ******************** */
@@ -112,12 +118,18 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	// スクリーンネーム
 	// $query["screen_name"]
 	// 配列の内容を出力する (本番では不要)
-	echo '<p>下記の認証情報を取得しました。(<a href="' . explode( "?", $_SERVER["REQUEST_URI"] )[0] . '">もう1回やってみる</a>)</p>' ;
-	foreach ( $query as $key => $value ) {
-		echo "<b>" . $key . "</b>: " . $value . "<BR>" ;
-	}
-	echo '<div><span id="oauth_token">'.$query["oauth_token"].'</span><span id="oauth_token_secret">'.$query["oauth_token_secret"].'</span></div>' ;
-	echo '<div id="tweet" class="button">ツイートする</div>' ;
+	//echo '<p>下記の認証情報を取得しました。(<a href="' . explode( "?", $_SERVER["REQUEST_URI"] )[0] . '">もう1回やってみる</a>)</p>' ;
+	//foreach ( $query as $key => $value ) {
+	//	echo "<b>" . $key . "</b>: " . $value . "<BR>" ;
+	//}
+	echo '<input id="api_key" type="hidden" value="'.$api_key.'" name="api_key">';
+	echo '<input id="api_secret" type="hidden" value="'.$api_secret.'" name="api_secret">';
+	echo '<input id="oauth_token" type="hidden" value="'.$query["oauth_token"].'" name="oauth_token">';
+	echo '<input id="oauth_token_secret" type="hidden" value="'.$query["oauth_token_secret"].'" name="oauth_token_secret">';
+
+	echo '<div><textarea type="text" name="tweTxt" maxlength="140"></textarea></div>';
+	echo '<div id="140tweet"><p style="font-size: 12pt;text-align: right;">140</p></div>';
+	echo '<div id="tweet" class="button">ツイートする</div>';
 // 認証画面から戻ってきた時 (認証NG)
 } elseif ( isset( $_GET["denied"] ) ) {
 	// エラーメッセージを出力して終了
@@ -218,6 +230,7 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	header( "Location: https://api.twitter.com/oauth/authenticate?oauth_token=" . $query["oauth_token"] ) ;
 }
 ?>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="<?php
 	$file = "script.js";

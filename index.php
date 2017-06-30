@@ -333,7 +333,6 @@ function getLastUpdateDate() {
 		</div>
 		
 		<div id="tweet_open" class="button">ツイート</div>
-		<textarea type="text" name="tweTxt" class="tweTxt" maxlength="45"></textarea>
 		
 	</div>
 	<div id="output_screen">

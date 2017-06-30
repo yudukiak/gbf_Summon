@@ -480,3 +480,14 @@ input, textarea {
 	-o-transform:rotate(270deg);
 	z-index:100;
 }
+
+.tweet_table {
+	width: 320px;
+	margin:0 auto;
+	padding-top: 15px;
+	text-align: center;
+}
+.tweet_table textarea {
+	width: 320px;
+	height: 165px;
+}

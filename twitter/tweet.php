@@ -5,7 +5,7 @@
 // Content-TypeをJSONに指定する
 header('Content-Type: application/json');
 // エラーを出さないように文字列として安全に展開する
-foreach (['oauth_token', 'oauth_token_secret', 'imgUrl', 'tweTxt'] as $v) {
+foreach (['api_key', 'api_secret', 'oauth_token', 'oauth_token_secret', 'imgUrl', 'tweTxt'] as $v) {
 	$$v = (string)filter_input(INPUT_POST, $v);
 }
 echo json_encode(compact('data'));
@@ -14,8 +14,8 @@ echo json_encode(compact('data'));
 require_once("./library/tmhOAuth.php");
 //初期設定
 $tmhOAuth = new tmhOAuth(array(
-	'consumer_key' => 'BNOLZqJASmrxNwCSh1SKlinJC',
-	'consumer_secret' => '3ZuKBcx55W7Vwat9afM1n3odKstPuSvz9HUFpx0RRxVOx1ZJfE',
+	'consumer_key' => $api_key,
+	'consumer_secret' => $api_secret,
 	'user_token' => $oauth_token,
 	'user_secret' => $oauth_token_secret,
 ));
