@@ -281,13 +281,17 @@ $('#screenshot').on('click', function () {
 　http://qiita.com/mpyw/items/62e6e415f86eb30a5ff4
 ******************** */
 $('#tweet_open').on('click', function () {
-	var
-	w=770,
-	h=600,
-	l=(screen.availWidth-w)/2,
-	t=(screen.availHeight-h)/2,
-	popPage = '.popup';
-	window.open('twitter/index.php',"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+	if ($('#screen_image').attr('src')) {
+		var
+		w=770,
+		h=600,
+		l=(screen.availWidth-w)/2,
+		t=(screen.availHeight-h)/2,
+		popPage = '.popup';
+		window.open('twitter/index.php',"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+	} else {
+		alert('画像生成してください。');
+	}
 });
 //JSON 終了
 });

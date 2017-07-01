@@ -19,6 +19,11 @@ function getFileUpdateDate($file) {
 		$FUDate = getFileUpdateDate($file);
 		print $FUDate;
 	?>">
+	<link rel="stylesheet" href="<?php
+		$file= "style.css";
+		$FUDate = getFileUpdateDate($file);
+		print $FUDate;
+	?>">
 	<title>フレ石編成的ななにか - ツイート画面</title>
 </head>
 <body>
@@ -30,7 +35,7 @@ function getFileUpdateDate($file) {
 // 設定項目
 $api_key = "BNOLZqJASmrxNwCSh1SKlinJC" ;	// API Key
 $api_secret = "3ZuKBcx55W7Vwat9afM1n3odKstPuSvz9HUFpx0RRxVOx1ZJfE" ;	// API Secret
-$callback_url = "https://prfac.com/gbf/sss/twitter/index.php" ;	// Callback URL (このプログラムのURLアドレス)
+$callback_url = "https://prfac.com/gbf/qwe/twitter/index.php" ;	// Callback URL (このプログラムのURLアドレス)
 
 /*** [手順4] ユーザーが戻ってくる ***/
 // 認証画面から戻ってきた時 (認証OK)
@@ -91,7 +96,7 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	// cURLを使ってリクエスト
 	$curl = curl_init() ;
 	curl_setopt( $curl, CURLOPT_URL , $request_url ) ;
-	curl_setopt( $curl, CURLOPT_HEADER, 1 ) ; 
+	curl_setopt( $curl, CURLOPT_HEADER, 1 ) ;
 	curl_setopt( $curl, CURLOPT_CUSTOMREQUEST , $context["http"]["method"] ) ;	// メソッド
 	curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER , false ) ;	// 証明書の検証を行わない
 	curl_setopt( $curl, CURLOPT_RETURNTRANSFER , true ) ;	// curl_execの結果を文字列で返す
@@ -122,14 +127,28 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	//foreach ( $query as $key => $value ) {
 	//	echo "<b>" . $key . "</b>: " . $value . "<BR>" ;
 	//}
-	echo '<input id="api_key" type="hidden" value="'.$api_key.'" name="api_key">';
-	echo '<input id="api_secret" type="hidden" value="'.$api_secret.'" name="api_secret">';
-	echo '<input id="oauth_token" type="hidden" value="'.$query["oauth_token"].'" name="oauth_token">';
-	echo '<input id="oauth_token_secret" type="hidden" value="'.$query["oauth_token_secret"].'" name="oauth_token_secret">';
-
-	echo '<div><textarea type="text" name="tweTxt" maxlength="140"></textarea></div>';
-	echo '<div id="140tweet"><p style="font-size: 12pt;text-align: right;">140</p></div>';
-	echo '<div id="tweet" class="button">ツイートする</div>';
+	// Undefined index対策
+	// http://d.hatena.ne.jp/sagra-da/20120405/1333587852
+	if(isset($query["oauth_token"]) || isset($query["oauth_token_secret"])) {
+		echo '<input id="api_key" type="hidden" value="'.$api_key.'" name="api_key">
+		<input id="api_secret" type="hidden" value="'.$api_secret.'" name="api_secret">
+		<input id="oauth_token" type="hidden" value="'.$query["oauth_token"].'" name="oauth_token">
+		<input id="oauth_token_secret" type="hidden" value="'.$query["oauth_token_secret"].'" name="oauth_token_secret">
+		<p>ツイートしたい文章を記載下さい。</p>
+		<div><textarea type="text" name="tweTxt" maxlength="140"></textarea></div>
+		<div id="140tweet" style="font-size: 12pt;text-align: right;">140</div>
+		<div>ハッシュタグ「#フレ石編成的ななにか」をつける</div>
+		<div class="radio">
+			<input type="radio" name="hashtag" id="hashyes" value="yes">
+			<label for="hashyes" class="r_rank3">はい</label>
+			<input type="radio" name="hashtag" id="hashno" value="no" checked>
+			<label for="hashno" class="r_rank4">いいえ</label>
+		</div>
+		<div id="tweet" class="button">ツイートする</div>';
+	} else {
+		echo '<p>不正なアクセスです。<br>連携し直して下さい。</p>
+		<a href="' . explode( "?", $_SERVER["REQUEST_URI"] )[0] . '"><div class="button">Twitter連携する</div></a>';
+	}
 // 認証画面から戻ってきた時 (認証NG)
 } elseif ( isset( $_GET["denied"] ) ) {
 	// エラーメッセージを出力して終了
@@ -225,9 +244,9 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	$_SESSION["oauth_token_secret"] = $query["oauth_token_secret"] ;
 	/*** [手順2] ユーザーを認証画面へ飛ばす ***/
 	// ユーザーを認証画面へ飛ばす (毎回ボタンを押す場合)
-	//header( "Location: https://api.twitter.com/oauth/authorize?oauth_token=" . $query["oauth_token"] ) ;
+	header( "Location: https://api.twitter.com/oauth/authorize?oauth_token=" . $query["oauth_token"] ) ;
 	// ユーザーを認証画面へ飛ばす (二回目以降は認証画面をスキップする場合)
-	header( "Location: https://api.twitter.com/oauth/authenticate?oauth_token=" . $query["oauth_token"] ) ;
+	//header( "Location: https://api.twitter.com/oauth/authenticate?oauth_token=" . $query["oauth_token"] ) ;
 }
 ?>
 </div>

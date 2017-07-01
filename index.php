@@ -325,15 +325,13 @@ function getLastUpdateDate() {
 	</div>
 
 	<div class="table setting" onselectstart="return false;" unselectable="on">
-		<p>画像生成を行わないと、ダウンロードできません</p>
+		<!-- <p>画像生成を行わないと、ダウンロードできません</p> -->
 		<div class="box">
 			<div><div id="screenshot" class="button">画像生成</div></div>
 			<div><span class="arrow"></span></div>
-			<div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div>
+			<!-- <div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div> -->
+			<div id="tweet_open" class="button">ツイート</div>
 		</div>
-		
-		<div id="tweet_open" class="button">ツイート</div>
-		
 	</div>
 	<div id="output_screen">
 		<p>以下のプレビューからも保存できます</p>
