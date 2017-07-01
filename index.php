@@ -325,7 +325,7 @@ function getLastUpdateDate() {
 	</div>
 
 	<div class="table setting" onselectstart="return false;" unselectable="on">
-		<!-- <p>画像生成を行わないと、ダウンロードできません</p> -->
+		<p>画像生成を行わないと、ツイートできません</p>
 		<div class="box">
 			<div><div id="screenshot" class="button">画像生成</div></div>
 			<div><span class="arrow"></span></div>
