@@ -1,4 +1,5 @@
 <?php
+// クエリ文字を生成
 function getFileUpdateDate($file) {
 	$FUDate = "";
 	$FUDate = filemtime($file);
@@ -6,6 +7,7 @@ function getFileUpdateDate($file) {
 	$FUDate = $file."?date=".$FUDate;
 	return $FUDate;
 }
+// 曜日の設定
 function getLastUpdateDate() {
 	$weekday = array( "日", "月", "火", "水", "木", "金", "土" );
 	chdir("assets");
@@ -323,11 +325,12 @@ function getLastUpdateDate() {
 	</div>
 
 	<div class="table setting" onselectstart="return false;" unselectable="on">
-		<p>画像生成を行わないと、ダウンロードできません</p>
+		<!-- <p>画像生成を行わないと、ダウンロードできません</p> -->
 		<div class="box">
 			<div><div id="screenshot" class="button">画像生成</div></div>
 			<div><span class="arrow"></span></div>
-			<div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div>
+			<!-- <div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div> -->
+			<div><div id="tweet_open" class="button">ツイート</div></div>
 		</div>
 	</div>
 	<div id="output_screen">

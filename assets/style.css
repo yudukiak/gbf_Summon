@@ -1,21 +1,3 @@
-/* ********************
-　バージョン 1.02
-　更新日 2017/06/02
-
-2017/05/22
-　推しキャラ周りのCSSを追加
-　・吹き出し
-　　http://webnonotes.com/css/tooltip/
-　・アニメーション
-　　http://waitanimate.wstone.io/#!/#%2F
-2017/06/02
-　HTML/JavaScript周りの変更に伴い、一部変更
-　（画像発行・矢印あたり）
-
-******************** */
-
-
-
 * {
 	-webkit-appearance: none;
 }
