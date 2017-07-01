@@ -330,7 +330,7 @@ function getLastUpdateDate() {
 			<div><div id="screenshot" class="button">画像生成</div></div>
 			<div><span class="arrow"></span></div>
 			<!-- <div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div> -->
-			<div id="tweet_open" class="button">ツイート</div>
+			<div><div id="tweet_open" class="button">ツイート</div></div>
 		</div>
 	</div>
 	<div id="output_screen">

@@ -35,7 +35,7 @@ function getFileUpdateDate($file) {
 // 設定項目
 $api_key = "BNOLZqJASmrxNwCSh1SKlinJC" ;	// API Key
 $api_secret = "3ZuKBcx55W7Vwat9afM1n3odKstPuSvz9HUFpx0RRxVOx1ZJfE" ;	// API Secret
-$callback_url = "https://prfac.com/gbf/qwe/twitter/index.php" ;	// Callback URL (このプログラムのURLアドレス)
+$callback_url = "https://prfac.com/gbf/summon/twitter/index.php" ;	// Callback URL (このプログラムのURLアドレス)
 
 /*** [手順4] ユーザーが戻ってくる ***/
 // 認証画面から戻ってきた時 (認証OK)
@@ -152,7 +152,8 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 // 認証画面から戻ってきた時 (認証NG)
 } elseif ( isset( $_GET["denied"] ) ) {
 	// エラーメッセージを出力して終了
-	echo "連携を拒否しました。" ;
+	echo '<p>連携を拒否しました。<br>連携する場合は以下のボタンより再度行って下さい。</p>
+	<a href="' . explode( "?", $_SERVER["REQUEST_URI"] )[0] . '"><div class="button">Twitter連携する</div></a>';
 	exit ;
 // 初回のアクセス
 } else {
@@ -231,7 +232,10 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	// $response = file_get_contents( $request_url , false , stream_context_create( $context ) ) ;
 	// リクエストトークンを取得できなかった場合
 	if( !$response ) {
-		echo "<p>リクエストトークンを取得できませんでした…。$api_keyと$callback_url、そしてTwitterのアプリケーションに設定しているCallback URLを確認して下さい。</p>" ;
+		//echo "<p>リクエストトークンを取得できませんでした…。$api_keyと$callback_url、そしてTwitterのアプリケーションに設定しているCallback URLを確認して下さい。</p>" ;
+		echo '<p>リクエストトークンを取得できませんでした。<br>
+		このウィンドウを閉じ、改めてお試し下さい。</p>
+		<p>それでもこの画面が表示されるようであれば<a href="https://twitter.com/micelle9" target="_blank">管理者</a>までご連絡下さい。</p>' ;
 		exit ;
 	}
 	// $responseの内容(文字列)を$query(配列)に直す
