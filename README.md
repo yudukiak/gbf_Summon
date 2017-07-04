@@ -29,7 +29,7 @@
 6. 連携が終わりましたらツイートする文章を記載後、「ツイートする」ボタンをクリックすることで自動的にツイートされます。
 
 ## ライセンス (Licence)
-このソフトウェアはMITライセンスでリリースされています。「LICENSE.md」を参照してください。
+このソフトウェアはMITライセンスでリリースされています。「LICENSE.md」を参照してください。  
 This software is released under the MIT License, see "LICENSE.md".
 
 ## その他 (Author)
