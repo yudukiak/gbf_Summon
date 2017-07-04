@@ -13,8 +13,8 @@ $(function(){
 			$('#overlay').fadeIn('slow');
 
 			// 投稿処理
-			var $api_key = $('#api_key').val();
-			var $api_secret = $('#api_secret').val();
+			//var $api_key = $('#api_key').val();
+			//var $api_secret = $('#api_secret').val();
 			var $oauth_token = $('#oauth_token').val();
 			var $oauth_token_secret = $('#oauth_token_secret').val();
 			var radioValue = $('.radio').find('input:radio:checked').val(); // yes|no
@@ -28,8 +28,8 @@ $(function(){
 				type: 'post', // getかpostを指定(デフォルトは前者)
 				dataType: 'json', // 「json」を指定するとresponseがJSONとしてパースされたオブジェクトになる
 				data: { // 送信データを指定(getの場合は自動的にurlの後ろにクエリとして付加される)
-					api_key: $api_key,
-					api_secret: $api_secret,
+					//api_key: $api_key,
+					//api_secret: $api_secret,
 					oauth_token: $oauth_token,
 					oauth_token_secret: $oauth_token_secret,
 					imgUrl: $imgUrl,

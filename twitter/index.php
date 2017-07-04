@@ -29,12 +29,13 @@ function getFileUpdateDate($file) {
 <body>
 <div class="tweet_table">
 <?php
+include '../../gbf_summon.php';
 /* ********************
 　https://syncer.jp/Web/API/Twitter/REST_API/
 ******************** */
 // 設定項目
-$api_key = "BNOLZqJASmrxNwCSh1SKlinJC" ;	// API Key
-$api_secret = "3ZuKBcx55W7Vwat9afM1n3odKstPuSvz9HUFpx0RRxVOx1ZJfE" ;	// API Secret
+$api_key = $API_Key ;	// API Key
+$api_secret = $API_Secret ;	// API Secret
 $callback_url = "https://prfac.com/gbf/summon/twitter/index.php" ;	// Callback URL (このプログラムのURLアドレス)
 
 /*** [手順4] ユーザーが戻ってくる ***/
@@ -130,9 +131,7 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 	// Undefined index対策
 	// http://d.hatena.ne.jp/sagra-da/20120405/1333587852
 	if(isset($query["oauth_token"]) || isset($query["oauth_token_secret"])) {
-		echo '<input id="api_key" type="hidden" value="'.$api_key.'" name="api_key">
-		<input id="api_secret" type="hidden" value="'.$api_secret.'" name="api_secret">
-		<input id="oauth_token" type="hidden" value="'.$query["oauth_token"].'" name="oauth_token">
+		echo '<input id="oauth_token" type="hidden" value="'.$query["oauth_token"].'" name="oauth_token">
 		<input id="oauth_token_secret" type="hidden" value="'.$query["oauth_token_secret"].'" name="oauth_token_secret">
 		<p>ツイートしたい文章を記載下さい。</p>
 		<div><textarea type="text" name="tweTxt" maxlength="140"></textarea></div>

@@ -5,17 +5,19 @@
 // Content-TypeをJSONに指定する
 header('Content-Type: application/json');
 // エラーを出さないように文字列として安全に展開する
-foreach (['api_key', 'api_secret', 'oauth_token', 'oauth_token_secret', 'imgUrl', 'tweTxt'] as $v) {
+foreach (['oauth_token', 'oauth_token_secret', 'imgUrl', 'tweTxt'] as $v) {
 	$$v = (string)filter_input(INPUT_POST, $v);
 }
 echo json_encode(compact('data'));
 
 //thmOAuth.phpを読み込む
 require_once("./library/tmhOAuth.php");
+
+include '../../gbf_summon.php';
 //初期設定
 $tmhOAuth = new tmhOAuth(array(
-	'consumer_key' => $api_key,
-	'consumer_secret' => $api_secret,
+	'consumer_key' => $API_Key,
+	'consumer_secret' => $API_Secret,
 	'user_token' => $oauth_token,
 	'user_secret' => $oauth_token_secret,
 ));
