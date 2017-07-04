@@ -20,7 +20,7 @@ function getFileUpdateDate($file) {
 		print $FUDate;
 	?>">
 	<link rel="stylesheet" href="<?php
-		$file= "style.css";
+		$file= "assets/style.css";
 		$FUDate = getFileUpdateDate($file);
 		print $FUDate;
 	?>">
@@ -255,7 +255,7 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="<?php
-	$file = "script.js";
+	$file = "assets/script.js";
 	$FUDate = getFileUpdateDate($file);
 	print $FUDate;
 ?>"></script>
