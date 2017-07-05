@@ -225,6 +225,8 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
 		$this.nextAll('textarea').remove();
 		list_display($this_parent_class); //リスト作成
 	}
+	// 最後にボタン制御
+	radio_display($this_parent_class);
 });
 /* ********************
 　3凸・4凸ボタンの動作
