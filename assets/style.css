@@ -63,7 +63,7 @@ h2 {
 	padding: 0;
 	list-style: none;
 }
-#menu li{ 
+#menu li{
 	display: inline;
 	padding: 0;
 	margin: 0;
@@ -208,6 +208,9 @@ h2 {
 /* ********************
 　3凸・4凸切り替えボタン設定
 ******************** */
+.radio {
+  margin: 2px 0;
+}
 .radio input {
 	display: none;
 }
@@ -306,7 +309,8 @@ select{
 	color: #f2eee2;
 	width: 100%;
 	border-radius: 3px;
-	margin: 3px 2px;
+	/*margin: 3px 2px;*/
+	margin: 2px 0px;
 }
 select option{
 	background-color: #fff;
@@ -315,12 +319,13 @@ select option{
 select::-ms-expand {
 	display: none;
 }
-select:-moz-focusring { 
-	color: transparent; 
+select:-moz-focusring {
+	color: transparent;
 	text-shadow: 0 0 0 #828c9a;
 }
 .c_type, .c_rarity {
-	width: calc( (100% / 2) - 7px);
+	/*width: calc( (100% / 2) - 7px);*/
+  width: calc( (100% / 2) - 3px);
 }
 
 /* ********************
@@ -334,7 +339,8 @@ select:-moz-focusring {
 	height: 70px;
 	overflow:hidden;
 	resize: none;
-	margin-top: 5px;
+	/*margin-top: 5px;*/
+	margin-top: 4px;
 }
 input, textarea {
 	outline: none;
@@ -357,6 +363,7 @@ input, textarea {
 	color: #231E18;
 	width: 166px;
 	border-radius: 3px;
+    margin: 2px 0;
 }
 /* ********************
 　設定の設定
@@ -448,20 +455,20 @@ input, textarea {
 	border-radius:3px;
 	z-index:100;
 }
- 
+
 /* フキダシ部分を作成 */
 .float span:before{
 	content:'';
 	display:block;
 	/* relativeからの絶対位置 */
 	position:absolute;
-	height:0; 
-	width:0; 
-	top:-13px; 
+	height:0;
+	width:0;
+	top:-13px;
 	left:15px;
-	border:13px transparent solid; 
-	border-right-width:0; 
-	border-left-color:#51A2C1; 
+	border:13px transparent solid;
+	border-right-width:0;
+	border-left-color:#51A2C1;
 	/* 傾きをつける */
 	transform:rotate(270deg);
 	-webkit-transform:rotate(270deg);
