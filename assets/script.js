@@ -10,11 +10,25 @@ $.getJSON('assets/echo',init); // JSONを取得
 function init(data){
 	alldata=data; // 全データを保持しておく
 	filterdata=alldata; // とりあえず全データを代入しておく
-	$('#summon_setting div[class^="type"]').each(function(){
-		var $this_parent_class=$(this).attr('class');
-		list_display($this_parent_class); // リスト生成
-		radio_display($this_parent_class); // 3凸・4凸ボタン
-	});
+	if (Cookies.get('setting')) {
+		// cookieがあるとき
+		if (confirm('前回の内容を復元する？') == true) {
+			jsCookie_load();
+		} else {
+			$('#summon_setting div[class^="type"]').each(function(){
+				var $this_parent_class=$(this).attr('class');
+				list_display($this_parent_class); // リスト生成
+				radio_display($this_parent_class); // 3凸・4凸ボタン
+			});
+		}
+	} else {
+		// cookieがないとき
+		$('#summon_setting div[class^="type"]').each(function(){
+			var $this_parent_class=$(this).attr('class');
+			list_display($this_parent_class); // リスト生成
+			radio_display($this_parent_class); // 3凸・4凸ボタン
+		});
+	}
 	table_display(); // 一覧表示
 }
 /* ********************
@@ -146,6 +160,7 @@ function table_display(){
 ******************** */
 $('.change').on('click', function (){
 	table_display();
+	jsCookie_save();
 });
 /* ********************
 　プルダウンが変わったら
@@ -295,5 +310,107 @@ $('#tweet_open').on('click', function () {
 		alert('画像生成してください。');
 	}
 });
+/* ********************
+　js-cookie
+******************** */
+function jsCookie_save(){
+	//Cookies.remove('setting');
+	Cookies.set('setting', 'y');
+	$('.c_summon').each(function() {
+		var $this=$(this);
+		var pType=$this.parent().attr('class'); // 親要素
+		var sType=$this.siblings('.c_type').val(); // 属性
+		var sRari=$this.siblings('.c_rarity').val(); // レアリティ
+		var sSele=$this.val(); // 召喚石
+		var sRank=$this.nextAll('.radio').find('input:radio:checked').val(); // 解放段階
+		var sRank=(function(){
+			if(sRank===void 0) return 'rank0';
+			if(sRank.match(/rank3/)) return 'rank3';
+			if(sRank.match(/rank4/)) return 'rank4';
+		})();
+		// cookie
+		Cookies.set(pType, {
+			'sType':sType,
+			'sRari':sRari,
+			'sSele':sSele,
+			'sRank':sRank
+		});
+	});
+	var sUser=$('input[name="user_id"]').val();
+	var sUser=(function(){
+		if(sUser===void 0) return '';
+		return encodeURIComponent(sUser);
+	})();
+	var sChar=$('textarea[name="comment"]').val();
+	var sChar=(function(){
+		if(sChar===void 0) return '';
+		return encodeURIComponent(sChar);
+	})();
+	var sIcon=$('.setting .type8 .title').hasClass('type_icon');
+	Cookies.set('type0', {
+		'sIcon':sIcon,
+		'sUser':sUser,
+		'sChar':sChar
+	});
+}
+function jsCookie_load(){
+	// 推しキャラ切り替え・推しキャラコメント・ユーザーIDの処理
+	var cJson=Cookies.getJSON('type0');
+	if (!cJson.sIcon) {
+		var $this=$('.setting .type8 .title');
+		var $html=$this.html();
+		var $c_type=$this.nextAll('.c_type');
+		var $c_rarity=$this.nextAll('.c_rarity');
+		var $radio=$this.nextAll('.radio');
+		var $this_parent_class=$this.parent().attr('class');
+		$c_rarity.find('option').prop('selected', false);
+		$('.type8 .c_summon').empty();
+		$c_rarity.empty();
+		$this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
+		$c_type.css('color', '#FF0000').attr("selected", false).val('type1');
+		$c_rarity.append(
+			'<option value="ssr">SSR</option>'+
+			'<option value="sr">SR</option>'+
+			'<option value="r">R</option>'+
+			'<option value="skin">スキン他</option>'
+		);
+		$this.parent().attr('data-select','character').data('select','character');
+		$radio.find('.r_rank3').text('上限解放');
+		$radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
+		$this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
+		list_display($this_parent_class); //リスト作成
+		$this.parent().find('textarea').val(decodeURIComponent(cJson.sChar));
+	}
+	$('input[name="user_id"]').val(decodeURIComponent(cJson.sUser));
+	// 各種召喚石の処理
+	for (var i=1; i<10; i++){
+		var cookieType='type'+i;
+		var cookieJson=Cookies.getJSON(cookieType);
+		var $sCookieType=$('#summon_setting .'+cookieType);
+		var $sType=$sCookieType.find('.c_type');
+		$sType.val(cookieJson.sType); // 属性をセット
+		switch(cookieJson.sType){ // 色を変更
+			case 'type1':$sType.css('color', '#FF0000');break;
+			case 'type2':$sType.css('color', '#00FFFF');break;
+			case 'type3':$sType.css('color', '#FF9872');break;
+			case 'type4':$sType.css('color', '#00FF00');break;
+			case 'type5':$sType.css('color', '#FFFF00');break;
+			case 'type6':$sType.css('color', '#FF00FF');break;
+		}
+		$sCookieType.find('.c_rarity').val(cookieJson.sRari); // レアリティをセット
+		var $this_parent_class = cookieType;
+		list_display($this_parent_class); // リストを生成
+		$sCookieType.find('.c_summon').val(cookieJson.sSele); // 保存した召喚石を選択
+		radio_display($this_parent_class); // 3凸・4凸ボタン
+		if (cookieJson.sRank==='rank0') {
+			$sCookieType.find('.radio input:eq(0)').prop('checked', false);
+		} else if (cookieJson.sRank==='rank3') {
+			$sCookieType.find('.radio input:eq(0)').prop('checked', true);
+		} else if (cookieJson.sRank==='rank4') {
+			$sCookieType.find('.radio input:eq(1)').prop('checked', true);
+		}
+	}
+	// --------------------------------------------------------
+}
 //JSON 終了
 });

@@ -346,6 +346,7 @@ function getLastUpdateDate() {
 	<!-- 各種Script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
 	<script src="<?php
 		$file = "assets/script.js";
 		$FUDate = getFileUpdateDate($file);
