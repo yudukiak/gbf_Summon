@@ -410,7 +410,6 @@ function jsCookie_load(){
 			$sCookieType.find('.radio input:eq(1)').prop('checked', true);
 		}
 	}
-	// --------------------------------------------------------
 }
 //JSON 終了
 });
