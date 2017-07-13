@@ -32,7 +32,7 @@ function getLastUpdateDate() {
 	<meta name="twitter:site" content="@micelle9" />
 	<meta name="twitter:title" content="フレ石編成的ななにか" />
 	<meta name="twitter:description" content="グラブルのフレ募集とかで使えそうな「フレ石編成的ななにか」です" />
-	<meta name="twitter:image" content="https://prfac.com/wp-content/uploads/2017/05/0d40a5e4a645fc6b96e767d64ac0878e.jpg" />
+	<meta name="twitter:image" content="image/thumbnail.jpg" />
 
 	<link rel="shortcut icon" href="image/icon.png">
 	<link rel="stylesheet" href="<?php
