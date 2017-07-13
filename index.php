@@ -35,9 +35,8 @@ function getLastUpdateDate() {
 	<meta name="twitter:image" content="https://prfac.com/wp-content/uploads/2017/05/0d40a5e4a645fc6b96e767d64ac0878e.jpg" />
 
 	<link rel="shortcut icon" href="image/icon.png">
-	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css">
 	<link rel="stylesheet" href="<?php
-		$file= "assets/style.css";
+		$file= "assets/style.min.css";
 		$FUDate = getFileUpdateDate($file);
 		print $FUDate;
 	?>">
@@ -346,15 +345,20 @@ function getLastUpdateDate() {
 	</div>
 
 	<!-- 各種Script -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script async src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-	<script async src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
-	<script async src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
-	<script async src="<?php
-		$file = "assets/script.js";
+	<script defer src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script defer src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	<script defer src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+	<script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+	<script defer src="<?php
+		$file = "assets/script.min.js";
 		$FUDate = getFileUpdateDate($file);
 		print $FUDate;
 	?>"></script>
+	<!-- <script defer src="<?php
+		$file = "assets/echo";
+		$FUDate = getFileUpdateDate($file);
+		print $FUDate;
+	?>" id="dataJSON" type="application/json"></script> -->
 	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56839189-1', 'auto');ga('send', 'pageview');</script>
 
 </body>

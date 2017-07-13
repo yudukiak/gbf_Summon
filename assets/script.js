@@ -7,6 +7,8 @@ var $summon_screeen=$('#summon_screeen');
 var alldata=[]; // すべてのデータを保持しておく配列
 var filterdata=[]; // フィルターを掛けたデータを保持する配列
 $.getJSON('assets/echo',init); // JSONを取得
+//var echo=$('#dataJSON').attr('src');
+//$.getJSON(echo,init); // JSONを取得
 function init(data){
 	alldata=data; // 全データを保持しておく
 	filterdata=alldata; // とりあえず全データを代入しておく
