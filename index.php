@@ -35,6 +35,7 @@ function getLastUpdateDate() {
 	<meta name="twitter:image" content="https://prfac.com/wp-content/uploads/2017/05/0d40a5e4a645fc6b96e767d64ac0878e.jpg" />
 
 	<link rel="shortcut icon" href="image/icon.png">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css">
 	<link rel="stylesheet" href="<?php
 		$file= "assets/style.css";
 		$FUDate = getFileUpdateDate($file);
@@ -341,12 +342,14 @@ function getLastUpdateDate() {
 	<div class="table setting">
 		<hr>
 		<p>なにかありましたら<a href="https://twitter.com/micelle9" target="_blank" style="color:#59b1eb;">Twitter</a>までご報告ください（´・ω・｀）</p>
+		<p>あと<a href="http://amzn.asia/5euNPQp" target="_blank" style="color:#59b1eb;">コレ</a>欲しいの（´・ω・｀）</p>
 	</div>
 
 	<!-- 各種Script -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
 	<script src="<?php
 		$file = "assets/script.js";
 		$FUDate = getFileUpdateDate($file);

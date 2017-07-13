@@ -12,24 +12,39 @@ function init(data){
 	filterdata=alldata; // とりあえず全データを代入しておく
 	if (Cookies.get('setting')) {
 		// cookieがあるとき
-		if (confirm('前回の内容を復元する？') == true) {
-			jsCookie_load();
-		} else {
-			$('#summon_setting div[class^="type"]').each(function(){
-				var $this_parent_class=$(this).attr('class');
-				list_display($this_parent_class); // リスト生成
-				radio_display($this_parent_class); // 3凸・4凸ボタン
-			});
-		}
+	  swal({
+	    title: '前回の設定内容を復元する？',
+	    type: 'question',
+	    html:
+	    '前回、設定した召喚石やIDなどを呼び出せます。<br>'+
+	    'しないを選択するとデフォルトの設定が表示されます。',
+	    //showCloseButton: true,
+	    showCancelButton: true,
+	    confirmButtonText: 'する',
+	    cancelButtonText:  'しない'
+	  }).then(function () {
+	    jsCookie_load();
+	  }, function (dismiss) {
+	    // dismiss can be 'cancel', 'overlay', 'close', and 'timer'
+	    if (dismiss === 'cancel', 'overlay' ) {
+	      jsCookie_Noload();
+	    }
+	  })
 	} else {
 		// cookieがないとき
-		$('#summon_setting div[class^="type"]').each(function(){
-			var $this_parent_class=$(this).attr('class');
-			list_display($this_parent_class); // リスト生成
-			radio_display($this_parent_class); // 3凸・4凸ボタン
-		});
+		jsCookie_Noload();
 	}
-	table_display(); // 一覧表示
+}
+/* ********************
+　初期の呼出
+******************** */
+function jsCookie_Noload(){
+	$('#summon_setting div[class^="type"]').each(function(){
+		var $this_parent_class=$(this).attr('class');
+		list_display($this_parent_class); // リスト生成
+		radio_display($this_parent_class); // 3凸・4凸ボタン
+		table_display(); // 一覧表示
+	});
 }
 /* ********************
 　リスト生成の関数
@@ -305,7 +320,15 @@ $('#tweet_open').on('click', function () {
 		l=(screen.availWidth-w)/2,
 		t=(screen.availHeight-h)/2,
 		popPage = '.popup';
-		window.open('twitter/index.php',"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+		window.open(
+			'twitter/index.php',
+			"window",
+			"width= "+ w +
+			",height=" + h +
+			",left=" + l +
+			",top=" + t +
+			", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no"
+		);
 	} else {
 		alert('画像生成してください。');
 	}
@@ -410,6 +433,7 @@ function jsCookie_load(){
 			$sCookieType.find('.radio input:eq(1)').prop('checked', true);
 		}
 	}
+	table_display(); // 一覧表示
 }
 //JSON 終了
 });
