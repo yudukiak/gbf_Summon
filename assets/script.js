@@ -6,9 +6,7 @@ $(function(){
 var $summon_screeen=$('#summon_screeen');
 var alldata=[]; // すべてのデータを保持しておく配列
 var filterdata=[]; // フィルターを掛けたデータを保持する配列
-$.getJSON('assets/echo',init); // JSONを取得
-//var echo=$('#dataJSON').attr('src');
-//$.getJSON(echo,init); // JSONを取得
+$.getJSON('assets/echo.php',init); // JSONを取得
 function init(data){
 	alldata=data; // 全データを保持しておく
 	filterdata=alldata; // とりあえず全データを代入しておく
@@ -156,7 +154,7 @@ function table_display(){
 					}
 					return '.jpg';
 				})();
-				$summon_screeen.find('.'+summon_type+' img').attr('src', 'image/'+fclass+ _frarity +'/'+fid+ _extension); // 画像の書き換え
+				$summon_screeen.find('.'+summon_type+' img').attr('src', '//i0.wp.com/prfac.com/gbf/aiu/image/'+fclass+ _frarity +'/'+fid+ _extension); // 画像の書き換え
 				// 召喚石の文章
 				var _summon_rank = (function() {
 					if (summon_rank === void 0) return 'rank0';

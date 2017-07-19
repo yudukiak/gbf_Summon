@@ -21,6 +21,25 @@ function getLastUpdateDate() {
 	$LUDate = $LUDate_m.$LUDate_d.$LUDate_w;
 	return $LUDate;
 }
+// PHPが吐き出すHTMLファイルを『自動的に最小化する』スクリプト
+// https://manablog.org/php-html-minify/
+function sanitize_output($buffer) {
+	$search = array(
+		'/\>[^\S ]+/s',      // strip whitespaces after tags, except space
+		'/[^\S ]+\</s',      // strip whitespaces before tags, except space
+		'/(\s)+/s',          // shorten multiple whitespace sequences
+		'/<!--[\s\S]*?-->/s' // コメントを削除
+	);
+	$replace = array(
+		'>',
+		'<',
+		'\\1',
+		''
+	);
+	$buffer = preg_replace($search, $replace, $buffer);
+	return $buffer;
+}
+ob_start("sanitize_output");
 ?>
 
 <!DOCTYPE html>
@@ -34,19 +53,20 @@ function getLastUpdateDate() {
 	<meta name="twitter:description" content="グラブルのフレ募集とかで使えそうな「フレ石編成的ななにか」です" />
 	<meta name="twitter:image" content="image/thumbnail.jpg" />
 
-	<link rel="shortcut icon" href="image/icon.png">
+	<link rel="dns-prefetch" href="//i0.wp.com">
+	<link rel="shortcut icon" href="//i0.wp.com/prfac.com/gbf/aiu/image/icon.png">
 	<style type="text/css" id="stylesheet"><?php include("./assets/style.min.css"); ?></style>
-	<style type="text/css" id="sweetsheet"><?php include("./assets/sweetalert2.min.css"); ?></style>
+	<style type="text/css" id="sweetsheet"><?php include("./plugins/sweetalert2.min.css"); ?></style>
 	<title>フレ石編成的ななにか</title>
 </head>
 
 <body>
 	<div id="menu">
 		<ul>
-		<li><a href="../../">ブログ</a></li>
-		<li><a href="../../gbf-summon-usage/">使い方</a></li>
-		<li><a href="../../gbf-summon-usage/#history">更新履歴</a></li>
-		<li><a href="https://twitter.com/micelle9">お問い合わせ</a></li>
+		<li><a href="/">ブログ</a></li>
+		<li><a href="/gbf-summon-usage/">使い方</a></li>
+		<li><a href="/gbf-summon-usage/#history">更新履歴</a></li>
+		<li><a href="//twitter.com/micelle9">お問い合わせ</a></li>
 		</ul>
 	</div>
 
@@ -352,6 +372,15 @@ function getLastUpdateDate() {
 		$FUDate = getFileUpdateDate($file);
 		print $FUDate;
 	?>"></script>
+	<!--
+	埋め込むとスマホのパフォーマンスが下がってしまう…
+	<script type="text/javascript" id="jquery"><?php include("./plugins/jquery.min.js"); ?></script>
+	<script type="text/javascript" id="html2canvas"><?php include("./plugins/html2canvas.min.js"); ?></script>
+	<script type="text/javascript" id="cookie"><?php include("./plugins/js.cookie.min.js"); ?></script>
+	<script type="text/javascript" id="sweetalert2"><?php include("./plugins/sweetalert2.min.js"); ?></script>
+	<script type="text/javascript" id="core"><?php include("./plugins/core.min.js"); ?></script>
+	<script type="text/javascript" id="script"><?php include("./assets/script.min.js"); ?></script>
+	 -->
 	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56839189-1', 'auto');ga('send', 'pageview');</script>
 
 </body>
