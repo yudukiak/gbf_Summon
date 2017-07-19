@@ -154,7 +154,7 @@ function table_display(){
 					}
 					return '.jpg';
 				})();
-				$summon_screeen.find('.'+summon_type+' img').attr('src', '//i0.wp.com/prfac.com/gbf/aiu/image/'+fclass+ _frarity +'/'+fid+ _extension); // 画像の書き換え
+				$summon_screeen.find('.'+summon_type+' img').attr('src', 'image/'+fclass+ _frarity +'/'+fid+ _extension); // 画像の書き換え
 				// 召喚石の文章
 				var _summon_rank = (function() {
 					if (summon_rank === void 0) return 'rank0';
