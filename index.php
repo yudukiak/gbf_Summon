@@ -35,11 +35,8 @@ function getLastUpdateDate() {
 	<meta name="twitter:image" content="image/thumbnail.jpg" />
 
 	<link rel="shortcut icon" href="image/icon.png">
-	<link rel="stylesheet" href="<?php
-		$file= "assets/style.min.css";
-		$FUDate = getFileUpdateDate($file);
-		print $FUDate;
-	?>">
+	<style type="text/css" id="stylesheet"><?php include("./assets/style.min.css"); ?></style>
+	<style type="text/css" id="sweetsheet"><?php include("./assets/sweetalert2.min.css"); ?></style>
 	<title>フレ石編成的ななにか</title>
 </head>
 
@@ -355,11 +352,6 @@ function getLastUpdateDate() {
 		$FUDate = getFileUpdateDate($file);
 		print $FUDate;
 	?>"></script>
-	<!-- <script defer src="<?php
-		$file = "assets/echo";
-		$FUDate = getFileUpdateDate($file);
-		print $FUDate;
-	?>" id="dataJSON" type="application/json"></script> -->
 	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56839189-1', 'auto');ga('send', 'pageview');</script>
 
 </body>
