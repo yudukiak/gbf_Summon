@@ -359,7 +359,7 @@ function jsCookie_save(){
 			'sRari':sRari,
 			'sSele':sSele,
 			'sRank':sRank
-		});
+		}, {expires:365});
 	});
 	var sUser=$('input[name="user_id"]').val();
 	var sUser=(function(){
@@ -376,7 +376,7 @@ function jsCookie_save(){
 		'sIcon':sIcon,
 		'sUser':sUser,
 		'sChar':sChar
-	});
+	}, {expires:365});
 }
 function jsCookie_load(){
 	// 推しキャラ切り替え・推しキャラコメント・ユーザーIDの処理
