@@ -1,4 +1,7 @@
 <?php
+// タイムゾーンを設定
+date_default_timezone_set('Asia/Tokyo');
+
 // クエリ文字を生成
 function getFileUpdateDate($file) {
 	$FUDate = "";
