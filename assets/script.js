@@ -340,7 +340,7 @@ $('#tweet_open').on('click', function () {
 ******************** */
 function jsCookie_save(){
 	//Cookies.remove('setting');
-	Cookies.set('setting', 'y');
+	Cookies.set('setting', 'y', {expires:365});
 	$('.c_summon').each(function() {
 		var $this=$(this);
 		var pType=$this.parent().attr('class'); // 親要素
