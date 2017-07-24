@@ -54,10 +54,9 @@ ob_start("sanitize_output");
 	<meta name="twitter:site" content="@micelle9" />
 	<meta name="twitter:title" content="フレ石編成的ななにか" />
 	<meta name="twitter:description" content="グラブルのフレ募集とかで使えそうな「フレ石編成的ななにか」です" />
-	<meta name="twitter:image" content="image/thumbnail.jpg" />
+	<meta name="twitter:image" content="https://prfac.com/gbf/summon/image/thumbnail.jpg" />
 
-	<link rel="dns-prefetch" href="//i0.wp.com">
-	<link rel="shortcut icon" href="//i0.wp.com/prfac.com/gbf/aiu/image/icon.png">
+	<link rel="shortcut icon" href="image/icon.png">
 	<style type="text/css" id="stylesheet"><?php include("assets/style.min.css"); ?></style>
 	<style type="text/css" id="sweetsheet"><?php include("plugins/sweetalert2.min.css"); ?></style>
 	<title>フレ石編成的ななにか</title>
