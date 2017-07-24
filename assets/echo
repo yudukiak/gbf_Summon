@@ -1211,6 +1211,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710052000",
+    "name": "オイゲン(Mr. Big Shot)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type3",
     "id": "3040077000",
@@ -2295,6 +2305,16 @@
     "type": "type4",
     "id": "3040081000",
     "name": "コルワ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040127000",
+    "name": "コルワ(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
