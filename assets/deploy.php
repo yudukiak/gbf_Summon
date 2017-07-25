@@ -1,5 +1,5 @@
 <?php
-include '../gbf_summon.php';
+include '../../gbf_summon.php';
 
 // http://isometriks.com/verify-github-webhooks-with-php
 $secret = $Git_Secret;
@@ -23,6 +23,6 @@ if ($hash !== $payloadHash) {
 }
 
 // Your code here.
-exec('cd summon;~/opt/bin/git pull');
+exec('cd ../;~/opt/bin/git pull');
 
 ?>
