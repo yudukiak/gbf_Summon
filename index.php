@@ -58,7 +58,7 @@ ob_start("sanitize_output");
 
 	<link rel="shortcut icon" href="image/icon.png">
 	<style type="text/css" id="stylesheet"><?php include("assets/style.min.css"); ?></style>
-	<style type="text/css" id="sweetsheet"><?php include("plugins/sweetalert2.min.css"); ?></style>
+	<style type="text/css" id="sweetsheet"><?php include("assets/sweetalert2.min.css"); ?></style>
 	<title>フレ石編成的ななにか</title>
 </head>
 
