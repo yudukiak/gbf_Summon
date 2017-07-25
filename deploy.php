@@ -23,6 +23,6 @@ if ($hash !== $payloadHash) {
 }
 
 // Your code here.
-exec('cd summon2;~/opt/bin/git pull');
+exec('cd summon;~/opt/bin/git pull');
 
 ?>
