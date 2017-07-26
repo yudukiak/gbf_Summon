@@ -364,7 +364,7 @@ ob_start("sanitize_output");
 	</div>
 
 	<div class="table setting">
-		<p style="font-size:12px;">© 2017 micelle</p>
+		<p style="font-size:12px;">&copy; 2017 micelle</p>
 	</div>
 
 	<!-- 各種Script -->
