@@ -363,6 +363,10 @@ ob_start("sanitize_output");
 		<p>あと<a href="http://amzn.asia/5euNPQp" target="_blank" style="color:#59b1eb;">コレ</a>欲しいの（´・ω・｀）</p>
 	</div>
 
+	<div class="table setting">
+		<p style="font-size:12px;">© 2017 micelle</p>
+	</div>
+
 	<!-- 各種Script -->
 	<script defer src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script defer src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
