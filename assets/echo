@@ -50,6 +50,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030199000",
+    "name": "アイル(水着)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -605,6 +615,16 @@
     "type": "type2",
     "id": "3040100000",
     "name": "イシュミール",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040126000",
+    "name": "イシュミール(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -1742,6 +1762,16 @@
   {
     "class": "character",
     "rarity": "sr",
+    "type": "type1",
+    "id": "3030200000",
+    "name": "カレン(水着)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
     "type": "type2",
     "id": "3030069000",
     "name": "川島瑞樹",
@@ -2865,6 +2895,16 @@
     "type": "type5",
     "id": "3040020000",
     "name": "シャルロッテ(ハロウィンver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030198000",
+    "name": "シャルロッテ(水着)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -6817,46 +6857,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
