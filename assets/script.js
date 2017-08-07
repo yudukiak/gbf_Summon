@@ -286,7 +286,7 @@ $('div').on('click', '.radio label', function(event){
 ******************** */
 $('#screenshot').on('click', function () {
   // 属性アイコンが正常に描写されないので非表示
-  $summon_screeen.find('.title').removeClass('type_icon');
+  //$summon_screeen.find('.title').removeClass('type_icon');
   // サイトのURLを記載させる
   $summon_screeen.append('<p class="add">https://prfac.com/gbf/summon/</p>');
   // 画像生成を開始
@@ -299,11 +299,13 @@ $('#screenshot').on('click', function () {
   });
   setTimeout(function(){
     // 属性アイコンを0.1秒後に再表示させます
+    /*
     $summon_screeen.find('.content').each(function(){
       if (!$(this).hasClass('breakword')) {
         $(this).prev().addClass('type_icon');
       }
     });
+    */
     // 記載させたURLを削除
     $summon_screeen.find('.add').remove();
     // トップに移動しちゃうので、画面位置を戻す
