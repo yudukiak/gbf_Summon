@@ -94,8 +94,11 @@ body {
   background-color: #231E18;
 }
 .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-wrap:wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -106,6 +109,16 @@ body {
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
+}
+@media all and (-ms-high-contrast:none){
+  .box>div {
+    width: 309px;
+  }
+}
+@media all and (-ms-high-contrast:active){
+  .box>div {
+    width: 309px;
+  }
 }
 /*
 .cell{
@@ -120,6 +133,9 @@ body {
   -moz-border-radius: 3px;
 }*/
 .content{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 .content>div {
@@ -169,6 +185,16 @@ body {
   width: 200px;
   font-size: 14px;
   line-height: 1;
+}
+@media all and (-ms-high-contrast:none){
+  .spec {
+    width: 195px;
+  }
+}
+@media all and (-ms-high-contrast:none){
+  .spec {
+    width: 195px;
+  }
 }
 .job {
   color: #f2eee2;
@@ -420,6 +446,9 @@ input, textarea {
   margin: 0 5px;
   animation: float 4s linear infinite;
   transform-origin: 50% 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
   display:inline-flex;
 }
 @keyframes float {
