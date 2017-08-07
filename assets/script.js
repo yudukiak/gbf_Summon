@@ -307,7 +307,7 @@ $('#screenshot').on('click', function () {
     // 記載させたURLを削除
     $summon_screeen.find('.add').remove();
     // トップに移動しちゃうので、画面位置を戻す
-    $("html,body").animate({scrollTop:$('.change').offset().top});
+    //$("html,body").animate({scrollTop:$('.change').offset().top});
   },100);
 });
 /* ********************
