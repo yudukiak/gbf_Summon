@@ -18,7 +18,7 @@ function getFileUpdateDate($file) {
   <meta charset="utf-8">
   <link rel="shortcut icon" href="../image/icon.png">
   <link rel="stylesheet" href="<?php
-    $file= "../assets/style.css";
+    $file= "../assets/style.min.css";
     $FUDate = getFileUpdateDate($file);
     print $FUDate;
   ?>">
@@ -258,7 +258,7 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="<?php
-  $file = "assets/script.js";
+  $file = "assets/script.min.js";
   $FUDate = getFileUpdateDate($file);
   print $FUDate;
 ?>"></script>
