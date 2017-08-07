@@ -347,12 +347,10 @@ select:-moz-focusring {
   /*width: calc( (100% / 2) - 7px);*/
   /*width: calc( (100% / 2) - 3px);*/
   /*width: calc( (100% / 2) - 2px);*/
-  width: 92px;
+  width: 93px;
 }
-/*
 .c_type {margin-right: 2px;}
 .c_rarity {margin-left: 2px;}
-*/
 
 /* ********************
 　ID設定

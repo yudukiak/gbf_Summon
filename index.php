@@ -28,15 +28,17 @@ function getLastUpdateDate() {
 // https://manablog.org/php-html-minify/
 function sanitize_output($buffer) {
   $search = array(
-    '/\>[^\S ]+/s',      // strip whitespaces after tags, except space
-    '/[^\S ]+\</s',      // strip whitespaces before tags, except space
-    '/(\s)+/s',          // shorten multiple whitespace sequences
+    '/\r\n|\n|\r/s',     // 改行を削除
+    '/(\s)+/s',          // 連続スペースを1つにする
+    '/\>(\s)/s',         // タグの次にあるスペースを削除
+    '/(\s)\</s',         // タグの前にあるスペースを削除
     '/<!--[\s\S]*?-->/s' // コメントを削除
   );
   $replace = array(
+    '',
+    '\\1',
     '>',
     '<',
-    '\\1',
     ''
   );
   $buffer = preg_replace($search, $replace, $buffer);
@@ -57,8 +59,8 @@ ob_start("sanitize_output");
   <meta name="twitter:image" content="https://prfac.com/gbf/summon/image/thumbnail.jpg" />
 
   <link rel="shortcut icon" href="image/icon.png">
-  <style type="text/css" id="stylesheet"><?php include("assets/style.min.css"); ?></style>
-  <style type="text/css" id="sweetsheet"><?php include("assets/sweetalert2.min.css"); ?></style>
+  <style type="text/css" id="stylesheet"><?php echo file_get_contents("assets/style.min.css"); ?></style>
+  <style type="text/css" id="sweetsheet"><?php echo file_get_contents("assets/sweetalert2.min.css"); ?></style>
   <title>フレ石編成的ななにか</title>
 </head>
 
