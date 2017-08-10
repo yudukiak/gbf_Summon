@@ -2620,6 +2620,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040128000",
+    "name": "ジークフリート(浴衣ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c1",
     "type": "Djeeta Gran",
@@ -6877,16 +6887,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
