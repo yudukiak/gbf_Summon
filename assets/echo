@@ -1820,6 +1820,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030201000",
+    "name": "ガンダゴウザ(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type4",
@@ -2125,6 +2135,16 @@
     "type": "type4",
     "id": "3020059000",
     "name": "クロエ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030202000",
+    "name": "クロエ(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -3905,6 +3925,16 @@
     "type": "type2",
     "id": "3030150000",
     "name": "ディアンサ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040129000",
+    "name": "ディアンサ(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -6887,36 +6917,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
