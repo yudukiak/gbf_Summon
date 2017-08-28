@@ -1,9 +1,9 @@
 # フレ石編成的ななにか
 
-## 説明 (Description)
-グラブルのフレ募集とかで使えそうな「[フレ石編成的ななにか](https://prfac.com/gbf/summon/)」です。
 
-リンクからアクセスしてお使い下さい。
+## 説明 (Description)
+グラブルのフレ募集とかで使えそうな「[フレ石編成的ななにか](https://prfac.com/gbf/summon/)」です。リンクからアクセスしてお使い下さい。
+
 
 ## デモ (Demo)
 設定方法 (Setting)
@@ -18,6 +18,11 @@
 [by Twitter](https://twitter.com/micelle9/status/881114761114533888)  
 ![ツイート方法 Tweet](https://prfac.com/wp-content/uploads/2017/07/gif-0be337aad0.gif)
 
+設定の引継 (Succession)
+[by Twitter](https://twitter.com/micelle9/status/885337733610127360)  
+![設定の引継 Succession](https://prfac.com/wp-content/uploads/2017/08/gif-ca16dd3e40.gif)
+
+
 ## 使い方 (Usage)
 1. 「[フレ石編成的ななにか](https://prfac.com/gbf/summon/)」へアクセスします。
 2. 各属性の召喚石と、主人公のジョブ等を設定します。  
@@ -28,10 +33,13 @@
 5. 画像生成後、「ツイート」ボタンをクリックすることでTwitterとの連携画面が出ます。
 6. 連携が終わりましたらツイートする文章を記載後、「ツイートする」ボタンをクリックすることで自動的にツイートされます。
 
-## ライセンス (Licence)
-このソフトウェアはMITライセンスでリリースされています。「LICENSE.md」を参照してください。  
-This software is released under the MIT License, see "LICENSE.md".
 
-## その他 (Author)
+## ライセンス (Licence)
+このソフトウェアはMITライセンスでリリースされています。「LICENSE」を参照してください。
+
+This software is released under the MIT License, see "LICENSE".
+
+
+## その他 (Others)
 以下のサイトをご確認下さい。  
-<https://prfac.com/gbf-summon-usage/>
+https://prfac.com/gbf-summon-usage/
