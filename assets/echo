@@ -2120,6 +2120,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030204000",
+    "name": "グレア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type3",
@@ -2347,6 +2357,16 @@
     "name": "ゴッドガード・ブローディア",
     "rank0": "土属性攻撃力が120%UP",
     "rank3": "土属性攻撃力が140%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040228000",
+    "name": "孤独の竜姫",
+    "rank0": "火属性攻撃力40%UP/防御DOWN",
+    "rank3": "火属性攻撃力40%UP/ダブルアタック確率UP（未確認）",
     "rank4": ""
   },
   {
@@ -6957,26 +6977,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
