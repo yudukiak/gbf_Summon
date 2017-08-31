@@ -1200,6 +1200,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030203000",
+    "name": "炎獄先生エルモート",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c1",
     "type": "Djeeta Gran",
@@ -2100,6 +2110,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040130000",
+    "name": "グレア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type3",
@@ -2447,6 +2467,16 @@
     "name": "サイドワインダー",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040229000",
+    "name": "ザオシェン",
+    "rank0": "装備している火属性召喚石の数が多いほど火属性攻撃力がUP(最大100％)",
+    "rank3": "装備している火属性召喚石の数が多いほど火属性攻撃力がUP(最大120％)",
     "rank4": ""
   },
   {
@@ -6927,36 +6957,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
