@@ -632,6 +632,16 @@
   {
     "class": "character",
     "rarity": "sr",
+    "type": "type1",
+    "id": "3030205000",
+    "name": "和泉守兼定",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
     "type": "type4",
     "id": "3030194000",
     "name": "一ノ瀬志希",
@@ -5730,6 +5740,16 @@
     "rank4": "土属性キャラ攻撃50%UP/奥義ゲージ上昇＋"
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040131000",
+    "name": "三日月宗近",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type4",
@@ -5925,6 +5945,16 @@
     "type": "type3",
     "id": "3030111000",
     "name": "ヤイア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030206000",
+    "name": "山姥切国広",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -6977,36 +7007,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
