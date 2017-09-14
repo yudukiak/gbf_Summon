@@ -451,6 +451,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040132000",
+    "name": "アン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type2",
     "id": "3030012000",
@@ -1287,6 +1297,16 @@
     "name": "オイゲン(浪漫艶黒袴)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030207000",
+    "name": "オーウェン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -3887,6 +3907,16 @@
     "name": "たゆたう焔魂",
     "rank0": "火属性キャラのHPが20%UP",
     "rank3": "火属性キャラのHPが25%UP",
+    "rank4": ""
+  },
+  {
+    "class": "job",
+    "rarity": "ex",
+    "type": "Djeeta Gran",
+    "id": "280201_kn",
+    "name": "ダンサー",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
@@ -7007,36 +7037,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
