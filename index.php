@@ -69,7 +69,7 @@ ob_start("sanitize_output");
     <ul>
     <li><a href="/">ブログ</a></li>
     <li><a href="/gbf-summon-usage/">使い方</a></li>
-    <li><a href="/gbf-summon-usage/#history">更新履歴</a></li>
+    <li><a href="//github.com/micelle/gbf_summon/commits/master">更新履歴</a></li>
     <li><a href="//twitter.com/micelle9">お問い合わせ</a></li>
     </ul>
   </div>
