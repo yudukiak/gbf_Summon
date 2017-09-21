@@ -10,6 +10,9 @@ function getFileUpdateDate($file) {
   $FUDate = $file."?date=".$FUDate;
   return $FUDate;
 }
+
+// Noticeエラーだけを非表示に設定
+error_reporting(E_ALL & ~E_NOTICE);
 ?>
 <!DOCTYPE html>
 <html lang="jp">
