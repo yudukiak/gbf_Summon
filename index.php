@@ -59,6 +59,7 @@ ob_start("sanitize_output");
   <meta name="twitter:image" content="https://prfac.com/gbf/summon/image/thumbnail.jpg" />
 
   <link rel="shortcut icon" href="image/icon.png">
+  <script language="javascript"><?php echo file_get_contents("assets/iealert.min.js"); ?></script>
   <style type="text/css" id="stylesheet"><?php echo file_get_contents("assets/style.min.css"); ?></style>
   <style type="text/css" id="sweetsheet"><?php echo file_get_contents("assets/sweetalert2.min.css"); ?></style>
   <title>フレ石編成的ななにか</title>
