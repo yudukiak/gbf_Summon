@@ -460,6 +460,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040233000",
+    "name": "アンクシャ",
+    "rank0": "装備している土属性召喚石の数が多いほど土属性攻撃力がUP(最大100％)",
+    "rank3": "装備している土属性召喚石の数が多いほど土属性攻撃力がUP(最大120％)",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type2",
@@ -1114,6 +1124,16 @@
     "rarity": "sr",
     "type": "type1",
     "id": "3030027000",
+    "name": "エゼクレイン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030210000",
     "name": "エゼクレイン",
     "rank0": "TRUE",
     "rank3": "TRUE",
@@ -2491,9 +2511,29 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040134000",
+    "name": "サーヴァンツ ドロシー＆クラウディア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type1",
     "id": "3030063000",
+    "name": "サーヤ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030209000",
     "name": "サーヤ",
     "rank0": "TRUE",
     "rank3": "TRUE",
@@ -3027,6 +3067,16 @@
     "name": "シャルロッテ(水着)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040232000",
+    "name": "シャローム",
+    "rank0": "闇属性キャラの攻撃力30％UP/魅了無効",
+    "rank3": "闇属性キャラの攻撃力40％UP/魅了無効",
     "rank4": ""
   },
   {
@@ -7047,56 +7097,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
