@@ -2641,6 +2641,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040041000",
+    "name": "サラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type3",
     "id": "3030021000",
@@ -2668,16 +2678,6 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
-  },
-  {
-    "class": "character",
-    "rarity": "ssr",
-    "type": "type3",
-    "id": "3040041000",
-    "name": "サラーサ",
-    "rank0": "TRUE",
-    "rank3": "TRUE",
-    "rank4": ""
   },
   {
     "class": "character",
