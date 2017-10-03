@@ -134,14 +134,14 @@ function table_display(){
       //var fname=filterdata[n].name;
       //var ftype = filterdata[n].type;
       var fclass=filterdata[n].class;
-      var frarity=filterdata[n].rarity;
+      //var frarity=filterdata[n].rarity;
       var fid=filterdata[n].id;
       if (fid.match(summon_select)){
         // 召喚石・キャラ・JOBの画像
-        var _frarity = (function() {
-          if(fclass.match(/^summon$/)||fclass.match(/^character$/)) return '_'+frarity;
-          return '';
-        })();
+        //var _frarity = (function() {
+        //  if(fclass.match(/^summon$/)||fclass.match(/^character$/)) return '_'+frarity;
+        //  return '';
+        //})();
         var _extension = (function() {
           if (fclass.match(/^character$/)) {
             if(summon_rank===void 0) return '_01.jpg';
@@ -154,7 +154,8 @@ function table_display(){
           }
           return '.jpg';
         })();
-        $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/'+fclass+ _frarity +'/'+fid+ _extension); // 画像の書き換え
+        $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/'+fid+ _extension); // 画像の書き換え
+        //$summon_screeen.find('.'+summon_type+' img').attr('src', 'image/'+fclass+ _frarity +'/'+fid+ _extension); // 画像の書き換え
         // 召喚石の文章
         var _summon_rank = (function() {
           if (summon_rank === void 0) return 'rank0';
