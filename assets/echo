@@ -4803,7 +4803,7 @@
     "class": "summon",
     "rarity": "sr",
     "type": "type5",
-    "id": "2030027000",
+    "id": "2030028000",
     "name": "ピクシー",
     "rank0": "回復アビリティ効果25%UP",
     "rank3": "回復アビリティ効果30%UP",
@@ -6140,6 +6140,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040125000",
+    "name": "ユグドラシル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type3",
@@ -7097,16 +7107,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
