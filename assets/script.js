@@ -166,6 +166,10 @@ function table_display(){
     }
     // ユーザーID取得＆書き込み
     var job_id = parseInt($('input[name="user_id"]').val());
+    var job_id = (function() {
+      if (Number.isNaN(job_id)){ return ''; } // NaN
+      return job_id; // 1-9
+    })();
     $('.type9 .spec').html('<div>'+job_id+'</div>');
 
   });
