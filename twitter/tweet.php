@@ -1,4 +1,7 @@
 <?php
+// Noticeエラーだけを非表示に設定
+error_reporting(E_ALL & ~E_NOTICE);
+
 /* ********************
 　https://www.imamura.biz/blog/22873
 ******************** */
