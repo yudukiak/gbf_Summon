@@ -109,7 +109,7 @@ Out-File -InputObject $diffString -FilePath tmp\diff.txt -Encoding UTF8
 echo "<diff>"$diffString
 echo "diff.txt"
 
-Start-Sleep -s 3
+Start-Sleep -s 10
 
 # remove tmp folder
 Remove-Item -path tmp -Recurse -Force
