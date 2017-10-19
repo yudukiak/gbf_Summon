@@ -131,6 +131,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040137000",
+    "name": "アザゼル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type4",
     "id": "3030044000",
@@ -715,6 +725,16 @@
     "type": "type2",
     "id": "3040088000",
     "name": "イングヴェイ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030221000",
+    "name": "ヴァンピィ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -1937,6 +1957,16 @@
     "name": "木之本桜",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710054000",
+    "name": "木之本桜(バトルコスチューム対『水』戦)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
@@ -7137,36 +7167,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "",
-    "rarity": "",
-    "type": "",
-    "id": "",
-    "name": "",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   },
   {
