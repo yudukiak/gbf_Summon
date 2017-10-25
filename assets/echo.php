@@ -3,13 +3,9 @@
 // https://manablog.org/php-html-minify/
 function sanitize_output($buffer) {
   $search = array(
-    '/\r\n|\n|\r/s', // 改行を削除
-    '/\s/s', // スペース全て削除
-    '/,{"class":"","rarity":"","type":"","id":"","name":"","rank0":"","rank3":"","rank4":""}/s' // JSONの不要な箇所を削除
+    '/\r\n|\n|\r|\s/s' // 改行＆スペースを削除
   );
   $replace = array(
-    '',
-    '',
     ''
   );
   $buffer = preg_replace($search, $replace, $buffer);
