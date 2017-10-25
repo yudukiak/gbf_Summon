@@ -2180,6 +2180,16 @@
     "rank4": ""
   },
   {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "310101_sw",
+    "name": "グラン＆ジータ",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type4",
