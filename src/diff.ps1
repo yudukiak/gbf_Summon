@@ -102,15 +102,19 @@ for($i=0;  $i -lt $diffLen; $i++){
     $draw.save.Invoke($diffInput)
     $draw.dispose.Invoke() # Object dispse
     # move
-    Move-Item $diffInput "..\image\thumbnail\"
+    Move-Item $diffInput "tmp" -force
+    Copy-Item $tmpDiffInput "..\image\thumbnail\"
   }
 }
 Out-File -InputObject $diffString -FilePath tmp\diff.txt -Encoding UTF8
 echo "<diff>"$diffString
 echo "diff.txt"
 
-Start-Sleep -s 10
+function Pause() {
+  Write-Host "Press any key to continue ..." -NoNewLine
+  [Console]::ReadKey() | Out-Null
+}
+Pause
 
 # remove tmp folder
 Remove-Item -path tmp -Recurse -Force
-echo "remove tmp folder"
