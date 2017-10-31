@@ -79,6 +79,12 @@ ob_start("sanitize_output");
     ?><br>情報が更新されない場合はキャッシュの削除をして下さい。</p>
   </div>
 
+  <!-- AdSense  -->
+  <div class="adsense">
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3052144799289425" data-ad-slot="1704901599"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
   <div class="table" id="summon_screeen">
     <h2>フレ石編成的ななにか</h2>
     <div class="box">
@@ -343,14 +349,20 @@ ob_start("sanitize_output");
     </div>
   </div>
 
+  <!-- AdSense  -->
+  <div class="adsense">
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3052144799289425" data-ad-slot="1704901599"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
   <div class="table setting" onselectstart="return false;" unselectable="on">
-    <p>画像生成を行わないと、ツイートできません</p>
     <div class="box">
       <div><div id="screenshot" class="button">画像生成</div></div>
       <div><span class="arrow"></span></div>
       <!-- <div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div> -->
       <div><div id="tweet_open" class="button">ツイート</div></div>
     </div>
+    <p>画像生成を行わないと、ツイートできません</p>
   </div>
   <div id="output_screen">
     <p>以下のプレビューからも保存できます</p>
@@ -379,6 +391,8 @@ ob_start("sanitize_output");
     print $FUDate;
   ?>"></script>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56839189-1', 'auto');ga('send', 'pageview');</script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-3052144799289425",enable_page_level_ads:true});</script>
 
 </body>
 

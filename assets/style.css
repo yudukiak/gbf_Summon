@@ -39,6 +39,11 @@ body {
   width: 960px;
   margin: 0 auto;
 }
+.adsense {
+  text-align: center;
+  width: 960px;
+  margin: 0 auto;
+}
 .breakword {
   word-wrap: break-word;
   overflow-wrap: break-word;
