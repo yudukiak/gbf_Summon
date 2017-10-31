@@ -44,7 +44,7 @@ $url     = $array["commits"][0]["url"];
 $pattern = "/\n+.+/"; // 対象
 $replace = "";        // 結果
 $message = preg_replace ($pattern, $replace, $message);
-$string  = "#フレ石編成的ななにか\n\n".$message."\n".$url;
+$string  = "#フレ石編成的ななにか_更新ログ\n\n".$message."\n".$url;
 //thmOAuth.phpを読み込む
 require_once("../twitter/library/tmhOAuth.php");
 //初期設定
