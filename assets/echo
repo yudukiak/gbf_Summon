@@ -1801,6 +1801,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030222000",
+    "name": "カルテイラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type4",
     "id": "3020043000",
@@ -3590,6 +3600,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040249000",
+    "name": "スノウホワイト",
+    "rank0": "バトルメンバーの種族数に応じて水属性攻撃力がUP(最大100％)",
+    "rank3": "バトルメンバーの種族数に応じて水属性攻撃力がUP(最大120％)",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c4",
     "type": "Djeeta Gran",
@@ -3867,6 +3887,16 @@
     "name": "セン(クリスマスver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040248000",
+    "name": "蒼紅之舞・竜胆",
+    "rank0": "火と水属性攻撃力が25%UP",
+    "rank3": "火と水属性攻撃力が40%UP",
     "rank4": ""
   },
   {
@@ -6318,6 +6348,26 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040138000",
+    "name": "ユエル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030223000",
+    "name": "ユエル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "summon",
