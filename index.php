@@ -1,7 +1,6 @@
 <?php
 // タイムゾーンを設定
-date_default_timezone_set('Asia/Tokyo');
-
+date_default_timezone_set("Asia/Tokyo");
 // クエリ文字を生成
 function getFileUpdateDate($file) {
   $FUDate = "";
@@ -28,18 +27,16 @@ function getLastUpdateDate() {
 // https://manablog.org/php-html-minify/
 function sanitize_output($buffer) {
   $search = array(
-    '/\r\n|\n|\r/s',     // 改行を削除
-    '/(\s)+/s',          // 連続スペースを1つにする
-    '/\>(\s)/s',         // タグの次にあるスペースを削除
-    '/(\s)\</s',         // タグの前にあるスペースを削除
-    '/<!--[\s\S]*?-->/s' // コメントを削除
+    "/\r\n|\n|\r|<!--[\s\S]*?-->/s", // 改行＆コメントを削除
+    "/(\s)+/s",                      // 連続スペースを1つにする
+    "/>(\s)/s",                      // タグの次にあるスペースを削除
+    "/(\s)</s",                      // タグの前にあるスペースを削除
   );
   $replace = array(
-    '',
-    '\\1',
-    '>',
-    '<',
-    ''
+    "",
+    "\\1",
+    ">",
+    "<",
   );
   $buffer = preg_replace($search, $replace, $buffer);
   return $buffer;
