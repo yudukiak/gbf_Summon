@@ -41,7 +41,8 @@ $array = json_decode($json, true);
 // メッセージの処理
 //$message = $array["commits"][0]["message"];
 $message = $array["head_commit"]["message"];
-$url     = $array["commits"][0]["url"];
+//$url     = $array["commits"][0]["url"];
+$url     = $array["head_commit"]["url"];
 $pattern = "/\n+.+/"; // 対象
 $replace = "";        // 結果
 $message = preg_replace ($pattern, $replace, $message);
