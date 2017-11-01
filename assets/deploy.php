@@ -39,7 +39,8 @@ exec('cd ../;~/opt/bin/git pull');
 $json = file_get_contents('php://input');
 $array = json_decode($json, true);
 // メッセージの処理
-$message = $array["commits"][0]["message"];
+//$message = $array["commits"][0]["message"];
+$message = $array["head_commit"]["message"];
 $url     = $array["commits"][0]["url"];
 $pattern = "/\n+.+/"; // 対象
 $replace = "";        // 結果
