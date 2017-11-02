@@ -7,7 +7,7 @@ date_default_timezone_set("Asia/Tokyo");
 // --------------------------------------------------------
 // 各種キー
 // --------------------------------------------------------
-require_once "../gbf_summon.php";
+require_once "../../gbf_summon.php";
 //require_once "../test_repository.php";
 
 // --------------------------------------------------------
@@ -41,19 +41,23 @@ function bad_secret() {
 // --------------------------------------------------------
 // Your code here.
 // --------------------------------------------------------
+// ブランチ取得用PHPを読み込み
+require_once "branch.php";
+// ディレクトリを指定
+$gbfDir = realpath("../../");
+$mainDir = $gbfDir."/summon";
+$testDir = $gbfDir."/summon.test";
+//$mainDir = $gbfDir."/test_repository";
+//$testDir = $gbfDir."/test_repository.test";
+
 // JSONの処理
 $array = json_decode($payload, true);
-
 // メッセージの処理
 $message = $array["head_commit"]["message"];
 $url     = $array["head_commit"]["url"];
 $message = preg_replace ("/\n+.+/", "", $message);
-
 // コミットされたブランチを取得
 $comBranch = preg_replace("/refs\/heads\//", "", $array["ref"]);
-
-// デプロイ用のPHPを読み込み
-require_once "deploy.php";
 
 // コミットされたブランチによって切り替え
 if($comBranch == "master"){
@@ -61,7 +65,7 @@ if($comBranch == "master"){
   test_deploy($testDir); // テスト環境をデプロイ
   // ツイートする
   $string  = "#フレ石編成的ななにか_更新ログ\n\n".$message."\n".$url;
-  require_once($gbfDir."/summon/twitter/library/tmhOAuth.php");
+  require_once($gbfDir."../twitter/library/tmhOAuth.php");
   $tmhOAuth = new tmhOAuth(array(
     'consumer_key'    => $API_Key,
     'consumer_secret' => $API_Secret,
@@ -79,8 +83,21 @@ if($comBranch == "master"){
   test_deploy($testDir); // テスト環境をデプロイ
 }
 
+// 本番環境のデプロイ
+function main_deploy($mainDir) {
+  $command = "cd ".$mainDir.";~/opt/bin/git fetch origin;~/opt/bin/git reset --hard origin/master";
+  exec($command);
+}
+// テスト環境のデプロイ
+function test_deploy($testDir) {
+  $nowBranch = now_branch($testDir);
+  $command = "cd ".$testDir.";~/opt/bin/git fetch origin;~/opt/bin/git reset --hard origin/".$nowBranch[0];
+  exec($command);
+}
+
 // ログの保存
 $file   = "deploy.log";
 $logStr = date("Y/m/d H:i:s")." (".$comBranch.") ".$message."\n";
 var_dump(file_put_contents($file, $logStr, FILE_APPEND | LOCK_EX));
+
 ?>
