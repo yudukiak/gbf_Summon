@@ -380,7 +380,7 @@ ob_start("sanitize_output");
   </div>
 
   <div id="branch_table" class="table setting"><?php
-    if(strpos($_SERVER['REQUEST_URI'],'test') == true){
+    if(strpos($_SERVER['REQUEST_URI'],'test') !== false){
       require_once "deploy/change.php";
     }
   ?></div>
@@ -397,7 +397,7 @@ ob_start("sanitize_output");
     print $FUDate;
   ?>"></script>
   <?php
-    if(strpos($_SERVER['REQUEST_URI'],'test') == true){
+    if(strpos($_SERVER['REQUEST_URI'],'test') !== false){
       $file = "assets/script_deploy.min.js";
       $FUDate = getFileUpdateDate($file);
       print "<script defer src=".$FUDate."></script>";

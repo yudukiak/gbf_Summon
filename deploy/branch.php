@@ -12,9 +12,14 @@ function now_branch($targetDir) {
     //$F_split[2] branch 'master' of github.com:micelle/test_repository
     preg_match("/'([\s\S]*?)'/", $F_split[2], $branch_list);
     array_unshift($branchList, $branch_list[1]); // 各ブランチ名を配列へ入れる
+    // バイナリのとき
     if($F_split[0] == $HEAD[0]){
       preg_match("/'([\s\S]*?)'/", $F_split[2], $F_match);
       $nowF_match = $F_match[1];
+    }
+    // ブランチ名のとき
+    elseif(strpos($HEAD[0],'ref') !== false){
+      $nowF_match = preg_replace("/ref: refs\/heads\//", "", $HEAD[0]);
     }
   }
   array_unshift($branchList, $nowF_match); // 現在のブランチ名を配列へ入れる

@@ -24,8 +24,8 @@ for($i=1;$i<count($nowBranch);$i++){
   }
 }
 $branchList .= '</select>';
+$branchList .= '<p id="branch_result">[結果]</p>';
 $branchList .= '<button type="button" name="branch_change" id="branch_change">切り替え</button>';
-$branchList .= '<p id="branch_result"></p>';
 // HTMLを表示
 echo($branchList);
 
