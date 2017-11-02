@@ -4,7 +4,7 @@ window.onload = function(){
     console.log(branch_val);
     $.ajax({
       type: "POST",
-      url: "../test_repository_deploy/branch_change_deploy.php",
+      url: "deploy/change_deploy.php",
       dataType: "JSON",
       data: {
         branch: branch_val,
