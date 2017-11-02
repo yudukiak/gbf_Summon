@@ -7,7 +7,8 @@ date_default_timezone_set("Asia/Tokyo");
 // --------------------------------------------------------
 // 各種キー
 // --------------------------------------------------------
-include "gbf_summon.php";
+require_once "../gbf_summon.php";
+//require_once "../test_repository.php";
 
 // --------------------------------------------------------
 // http://isometriks.com/verify-github-webhooks-with-php
@@ -19,12 +20,22 @@ $hubSignature = $headers['X-Hub-Signature'];
 list($algo, $hash) = explode('=', $hubSignature, 2);
 // Get payload
 $payload = file_get_contents('php://input');
+// $payloadが空の時
+if ($payload == "") {
+  bad_secret();
+}
 // Calculate hash based on payload and the secret
 $payloadHash = hash_hmac($algo, $payload, $secret);
 // Check if hashes are equivalent
 if ($hash !== $payloadHash) {
   // Kill the script or do something else here.
-  die('Bad secret');
+  //die('Bad secret');
+  bad_secret();
+}
+function bad_secret() {
+  http_response_code(301);
+  header("Location: https://prfac.com/");
+  exit;
 }
 
 // --------------------------------------------------------
@@ -36,21 +47,21 @@ $array = json_decode($payload, true);
 // メッセージの処理
 $message = $array["head_commit"]["message"];
 $url     = $array["head_commit"]["url"];
-$messPat = "/\n+.+/"; // 対象
-$messRep = "";        // 結果
-$message = preg_replace ($messPat, $messRep, $message);
+$message = preg_replace ("/\n+.+/", "", $message);
 
-// ブランチの判断
-$branch  = $array["ref"];
-$branPat = "/refs\/heads\//";
-$branRep = "";
-$branch  = preg_replace ($branPat, $branRep, $branch);
-if($branch == "master"){
-  $command = "cd summon;~/opt/bin/git fetch origin;~/opt/bin/git reset --hard origin/master";
-  exec($command);
+// コミットされたブランチを取得
+$comBranch = preg_replace("/refs\/heads\//", "", $array["ref"]);
+
+// デプロイ用のPHPを読み込み
+require_once "deploy.php";
+
+// コミットされたブランチによって切り替え
+if($comBranch == "master"){
+  main_deploy($mainDir); // 本番環境をデプロイ
+  test_deploy($testDir); // テスト環境をデプロイ
   // ツイートする
   $string  = "#フレ石編成的ななにか_更新ログ\n\n".$message."\n".$url;
-  require_once("summon/twitter/library/tmhOAuth.php");
+  require_once($gbfDir."/summon/twitter/library/tmhOAuth.php");
   $tmhOAuth = new tmhOAuth(array(
     'consumer_key'    => $API_Key,
     'consumer_secret' => $API_Secret,
@@ -65,14 +76,11 @@ if($branch == "master"){
     )
   );
 } else {
-  $command = "cd summon.bac;~/opt/bin/git fetch origin;~/opt/bin/git reset --hard origin/".$branch;
-  exec($command);
+  test_deploy($testDir); // テスト環境をデプロイ
 }
 
 // ログの保存
-$file    = "gbf_summon_deploy.log";
-$logStr  = date("Y/m/d H:i:s")." (".$branch.") ".$message."\n";
+$file   = "deploy.log";
+$logStr = date("Y/m/d H:i:s")." (".$comBranch.") ".$message."\n";
 var_dump(file_put_contents($file, $logStr, FILE_APPEND | LOCK_EX));
-
-
 ?>
