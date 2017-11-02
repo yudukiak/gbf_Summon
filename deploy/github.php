@@ -85,13 +85,13 @@ if($comBranch == "master"){
 
 // 本番環境のデプロイ
 function main_deploy($mainDir) {
-  $command = "cd ".$mainDir.";~/opt/bin/git fetch origin;~/opt/bin/git reset --hard origin/master";
+  $command = "cd ".$mainDir.";~/opt/bin/git fetch origin;~/opt/bin/git checkout --force origin/master;~/opt/bin/git reset --hard origin/master";
   exec($command);
 }
 // テスト環境のデプロイ
 function test_deploy($testDir) {
   $nowBranch = now_branch($testDir);
-  $command = "cd ".$testDir.";~/opt/bin/git fetch origin;~/opt/bin/git reset --hard origin/".$nowBranch[0];
+  $command = "cd ".$testDir.";~/opt/bin/git fetch origin;~/opt/bin/git checkout --force origin/".$nowBranch[0].";~/opt/bin/git reset --hard origin/".$nowBranch[0];
   exec($command);
 }
 
