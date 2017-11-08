@@ -2,34 +2,34 @@
 // Noticeエラーだけを非表示に設定
 error_reporting(E_ALL & ~E_NOTICE);
 // タイムゾーンを設定
-date_default_timezone_set('Asia/Tokyo');
+date_default_timezone_set("Asia/Tokyo");
 // --------------------------------------------------------
 // http://isometriks.com/verify-github-webhooks-with-php
 // --------------------------------------------------------
 function bad_secret(){
   http_response_code(301);
-  header('Location: https://prfac.com/');
+  header("Location: https://prfac.com/");
   exit;
 }
 $headers = getallheaders();
-$hubSignature = $headers['X-Hub-Signature'];
+$hubSignature = $headers["X-Hub-Signature"];
 // Split signature into algorithm and hash
-list($algo, $hash) = explode('=', $hubSignature, 2);
+list($algo, $hash) = explode("=", $hubSignature, 2);
 // Get payload
-$payload = file_get_contents('php://input');
+$payload = file_get_contents("php://input");
 // $payloadが空の時
-if($payload == ''){
+if($payload == ""){
   bad_secret();
 }
 // JSONの処理
 $array = json_decode($payload, true);
 // キーの読み込み
-$repositoryName = $array['repository']['name'];
+$repositoryName = $array["repository"]["name"];
 $repositoryFileName = "{$repositoryName}.php";
 if(file_exists($repositoryFileName)){
   require_once $repositoryFileName;
 } else {
-  exit;
+  bad_secret();
 }
 // Calculate hash based on payload and the secret
 $payloadHash = hash_hmac($algo, $payload, $Git_Secret);
@@ -42,19 +42,19 @@ if($hash !== $payloadHash){
 // Your code here.
 // --------------------------------------------------------
 // メッセージの処理
-$message = $array['head_commit']['message'];
-$url     = $array['head_commit']['url'];
-$message = preg_replace ("/\n+.+/", '', $message);
+$message = $array["head_commit"]["message"];
+$url     = $array["head_commit"]["url"];
+$message = preg_replace ("/\n+.+/", "", $message);
 // コミットされたブランチを取得
-$comBranch = preg_replace("/refs\/heads\//", '', $array['ref']);
+$comBranch = preg_replace("/refs\/heads\//", "", $array["ref"]);
 
 // テスト環境のブランチを取得
-function branchNow($GitDir_test){
-  $HEAD = file("{$GitDir_test}/.git/HEAD", FILE_IGNORE_NEW_LINES);
-  $branchNow = preg_replace("/ref: refs\/heads\//", '', $HEAD[0]);
-  return $branchNow;
-}
-$varBranch = branchNow($GitDir_test);
+//function branchNow($GitDir_test){
+//  $HEAD = file("{$GitDir_test}/.git/HEAD", FILE_IGNORE_NEW_LINES);
+//  $branchNow = preg_replace("/ref: refs\/heads\//", "", $HEAD[0]);
+//  return $branchNow;
+//}
+//$varBranch = branchNow($GitDir_test);
 
 // デプロイ用の関数
 function deploy($GitDir, $GitBranch) {
@@ -68,24 +68,24 @@ function deploy($GitDir, $GitBranch) {
 }
 
 // コミットされたブランチによって切り替え
-if($comBranch == 'master'){
-  deploy($GitDir_live, 'master'); // 本番環境をデプロイ
+if($comBranch == "master"){
+  deploy($GitDir_live, "master"); // 本番環境をデプロイ
   //deploy($GitDir_test, $varBranch); // テスト環境をデプロイ
-  deploy($GitDir_test, 'master'); // テスト環境をデプロイ
+  deploy($GitDir_test, "master"); // テスト環境をデプロイ
   // ツイートする
   require_once("{$GitDir_live}/twitter/library/tmhOAuth.php");
   $tmhOAuth = new tmhOAuth(array(
-    'consumer_key'    => $API_Key,
-    'consumer_secret' => $API_Secret,
-    'user_token'      => $Access_Token,
-    'user_secret'     => $Access_Token_Secret,
+    "consumer_key"    => $API_Key,
+    "consumer_secret" => $API_Secret,
+    "user_token"      => $Access_Token,
+    "user_secret"     => $Access_Token_Secret,
   ));
   $Tweet_string = "{$Tweet_string}\n\n{$message}\n{$url}";
   $tweet_update = $tmhOAuth->request(
-    'POST',
-    'https://api.twitter.com/1.1/statuses/update.json',
+    "POST",
+    "https://api.twitter.com/1.1/statuses/update.json",
     array(
-      'status' => $Tweet_string
+      "status" => $Tweet_string
     )
   );
 } else {
