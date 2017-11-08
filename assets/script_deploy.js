@@ -1,7 +1,8 @@
-window.onload = function(){
+$(function(){
   $("#branch_change").on("click", function (){
     var branch_val = $("#branch_list").val();
-    console.log(branch_val);
+    var $branch_result = $("#branch_result");
+    $branch_result.text(branch_val + "へ切り替えています");
     $.ajax({
       type: "POST",
       url: "deploy/change_deploy.php",
@@ -11,10 +12,10 @@ window.onload = function(){
       },
     })
     .done(function (response) {
-      $("#branch_result").text(response.data);
+      $branch_result.text(response.data);
     })
     .fail(function () {
-      $("#branch_result").text("失敗しました");
+      $branch_result.text("切り替えに失敗しました");
     });
   });
-}
+});
