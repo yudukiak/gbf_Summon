@@ -142,8 +142,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type1"></select>
         <div class="radio">
@@ -167,8 +167,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type2"></select>
         <div class="radio">
@@ -192,8 +192,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type3"></select>
         <div class="radio">
@@ -217,8 +217,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type4"></select>
         <div class="radio">
@@ -241,8 +241,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type5"></select>
         <div class="radio">
@@ -265,8 +265,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type6"></select>
         <div class="radio">
@@ -289,8 +289,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr" selected>SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type7"></select>
         <div class="radio">
@@ -317,8 +317,8 @@ ob_start("sanitize_output");
         <select class="c_rarity" name="c_rarity">
           <option value="ssr">SSR</option>
           <option value="sr">SR</option>
-          <!-- <option value="r">R</option> -->
-          <!-- <option value="n">N</option> -->
+          <option value="r">R</option>
+          <option value="n">N</option>
         </select>
         <select class="c_summon" name="type8"></select>
         <div class="radio">

@@ -252,7 +252,9 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
     $c_type.css('color', '#FFFF00').attr("selected", false).val('type5');
     $c_rarity.append(
       '<option value="ssr">SSR</option>'+
-      '<option value="sr">SR</option>'
+      '<option value="sr">SR</option>'+
+      '<option value="r">R</option>'+
+      '<option value="n">N</option>'
     );
     $this.parent().attr('data-select','summon').data('select','summon');
     $radio.find('.r_rank3').text('3凸');

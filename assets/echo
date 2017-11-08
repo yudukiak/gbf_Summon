@@ -270,6 +270,16 @@
     "rank4": "光属性攻撃力が80%UP/光属性キャラのHPが20%UP"
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020010000",
+    "name": "雨切蜻蛉",
+    "rank0": "風属性ダメージを10%軽減",
+    "rank3": "風属性ダメージを15%軽減",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type1",
@@ -730,6 +740,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020029000",
+    "name": "インプ",
+    "rank0": "闇属性攻撃力が10%UP",
+    "rank3": "闇属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type6",
@@ -910,6 +930,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type4",
+    "id": "2010001000",
+    "name": "ウィンドラビット",
+    "rank0": "風属性攻撃力が5%UP",
+    "rank3": "風属性攻撃力が10%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type2",
@@ -1080,6 +1110,16 @@
     "rank4": "土属性攻撃力が60%UP"
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020023000",
+    "name": "ウラザナ",
+    "rank0": "水属性攻撃力が10%UP",
+    "rank3": "水属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type2",
@@ -1088,6 +1128,26 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020002000",
+    "name": "ウルフリーダー",
+    "rank0": "土属性攻撃力が10%UP",
+    "rank3": "土属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type4",
+    "id": "2010002000",
+    "name": "エアグレイブ",
+    "rank0": "風属性攻撃力が5%UP",
+    "rank3": "風属性攻撃力が10%UP",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -1180,6 +1240,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020003000",
+    "name": "エムダラビット",
+    "rank0": "風属性攻撃力が10%UP",
+    "rank3": "風属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type6",
@@ -1267,6 +1337,16 @@
     "name": "炎獄先生エルモート",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type5",
+    "id": "2020021000",
+    "name": "エンジェル",
+    "rank0": "光属性ダメージを5%軽減",
+    "rank3": "光属性ダメージを10%軽減",
     "rank4": ""
   },
   {
@@ -1587,6 +1667,16 @@
     "name": "カスケードジェリー",
     "rank0": "水属性攻撃力が25%UP",
     "rank3": "水属性攻撃力が30%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020008000",
+    "name": "風のエレメンタル",
+    "rank0": "風属性キャラのHPが10%UP",
+    "rank3": "風属性キャラのHPが15%UP",
     "rank4": ""
   },
   {
@@ -2051,6 +2141,16 @@
   },
   {
     "class": "summon",
+    "rarity": "n",
+    "type": "type1",
+    "id": "2010003000",
+    "name": "キラービー",
+    "rank0": "火属性攻撃力が5%UP",
+    "rank3": "火属性攻撃力が10%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
     "rarity": "ssr",
     "type": "type5",
     "id": "2040157000",
@@ -2280,6 +2380,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020035000",
+    "name": "クロウラー",
+    "rank0": "土属性ダメージを10%軽減",
+    "rank3": "土属性ダメージを15%軽減",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "r",
     "type": "type4",
@@ -2337,6 +2447,16 @@
     "name": "クンフー",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020022000",
+    "name": "ケイブバット",
+    "rank0": "闇属性攻撃力が10%UP",
+    "rank3": "闇属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -2407,6 +2527,16 @@
     "name": "ケロちゃん",
     "rank0": "全属性キャラの攻撃力が10%UP",
     "rank3": "全属性キャラの攻撃力が20%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020017000",
+    "name": "剣鮫",
+    "rank0": "水属性攻撃力が10%UP",
+    "rank3": "水属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -2527,6 +2657,16 @@
     "name": "琥珀のカーバンクル",
     "rank0": "",
     "rank3": "弱体耐性が20%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type3",
+    "id": "2010004000",
+    "name": "ゴブリン",
+    "rank0": "土属性攻撃力が5%UP",
+    "rank3": "土属性攻撃力が10%UP",
     "rank4": ""
   },
   {
@@ -2780,6 +2920,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type5",
+    "id": "2010012000",
+    "name": "サモンミラージュ",
+    "rank0": "光属性攻撃力が5%UP",
+    "rank3": "光属性攻撃力が10%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type3",
@@ -3017,6 +3167,16 @@
     "name": "ジェミニ・サンライズ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020015000",
+    "name": "ジェリー",
+    "rank0": "水属性攻撃力が10%UP",
+    "rank3": "水属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -3540,6 +3700,26 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type4",
+    "id": "2010005000",
+    "name": "スケール",
+    "rank0": "風属性攻撃力が5%UP",
+    "rank3": "風属性攻撃力が10%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020009000",
+    "name": "スケルトン",
+    "rank0": "闇属性攻撃力が10%UP",
+    "rank3": "闇属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type6",
@@ -3601,6 +3781,16 @@
   },
   {
     "class": "summon",
+    "rarity": "n",
+    "type": "type2",
+    "id": "2010006000",
+    "name": "スニッパー",
+    "rank0": "水属性ダメージを5%軽減",
+    "rank3": "水属性ダメージを10%軽減",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
     "rarity": "ssr",
     "type": "type2",
     "id": "2040249000",
@@ -3617,6 +3807,16 @@
     "name": "スパルタ",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type5",
+    "id": "2020034000",
+    "name": "スピリット",
+    "rank0": "光属性攻撃力が10%UP",
+    "rank3": "光属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -3637,6 +3837,26 @@
     "name": "スフラマール(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020028000",
+    "name": "スライム",
+    "rank0": "水属性キャラのHPが10%UP",
+    "rank3": "水属性キャラのHPが15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020014000",
+    "name": "スリーピィ",
+    "rank0": "土属性ダメージを10%軽減",
+    "rank3": "土属性ダメージを15%軽減",
     "rank4": ""
   },
   {
@@ -4180,6 +4400,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020020000",
+    "name": "土のエレメンタル",
+    "rank0": "土属性キャラのHPが10%UP",
+    "rank3": "土属性キャラのHPが15%UP",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "ex",
     "type": "Djeeta Gran",
@@ -4487,6 +4717,16 @@
     "name": "ドロッセル",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020031000",
+    "name": "トワイライトフライ",
+    "rank0": "火属性攻撃力が10%UP",
+    "rank3": "火属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -5001,6 +5241,16 @@
   },
   {
     "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020006000",
+    "name": "ビースティンガー",
+    "rank0": "風属性攻撃力が10%UP",
+    "rank3": "風属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
     "rarity": "ssr",
     "type": "type5",
     "id": "2040096000",
@@ -5047,6 +5297,16 @@
     "name": "ヒドラ",
     "rank0": "火属性攻撃力が25%UP",
     "rank3": "火属性攻撃力が30%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020018000",
+    "name": "火のエレメンタル",
+    "rank0": "火属性キャラのHPが10%UP",
+    "rank3": "火属性キャラのHPが15%UP",
     "rank4": ""
   },
   {
@@ -5197,6 +5457,16 @@
     "name": "風竜イールシアス",
     "rank0": "風属性攻撃力が25%UP",
     "rank3": "風属性攻撃力が30%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020033000",
+    "name": "風鈴茸",
+    "rank0": "風属性キャラのHPが10%UP",
+    "rank3": "風属性キャラのHPが15%UP",
     "rank4": ""
   },
   {
@@ -5750,6 +6020,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020032000",
+    "name": "辺獄の亡者",
+    "rank0": "水属性攻撃力が10%UP",
+    "rank3": "水属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c3",
     "type": "Djeeta Gran",
@@ -5777,6 +6057,26 @@
     "name": "ホーリーナイトガウン",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020030000",
+    "name": "ボーンネイル",
+    "rank0": "土属性攻撃力が10%UP",
+    "rank3": "土属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020004000",
+    "name": "ホーンバード",
+    "rank0": "風属性攻撃力が10%UP",
+    "rank3": "風属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -5857,6 +6157,16 @@
     "name": "マイシェラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020016000",
+    "name": "マイトフィッシュ",
+    "rank0": "水属性攻撃力が10%UP",
+    "rank3": "水属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -6040,6 +6350,26 @@
     "rank4": "土属性キャラ攻撃50%UP/奥義ゲージ上昇＋"
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020013000",
+    "name": "マンドラゴラ",
+    "rank0": "土属性攻撃力が10%UP",
+    "rank3": "土属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type2",
+    "id": "2010010000",
+    "name": "ミートミキサー",
+    "rank0": "水属性攻撃力が5%UP",
+    "rank3": "水属性攻撃力が10%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type5",
@@ -6047,6 +6377,16 @@
     "name": "三日月宗近",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020019000",
+    "name": "水のエレメンタル",
+    "rank0": "水属性キャラのHPが10%UP",
+    "rank3": "水属性キャラのHPが15%UP",
     "rank4": ""
   },
   {
@@ -6077,6 +6417,16 @@
     "name": "ミニゴブ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020012000",
+    "name": "ミノタウロス",
+    "rank0": "火属性攻撃力が10%UP",
+    "rank3": "火属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -6227,6 +6577,16 @@
     "name": "メルゥ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020025000",
+    "name": "メルトランサー",
+    "rank0": "火属性攻撃力が10%UP",
+    "rank3": "火属性攻撃力が15%UP",
     "rank4": ""
   },
   {
@@ -6440,6 +6800,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020005000",
+    "name": "ラーヴァゴーレム",
+    "rank0": "火属性攻撃力が10%UP",
+    "rank3": "火属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type1",
@@ -6468,6 +6838,26 @@
     "rank0": "光と火属性攻撃力が40%UP",
     "rank3": "光と火属性攻撃力が60%UP",
     "rank4": "光属性キャラ：攻撃80%・奥義性能UP<br>火属性キャラ：攻撃60%・HP30%UP/風属性ダメージ軽減"
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020007000",
+    "name": "ラヴァード",
+    "rank0": "火属性攻撃力が10%UP",
+    "rank3": "火属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "n",
+    "type": "type3",
+    "id": "2010011000",
+    "name": "ラウンドウルフ",
+    "rank0": "土属性攻撃力が5%UP",
+    "rank3": "土属性攻撃力が10%UP",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -6637,6 +7027,26 @@
     "name": "ランドル",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type1",
+    "id": "2020027000",
+    "name": "ランニングトーチ",
+    "rank0": "火属性キャラのHPが10%UP",
+    "rank3": "火属性キャラのHPが15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type2",
+    "id": "2020011000",
+    "name": "ランページシェル",
+    "rank0": "水属性ダメージを10%軽減",
+    "rank3": "水属性ダメージを15%軽減",
     "rank4": ""
   },
   {
@@ -6817,6 +7227,16 @@
     "name": "ルインガーゴイル",
     "rank0": "土属性攻撃力が25%UP",
     "rank3": "土属性攻撃力が30%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "type3",
+    "id": "2020024000",
+    "name": "ルーマシーグリフォン",
+    "rank0": "土属性ダメージを10%軽減",
+    "rank3": "土属性ダメージを15%軽減",
     "rank4": ""
   },
   {
@@ -7197,6 +7617,16 @@
     "name": "ロゼッタ(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "r",
+    "type": "",
+    "id": "2020026000",
+    "name": "ロッド",
+    "rank0": "風属性攻撃力が10%UP",
+    "rank3": "風属性攻撃力が15%UP",
     "rank4": ""
   },
   {
