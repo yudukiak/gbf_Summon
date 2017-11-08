@@ -60,6 +60,8 @@ $varBranch = branchNow($GitDir_test);
 function deploy($GitDir, $GitBranch) {
   $command  = "";
   $command .= "cd {$GitDir};";
+  $command .= "~/opt/bin/git checkout -b {$GitBranch} origin/{$GitBranch};";
+  $command .= "~/opt/bin/git checkout {$GitBranch};";
   $command .= "~/opt/bin/git pull origin {$GitBranch};";
   $command .= "~/opt/bin/git fetch origin;";
   exec($command);
