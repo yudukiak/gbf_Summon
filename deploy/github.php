@@ -70,7 +70,8 @@ function deploy($GitDir, $GitBranch) {
 // コミットされたブランチによって切り替え
 if($comBranch == 'master'){
   deploy($GitDir_live, 'master'); // 本番環境をデプロイ
-  deploy($GitDir_test, $varBranch); // テスト環境をデプロイ
+  //deploy($GitDir_test, $varBranch); // テスト環境をデプロイ
+  deploy($GitDir_test, 'master'); // テスト環境をデプロイ
   // ツイートする
   require_once("{$GitDir_live}/twitter/library/tmhOAuth.php");
   $tmhOAuth = new tmhOAuth(array(
@@ -88,7 +89,8 @@ if($comBranch == 'master'){
     )
   );
 } else {
-  deploy($GitDir_test, $varBranch); // テスト環境をデプロイ
+  //deploy($GitDir_test, $varBranch); // テスト環境をデプロイ
+  deploy($GitDir_test, $comBranch); // テスト環境をデプロイ
 }
 
 // ログの保存
