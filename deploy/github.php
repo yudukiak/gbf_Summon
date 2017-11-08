@@ -48,14 +48,6 @@ $message = preg_replace ("/\n+.+/", "", $message);
 // コミットされたブランチを取得
 $comBranch = preg_replace("/refs\/heads\//", "", $array["ref"]);
 
-// テスト環境のブランチを取得
-//function branchNow($GitDir_test){
-//  $HEAD = file("{$GitDir_test}/.git/HEAD", FILE_IGNORE_NEW_LINES);
-//  $branchNow = preg_replace("/ref: refs\/heads\//", "", $HEAD[0]);
-//  return $branchNow;
-//}
-//$varBranch = branchNow($GitDir_test);
-
 // デプロイ用の関数
 function deploy($GitDir, $GitBranch) {
   $command  = "";
