@@ -379,11 +379,11 @@ ob_start("sanitize_output");
     <p style="font-size:12px;">&copy; 2017 micelle</p>
   </div>
 
-  <div id="branch_table" class="table setting"><?php
+  <?php
     if(strpos($_SERVER['REQUEST_URI'],'test') !== false){
-      require_once "deploy/change.php";
+      require_once "deploy/change_index.php";
     }
-  ?></div>
+  ?>
 
   <!-- 各種Script -->
   <script defer src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
