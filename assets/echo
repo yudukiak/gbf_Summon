@@ -272,7 +272,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020010000",
     "name": "雨切蜻蛉",
     "rank0": "風属性ダメージを10%軽減",
@@ -742,7 +742,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type6",
     "id": "2020029000",
     "name": "インプ",
     "rank0": "闇属性攻撃力が10%UP",
@@ -1242,7 +1242,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020003000",
     "name": "エムダラビット",
     "rank0": "風属性攻撃力が10%UP",
@@ -1672,7 +1672,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020008000",
     "name": "風のエレメンタル",
     "rank0": "風属性キャラのHPが10%UP",
@@ -2452,7 +2452,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type6",
     "id": "2020022000",
     "name": "ケイブバット",
     "rank0": "闇属性攻撃力が10%UP",
@@ -3712,7 +3712,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type6",
     "id": "2020009000",
     "name": "スケルトン",
     "rank0": "闇属性攻撃力が10%UP",
@@ -5242,7 +5242,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020006000",
     "name": "ビースティンガー",
     "rank0": "風属性攻撃力が10%UP",
@@ -5462,7 +5462,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020033000",
     "name": "風鈴茸",
     "rank0": "風属性キャラのHPが10%UP",
@@ -6072,7 +6072,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020004000",
     "name": "ホーンバード",
     "rank0": "風属性攻撃力が10%UP",
@@ -7622,7 +7622,7 @@
   {
     "class": "summon",
     "rarity": "r",
-    "type": "",
+    "type": "type4",
     "id": "2020026000",
     "name": "ロッド",
     "rank0": "風属性攻撃力が10%UP",
