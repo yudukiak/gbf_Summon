@@ -6,7 +6,7 @@ function getFileUpdateDate($file) {
   $FUDate = "";
   $FUDate = filemtime($file);
   $FUDate = date("YmdHi", $FUDate);
-  $FUDate = $file."?date=".$FUDate;
+  $FUDate = "{$file}?date={$FUDate}";
   return $FUDate;
 }
 // 曜日の設定
@@ -391,19 +391,19 @@ ob_start("sanitize_output");
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.min.js"></script>
-  <script defer src="<?php
+  <?php
+    // script
     $file = "assets/script.min.js";
     $FUDate = getFileUpdateDate($file);
-    print $FUDate;
-  ?>"></script>
-  <?php
-    if(strpos($_SERVER['REQUEST_URI'],'test') !== false){
+    $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+    print $fileStr;
+      // script_deploy
+    if(strpos($_SERVER["REQUEST_URI"],"test") !== false){
       $file = "assets/script_deploy.min.js";
       $FUDate = getFileUpdateDate($file);
-      print "<script defer src=".$FUDate."></script>";
+      $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+      print $fileStr;
     }
-  ?>
-  <?php
   ?>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56839189-1', 'auto');ga('send', 'pageview');</script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
