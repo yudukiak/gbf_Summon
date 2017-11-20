@@ -760,6 +760,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040141000",
+    "name": "ヴィーラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "skin",
     "type": "Djeeta Gran",
@@ -3960,6 +3970,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710056000",
+    "name": "ゼタ(レーシングスーツ)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type4",
@@ -5771,6 +5791,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710057000",
+    "name": "ベアトリクス(レーシングスーツ)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type4",
     "id": "3030066000",
@@ -6507,6 +6537,16 @@
     "name": "ミリア",
     "rank0": "闇属性攻撃力40%UP",
     "rank3": "闇属性攻撃力が50%UP/バトル開始時に闇属性キャラの奥義ゲージ10%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030224000",
+    "name": "ミリン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -7427,6 +7467,16 @@
     "name": "レヴィオンシスターズ",
     "rank0": "全属性キャラの防御力が10%UP",
     "rank3": "全属性キャラの防御力が20%UP",
+    "rank4": ""
+  },
+  {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "360101_gu",
+    "name": "レーシングスーツ",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
