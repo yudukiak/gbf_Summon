@@ -27,7 +27,7 @@
     "name": "アーミラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "summon",
@@ -2147,7 +2147,7 @@
     "name": "キュベレー",
     "rank0": "土属性キャラの攻撃力が30%UP/再生効果",
     "rank3": "土属性キャラの攻撃力が40%UP/再生効果",
-    "rank4": ""
+    "rank4": "土属性キャラの攻撃力60%UP/HP20%UP/再生効果/弱体効果1ターン短縮 "
   },
   {
     "class": "summon",
@@ -6507,7 +6507,7 @@
     "name": "ミュオン",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
