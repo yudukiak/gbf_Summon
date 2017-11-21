@@ -10,7 +10,7 @@ var filterdata=[]; // フィルターを掛けたデータを保持する配列
 // https://qiita.com/tatsuyankmura/items/8e09cbd5ee418d35f169
 var setCookie = function(cookieName, value, expire){
   var cookie = cookieName+"="+value+";";
-  if(Number(expire) > 0){cookie += 'expires='+expire.toGMTString();}
+  if(Number(expire) > 0){cookie += 'path=/; expires='+expire.toGMTString();}
   document.cookie = cookie;
 }
 var getCookie = function(cookieName){
