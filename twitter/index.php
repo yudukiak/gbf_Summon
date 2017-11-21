@@ -35,7 +35,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 <body>
 <div class="tweet_table">
 <?php
-include '../../gbf_summon.php';
+include '../../gbf_Summon.php';
 /* ********************
 　https://syncer.jp/Web/API/Twitter/REST_API/
 ******************** */

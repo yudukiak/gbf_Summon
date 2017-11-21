@@ -16,7 +16,7 @@ echo json_encode(compact('data'));
 //thmOAuth.phpを読み込む
 require_once("./library/tmhOAuth.php");
 
-include '../../gbf_summon.php';
+include '../../gbf_Summon.php';
 //初期設定
 $tmhOAuth = new tmhOAuth(array(
   'consumer_key' => $API_Key,
