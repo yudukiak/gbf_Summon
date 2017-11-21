@@ -6,11 +6,35 @@ $(function(){
 var $summon_screeen=$('#summon_screeen');
 var alldata=[]; // すべてのデータを保持しておく配列
 var filterdata=[]; // フィルターを掛けたデータを保持する配列
+// Cookieの保存・読み込み
+// https://qiita.com/tatsuyankmura/items/8e09cbd5ee418d35f169
+var setCookie = function(cookieName, value, expire){
+  var cookie = cookieName+"="+value+";";
+  if(Number(expire) > 0){cookie += 'expires='+expire.toGMTString();}
+  document.cookie = cookie;
+}
+var getCookie = function(cookieName){
+  var l = cookieName.length+1;
+  var cookieAry = document.cookie.split("; ");
+  var str = "";
+  for(i=0,j=cookieAry.length; i<j; i++){
+    if(cookieAry[i].substr(0,l) === cookieName+"="){
+      str = cookieAry[i].substr(l,cookieAry[i].length);
+      break;
+    }
+  }
+  return str;
+}
+
 $.getJSON('assets/echo.php',init); // JSONを取得
 function init(data){
   alldata=data; // 全データを保持しておく
   filterdata=alldata; // とりあえず全データを代入しておく
-  if (Cookies.get('setting')) {
+  setCookie('ck_cookie', true);
+  var checkCookie = getCookie('ck_cookie');
+  if(!checkCookie){alert('Cookieが無効になっています。');}
+  var st_key = getCookie('st_key');
+  if (st_key) {
     // cookieがあるとき
     swal({
       title: '前回の設定内容を復元する？',
@@ -30,6 +54,29 @@ function init(data){
         jsCookie_Noload();
       }
     })
+  // --------------------------------------------------------
+  // js-cookieの処理（削除予定）
+  } else if (Cookies.get('setting')) {
+    // cookieがあるとき
+    swal({
+      title: '前回の設定内容を復元する？',
+      type: 'question',
+      html:
+      '前回、設定した召喚石やIDなどを呼び出せます。<br>'+
+      'しないを選択するとデフォルトの設定が表示されます。',
+      //showCloseButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'する',
+      cancelButtonText:  'しない'
+    }).then(function () {
+      jsCookie_load_old();
+    }, function (dismiss) {
+      // dismiss can be 'cancel', 'overlay', 'close', and 'timer'
+      if (dismiss === 'cancel', 'overlay' ) {
+        jsCookie_Noload();
+      }
+    })
+  // --------------------------------------------------------
   } else {
     // cookieがないとき
     jsCookie_Noload();
@@ -231,6 +278,7 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
   　.type_iconがあったら「推しキャラ」の設定にする
   ******************** */
   if ($nclass) {
+    var $this=$('.setting .type8 .title');
     $this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
     $c_type.css('color', '#FF0000').attr("selected", false).val('type1');
     $c_rarity.append(
@@ -344,50 +392,126 @@ $('#tweet_open').on('click', function () {
     alert('画像生成してください。');
   }
 });
-/* ********************
-　js-cookie
-******************** */
+// --------------------------------------------------------
+// js-cookie、Cookeの処理
+//
+// --------------------------------------------------------
 function jsCookie_save(){
-  //Cookies.remove('setting');
-  Cookies.set('setting', 'y', {expires:365});
-  $('.c_summon').each(function() {
-    var $this=$(this);
-    var pType=$this.parent().attr('class'); // 親要素
-    var sType=$this.siblings('.c_type').val(); // 属性
-    var sRari=$this.siblings('.c_rarity').val(); // レアリティ
-    var sSele=$this.val(); // 召喚石
-    var sRank=$this.nextAll('.radio').find('input:radio:checked').val(); // 解放段階
-    var sRank=(function(){
-      if(sRank===void 0) return 'rank0';
-      if(sRank.match(/rank3/)) return 'rank3';
-      if(sRank.match(/rank4/)) return 'rank4';
-    })();
-    // cookie
-    Cookies.set(pType, {
-      'sType':sType,
-      'sRari':sRari,
-      'sSele':sSele,
-      'sRank':sRank
-    }, {expires:365});
+  // 🍪「js-cookie用のCookieを全て削除するよ」
+  var removeCookieName = ['setting','type0','type1','type2','type3','type4','type5','type6','type7','type8','type9'];
+  $.each(removeCookieName, function(i, value) {
+    Cookies.remove(value, { path: '' });
   });
-  var sUser=$('input[name="user_id"]').val();
-  var sUser=(function(){
-    if(sUser===void 0) return '';
-    return encodeURIComponent(sUser);
+  var aryCookie = [];
+  var objCookie = {};
+  var _user=$('input[name="user_id"]').val();
+  var c_user=(function(){
+    if(_user===void 0) return '';
+    return encodeURIComponent(_user);
   })();
-  var sChar=$('textarea[name="comment"]').val();
-  var sChar=(function(){
-    if(sChar===void 0) return '';
-    return encodeURIComponent(sChar);
+  var _text=$('textarea[name="comment"]').val();
+  var c_text=(function(){
+    if(_text===void 0) return '';
+    return encodeURIComponent(_text);
   })();
-  var sIcon=$('.setting .type8 .title').hasClass('type_icon');
-  Cookies.set('type0', {
-    'sIcon':sIcon,
-    'sUser':sUser,
-    'sChar':sChar
-  }, {expires:365});
+  var c_summon=$('.setting .type8 .title').hasClass('type_icon'); // フリー2はtrue、推しキャラはfalse
+  objCookie.user   = c_user;
+  objCookie.text  = c_text;
+  objCookie.summon = c_summon;
+  aryCookie.push(objCookie);
+  $('.c_summon').each(function() {
+    var objCookie = {};
+    var $this=$(this);
+    var c_target=$this.parent().attr('class'); // 親要素
+    var c_type=$this.siblings('.c_type').val(); // 属性
+    var c_rarity=$this.siblings('.c_rarity').val(); // レアリティ
+    var c_id=$this.val(); // 召喚石
+    var _rank=$this.nextAll('.radio').find('input:radio:checked').val(); // 解放段階
+    var c_rank=(function(){
+      if(_rank===void 0) return 'rank0';
+      if(_rank.match(/rank3/)) return 'rank3';
+      if(_rank.match(/rank4/)) return 'rank4';
+    })();
+    objCookie.target = c_target;
+    objCookie.type   = c_type;
+    objCookie.rarity = c_rarity;
+    objCookie.id     = c_id;
+    objCookie.rank   = c_rank;
+    aryCookie.push(objCookie);
+  });
+  // Cookieを保存
+  var expire = new Date(Date.now()+1*365*24*60*60*1000); // 365日保持させる
+  var jsnCookie = JSON.stringify(aryCookie);
+  var jsnCookie_e = encodeURIComponent(jsnCookie);
+  setCookie('st_key', jsnCookie_e, expire);
 }
 function jsCookie_load(){
+  // cookieを取得し、配列にする
+  var cookies = getCookie('st_key');
+  var cookies_jsn = decodeURIComponent(cookies)
+  var cookies_ary = JSON.parse(cookies_jsn);
+  $.each(cookies_ary, function(i, value) {
+    console.log(value);
+    var target = value.target;
+    var type = value.type;
+    var rarity = value.rarity;
+    var id = value.id;
+    var rank = value.rank;
+    var $target = $('#summon_setting .'+target);
+    var $c_type = $target.find('.c_type');
+    $c_type.val(type); // 属性をセット
+    switch(type){ // 色を変更
+      case 'type1':$c_type.css('color', '#FF0000');break;
+      case 'type2':$c_type.css('color', '#00FFFF');break;
+      case 'type3':$c_type.css('color', '#FF9872');break;
+      case 'type4':$c_type.css('color', '#00FF00');break;
+      case 'type5':$c_type.css('color', '#FFFF00');break;
+      case 'type6':$c_type.css('color', '#FF00FF');break;
+    }
+    $target.find('.c_rarity').val(rarity); // レアリティをセット
+    if(target!==void 0){list_display(target);} // リストを生成
+    $target.find('.c_summon').val(id); // 保存した召喚石を選択
+    if(target!==void 0){radio_display(target);} // 3凸・4凸ボタン
+    if (rank==='rank0') {
+      $target.find('.radio input:eq(0)').prop('checked', false);
+    } else if (rank==='rank3') {
+      $target.find('.radio input:eq(0)').prop('checked', true);
+    } else if (rank==='rank4') {
+      $target.find('.radio input:eq(1)').prop('checked', true);
+    }
+    var user = value.user;
+    var summon = value.summon;
+    var text = value.text;
+    if(user!==void 0){$('input[name="user_id"]').val(user);}
+    if(summon === false){
+      var $this=$('.setting .type8 .title');
+      var $html=$this.html();
+      var $c_type=$this.nextAll('.c_type');
+      var $c_rarity=$this.nextAll('.c_rarity');
+      var $radio=$this.nextAll('.radio');
+      var $this_parent_class=$this.parent().attr('class');
+      $c_rarity.find('option').prop('selected', false);
+      $('.type8 .c_summon').empty();
+      $c_rarity.empty();
+      $this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
+      $c_type.css('color', '#FF0000').attr("selected", false).val('type1');
+      $c_rarity.append(
+        '<option value="ssr">SSR</option>'+
+        '<option value="sr">SR</option>'+
+        '<option value="r">R</option>'+
+        '<option value="skin">スキン他</option>'
+      );
+      $this.parent().attr('data-select','character').data('select','character');
+      $radio.find('.r_rank3').text('上限解放');
+      $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
+      $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
+      list_display($this_parent_class); //リスト作成
+    }
+    if(text!==void 0){$('textarea[name="comment"]').val(decodeURIComponent(text));}
+  });
+  table_display(); // 一覧表示
+}
+function jsCookie_load_old(){
   // 推しキャラ切り替え・推しキャラコメント・ユーザーIDの処理
   var cJson=Cookies.getJSON('type0');
   if (!cJson.sIcon) {
