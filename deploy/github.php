@@ -7,7 +7,7 @@ date_default_timezone_set("Asia/Tokyo");
 // http://isometriks.com/verify-github-webhooks-with-php
 // --------------------------------------------------------
 function bad_secret(){
-  http_response_code(301);
+  http_response_code(200);
   header("Location: https://prfac.com/");
   exit;
 }
