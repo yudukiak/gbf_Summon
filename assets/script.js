@@ -9,8 +9,8 @@ var filterdata=[]; // フィルターを掛けたデータを保持する配列
 // Cookieの保存・読み込み
 // https://qiita.com/tatsuyankmura/items/8e09cbd5ee418d35f169
 var setCookie = function(cookieName, value, expire){
-  var cookie = cookieName+"="+value+";";
-  if(Number(expire) > 0){cookie += 'path=/; expires='+expire.toGMTString();}
+  var cookie = cookieName+"="+value+";path=/;";
+  if(Number(expire) > 0){cookie += 'expires='+expire.toGMTString();}
   document.cookie = cookie;
 }
 var getCookie = function(cookieName){
@@ -398,10 +398,13 @@ $('#tweet_open').on('click', function () {
 // --------------------------------------------------------
 function jsCookie_save(){
   // 🍪「js-cookie用のCookieを全て削除するよ」
-  var removeCookieName = ['setting','type0','type1','type2','type3','type4','type5','type6','type7','type8','type9'];
-  $.each(removeCookieName, function(i, value) {
-    Cookies.remove(value, { path: '' });
-  });
+  var oldCookie = getCookie('setting');
+  if(oldCookie){
+    var removeCookieName = ['setting','type0','type1','type2','type3','type4','type5','type6','type7','type8','type9'];
+    $.each(removeCookieName, function(i, value) {
+      setCookie(value, '');
+    });
+  }
   var aryCookie = [];
   var objCookie = {};
   var _user=$('input[name="user_id"]').val();
@@ -451,7 +454,6 @@ function jsCookie_load(){
   var cookies_jsn = decodeURIComponent(cookies)
   var cookies_ary = JSON.parse(cookies_jsn);
   $.each(cookies_ary, function(i, value) {
-    console.log(value);
     var target = value.target;
     var type = value.type;
     var rarity = value.rarity;
