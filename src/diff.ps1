@@ -1,5 +1,6 @@
 # create tmp folder
-New-Item tmp -itemType Directory -Force
+New-Item tmp -itemType Directory -Force | Out-Null
+echo "create /tmp directory"
 
 # echo download
 function echoDownload {
@@ -12,9 +13,10 @@ function echoDownload {
   $echoSize = $(Get-ChildItem "tmp\echo").Length / 1KB
   if($echoSize -lt 1){
     echoDownload
+    echo "retry download echo (${echoSize}KB)"
   } else {
     Move-Item "tmp\echo" "..\assets\" -Force
-    echo "echoDownload"
+    echo "download echo (${echoSize}KB)"
   }
 }
 echoDownload
@@ -48,7 +50,7 @@ Out-File -InputObject $echoString -FilePath tmp\diff_echo.txt -Encoding UTF8 # t
 $echoString = Get-Content tmp\diff_echo.txt | Sort-Object # sort text
 $echoString = $echoString -replace " ", "`r`n"
 Out-File -InputObject $echoString -FilePath tmp\diff_echo.txt -Encoding UTF8 # saving
-echo "diff_echo.txt"
+echo "create diff_echo.txt"
 
 # image
 [string]$imageString = ""
@@ -64,7 +66,7 @@ $imageString = $imageString -replace "3030158000_02.jpg ", ""
 $imageString = $imageString -replace "3040097000_02.jpg ", ""
 $imageString = $imageString -replace " ", "`r`n"
 Out-File -InputObject $imageString -FilePath tmp\diff_image.txt -Encoding UTF8 # saving
-echo "diff_image.txt"
+echo "create diff_image.txt"
 
 # diff, download, resize, move
 # used "mypss" => https://github.com/miyamiya/mypss
@@ -107,8 +109,9 @@ for($i=0;  $i -lt $diffLen; $i++){
   }
 }
 Out-File -InputObject $diffString -FilePath tmp\diff.txt -Encoding UTF8
-echo "<diff>"$diffString
-echo "diff.txt"
+echo "create diff.txt"
+echo "<diff list>"
+echo $diffString
 
 function Pause() {
   Write-Host "Press any key to continue ..." -NoNewLine
