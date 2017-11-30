@@ -597,7 +597,7 @@
     "name": "イオ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -6878,6 +6878,16 @@
     "rank0": "光と火属性攻撃力が40%UP",
     "rank3": "光と火属性攻撃力が60%UP",
     "rank4": "光属性キャラ：攻撃80%・奥義性能UP<br>火属性キャラ：攻撃60%・HP30%UP/風属性ダメージ軽減"
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030208000",
+    "name": "ラインハルザ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "summon",
