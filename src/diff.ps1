@@ -58,12 +58,12 @@ $image = Get-ChildItem ("..\image\thumbnail")
 $imageName = $image.name
 Out-File -InputObject $imageName -FilePath tmp\diff_image.txt -Encoding UTF8 # temporary saving
 $imageString = Get-Content tmp\diff_image.txt | Sort-Object # sort text
-$imageString = $imageString -replace "2040146000.jpg ", ""
-$imageString = $imageString -replace "2040149000.jpg ", ""
-$imageString = $imageString -replace "2040151000.jpg ", ""
-$imageString = $imageString -replace "3020065000_02.jpg ", ""
-$imageString = $imageString -replace "3030158000_02.jpg ", ""
-$imageString = $imageString -replace "3040097000_02.jpg ", ""
+#$imageString = $imageString -replace "2040146000.jpg ", ""
+#$imageString = $imageString -replace "2040149000.jpg ", ""
+#$imageString = $imageString -replace "2040151000.jpg ", ""
+#$imageString = $imageString -replace "3020065000_02.jpg ", ""
+#$imageString = $imageString -replace "3030158000_02.jpg ", ""
+#$imageString = $imageString -replace "3040097000_02.jpg ", ""
 $imageString = $imageString -replace " ", "`r`n"
 Out-File -InputObject $imageString -FilePath tmp\diff_image.txt -Encoding UTF8 # saving
 echo "create diff_image.txt"
