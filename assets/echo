@@ -11,6 +11,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030226000",
+    "name": "アーサー",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type5",
     "id": "3040051000",
@@ -158,6 +168,16 @@
     "rank0": "火属性攻撃力が50%UP",
     "rank3": "火属性攻撃力が80%UP",
     "rank4": "火属性攻撃力が80%UP/火属性キャラのHPが20%UP"
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040253000",
+    "name": "アドラメレク",
+    "rank0": "装備している光属性召喚石の数が多いほど光属性攻撃力がUP(最大80％)",
+    "rank3": "装備している光属性召喚石の数が多いほど光属性攻撃力がUP(最大100%)",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -3510,6 +3530,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040252000",
+    "name": "俊秀の義剣士",
+    "rank0": "風属性攻撃力が40%UP",
+    "rank3": "風属性攻撃力が40%UP/奥義ダメージが10％UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type1",
@@ -4234,6 +4264,16 @@
     "rarity": "ssr",
     "type": "type5",
     "id": "3040024000",
+    "name": "ソフィア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030225000",
     "name": "ソフィア",
     "rank0": "TRUE",
     "rank3": "TRUE",
@@ -7048,6 +7088,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040140000",
+    "name": "ランスロット",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "character",
