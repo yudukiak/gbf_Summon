@@ -1361,6 +1361,16 @@
   },
   {
     "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040255000",
+    "name": "エレン",
+    "rank0": "火と風属性攻撃力が40%UP",
+    "rank3": "火と風属性攻撃力が40%UP/火と風属性キャラのHP15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
     "rarity": "r",
     "type": "type5",
     "id": "2020021000",
@@ -4790,6 +4800,16 @@
     "rank4": ""
   },
   {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "310301_sw",
+    "name": "調査兵団",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type5",
@@ -6877,6 +6897,16 @@
     "name": "ミートミキサー",
     "rank0": "水属性攻撃力が5%UP",
     "rank3": "水属性攻撃力が10%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030227000",
+    "name": "ミカサ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
