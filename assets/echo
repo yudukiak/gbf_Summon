@@ -7660,6 +7660,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040142000",
+    "name": "リヴァイ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type2",
