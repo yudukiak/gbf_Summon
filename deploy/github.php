@@ -1,4 +1,5 @@
 <?php
+http_response_code(200);
 // Noticeエラーだけを非表示に設定
 error_reporting(E_ALL & ~E_NOTICE);
 // タイムゾーンを設定
@@ -7,7 +8,6 @@ date_default_timezone_set("Asia/Tokyo");
 // http://isometriks.com/verify-github-webhooks-with-php
 // --------------------------------------------------------
 function bad_secret(){
-  http_response_code(200);
   header("Location: https://prfac.com/");
   exit;
 }
@@ -89,6 +89,7 @@ if($comBranch == "master"){
 $logFile = "deploy_{$repositoryName}.log";
 $logTime = date("Y/m/d H:i:s");
 $logStr = "{$logTime} ({$comBranch}) {$message}\n";
+print $logStr;
 var_dump(file_put_contents($logFile, $logStr, FILE_APPEND | LOCK_EX));
 
 ?>
