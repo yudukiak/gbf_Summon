@@ -100,6 +100,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040259000",
+    "name": "紅き穿光と黒き大鎌",
+    "rank0": "火と闇属性攻撃力が40%UP",
+    "rank3": "火と闇属性攻撃力が40%UP/火と闇属性キャラのHP15%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type1",
@@ -740,6 +750,16 @@
     "rank4": "火属性攻撃力が60%UP"
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040148000",
+    "name": "イルザ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -785,6 +805,16 @@
     "type": "type6",
     "id": "3040094000",
     "name": "ヴァイト",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040147000",
+    "name": "ヴァジラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -1961,6 +1991,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030230000",
+    "name": "カルバ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type1",
     "id": "3020036000",
@@ -2357,6 +2397,16 @@
     "name": "グラン＆ジータ（水着Ver.）",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040261000",
+    "name": "グリームニル",
+    "rank0": "風属性攻撃力が120%UP",
+    "rank3": "風属性攻撃力が140%UP",
     "rank4": ""
   },
   {
@@ -4361,6 +4411,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030231000",
+    "name": "ゼタ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710019000",
@@ -5678,6 +5738,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040146000",
+    "name": "バザラガ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "summon",
