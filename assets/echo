@@ -3841,6 +3841,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710062000",
+    "name": "シャルロッテ(空色春華装)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type5",
     "id": "3040020000",
@@ -4417,6 +4427,16 @@
     "name": "ゼタ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710061000",
+    "name": "ゼタ(茜空千鳥舞)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
@@ -7717,6 +7737,16 @@
     "name": "ランスロット",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710060000",
+    "name": "ランスロット(蒼天羽織袴)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
