@@ -3762,6 +3762,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type1",
+    "id": "3040144000",
+    "name": "シャリオス17世",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type2",
     "id": "3040010000",
     "name": "シャルロッテ",
