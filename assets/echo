@@ -721,6 +721,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030232000",
+    "name": "イッパツ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type1",
     "id": "3020038000",
@@ -5165,6 +5175,16 @@
     "type": "type2",
     "id": "3020005000",
     "name": "デリフォード",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040149000",
+    "name": "テレーズ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
