@@ -355,6 +355,17 @@ ob_start("sanitize_output");
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
 
+  <div class="table setting">
+    <p>画像をTwitter向け（960&times;540）にリサイズする？</p>
+    <div class="radio resize">
+      <input type="radio" name="resize" id="resizeyes" value="yes" checked>
+      <label for="resizeyes" class="r_rank3">はい</label>
+      <input type="radio" name="resize" id="resizeno" value="no">
+      <label for="resizeno" class="r_rank4">いいえ</label>
+    </div>
+    <span style="font-size: 6pt;">はい 960&times;540・いいえ 960&times;435</span>
+  </div>
+
   <div class="table setting" onselectstart="return false;" unselectable="on">
     <div class="box">
       <div><div id="screenshot" class="button">画像生成</div></div>

@@ -53,6 +53,11 @@ body {
   text-align: right;
   margin: 5px 10px;
 }
+.picture {
+  width: : 960px !important;
+  height: 420px !important;
+  padding: 60px 0 !important;
+}
 /* ********************
 　メニューの設定
 ******************** */
@@ -266,6 +271,11 @@ body {
 .radio input[type="radio"]:checked + .r_rank4 {
   background-color: #7f12b7;
   color: #fff;
+}
+.resize {
+  width: 190px;
+  height: 40px;
+  margin: 0 auto;
 }
 /* ********************
 　変更ボタン設定

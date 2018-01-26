@@ -344,6 +344,11 @@ $('#screenshot').on('click', function () {
   //$summon_screeen.find('.title').removeClass('type_icon');
   // サイトのURLを記載させる
   $summon_screeen.append('<p class="add">https://prfac.com/gbf/summon/</p>');
+  // Twitter用にサイズ変更
+  var resize = $('input[name=resize]:checked').val();
+  if(resize == 'yes'){
+    $summon_screeen.addClass('picture');
+  }
   // 画像生成を開始
   html2canvas($summon_screeen, {
     onrendered: function (canvas) {
@@ -363,6 +368,8 @@ $('#screenshot').on('click', function () {
     */
     // 記載させたURLを削除
     $summon_screeen.find('.add').remove();
+    // 追加したClassを削除
+    $summon_screeen.removeClass('picture');
     // トップに移動しちゃうので、画面位置を戻す
     //$("html,body").animate({scrollTop:$('.change').offset().top});
   },100);
