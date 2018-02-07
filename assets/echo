@@ -227,7 +227,7 @@
     "name": "アニラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -4020,6 +4020,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040115000",
+    "name": "ジョヤ",
+    "rank0": "風属性攻撃力が40%UP",
+    "rank3": "風属性攻撃力が40%UP/防御力10%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type6",
@@ -4661,12 +4671,32 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030233000",
+    "name": "ゾーイ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710048000",
     "name": "ゾーイ(オフェンス・オブ・コスモス)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040150000",
+    "name": "ゾーイ(ガチャVer)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -4947,6 +4977,16 @@
     "name": "月白のカーバンクル",
     "rank0": "",
     "rank3": "弱体耐性が20%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040263000",
+    "name": "ツクヨミ",
+    "rank0": "バトルメンバーの種族数に応じて闇属性攻撃力がUP(最大80％)",
+    "rank3": "バトルメンバーの種族数に応じて闇属性攻撃力がUP(最大100％)",
     "rank4": ""
   },
   {
@@ -5417,7 +5457,7 @@
     "name": "ナハト",
     "rank0": "装備している闇属性召喚石の数が多いほど闇属性攻撃力がUP(最大80%)",
     "rank3": "装備している闇属性召喚石の数が多いほど闇属性攻撃力がUP(最大100%)",
-    "rank4": ""
+    "rank4": "装備している闇属性召喚石の数が多いほど闇属性攻撃力がUP(最大110%)/闇属性キャラのHPが10%UP　★初回召喚時は全効果が発動"
   },
   {
     "class": "character",
@@ -7787,6 +7827,16 @@
     "name": "ランスロット(ロイヤルブルーキュイラス)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030234000",
+    "name": "ランドル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
