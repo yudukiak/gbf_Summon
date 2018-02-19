@@ -5130,6 +5130,16 @@
     "rank4": "TRUE"
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030236000",
+    "name": "ティナ(バレンタインver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "",
@@ -5477,6 +5487,16 @@
     "name": "ナルメア(胡蝶幻舞装)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030235000",
+    "name": "ナルメア(バレンタインver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -7335,6 +7355,16 @@
     "type": "type3",
     "id": "3040123000",
     "name": "メドゥーサ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040151000",
+    "name": "メドゥーサ(バレンタインver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
