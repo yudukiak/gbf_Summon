@@ -183,12 +183,21 @@ body {
 　召喚石画像の設定
 ******************** */
 .image {
+  position: relative;
   width: 90px;
+  height: 51px;
   text-align: center;
 }
 /* ********************
 　召喚石コメントの設定
 ******************** */
+.quality {
+  bottom: 3px;
+  right: 10px;
+  position: absolute;
+  color: #ffff5f;
+  text-shadow: 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f;
+}
 .spec {
   background-color: #191313;
   width: 200px;
@@ -205,24 +214,62 @@ body {
     width: 195px;
   }
 }
+.breakword .info {
+  width: 168px;
+  font-size: 12px;
+}
 .job {
+  display: table;
+  width: 100%;
+  height: 100%;
   color: #f2eee2;
   font-size: 32px;
   text-align: center;
-  position: relative;
+  /*position: relative;*/
 }
 .job>div {
-  height: 32px;
+  display: table-cell;
+  vertical-align: middle;
+  /*height: 32px;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+  margin: auto;*/
 }
 .chara {
 }
 .chara>div {
+}
+.type-npc{
+  position: relative;
+}
+.npc-rank {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 29px;
+}
+.ico-npc-rank {
+    display: block;
+    background: url(image/icon_type/icon_type8.png) no-repeat ;
+    -webkit-background-size: 29px 29px;
+    background-size: 29px 29px;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 4px;
+    left: 0px;
+    margin: auto;
+}
+.txt-npc-rank {
+    text-shadow: 0px 0px 1px #570980, 0px 0px 1px #570980, 0px 0px 1px #570980, 0px 0px 2px #570980, 0px 0px 2px #570980, 0px 0px 2px #570980;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
 }
 .rank0 {
   color: #f2eee2;

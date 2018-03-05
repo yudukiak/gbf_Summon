@@ -152,33 +152,47 @@ function radio_display($this_parent_class){
 　テーブルへ画像・文字を表示させる関数
 ******************** */
 function table_display(){
+  // 設定画面に.type_iconがある・ないの処理
+  var type_icon=$('.setting .type8 .title').hasClass('type_icon');
+  if (type_icon) {
+    $summon_screeen.find('.type8 .title').addClass('type_icon').html('フリー属性固定召喚石');
+    $('.type8 .content').removeClass('breakword');
+  } else if (!type_icon) {
+    //$summon_screeen.find('.type8 .title').removeClass('type_icon').html('推しキャラ');
+    $summon_screeen.find('.type8 .title')
+      .html('<span>Lv** ****</span><div class="npc-rank"><div class="ico-npc-rank"></div><div class="txt-npc-rank">*</div></div>')
+      .removeClass('type_icon').addClass('type-npc');
+    //$('.type8 .content').addClass('breakword');
+    $summon_screeen.find('.type8 .content').addClass('breakword'); // 改行CSSを追加
+    $summon_screeen.find('.type8 .name').text(''); // 召喚石名を空に
+    // エスケープ http://www.webdesignleaves.com/wp/htmlcss/1485/
+    var targets = ["&", "<", ">" ,'"', "'"]; // エスケープする文字はこれ！
+    var escapes = ["&amp;", "&lt;", "&gt;", "&quot;", "&#39;"]; // 変換先のジョブはこれ！
+    var converted = $('textarea[name="comment"]').val(); // 入力された文字取得をするのだ
+    for(var i=0; i<targets.length; i++){ // forでフォ～～～っと変換するのだ
+      converted = converted.replace(new RegExp(targets[i], 'g'), escapes[i]);
+    }
+    //$('.type8 .spec').html(converted).removeClass('rank0 rank3 rank4'); // 書き込みじゃ
+    $('.type8 .info').html(converted).removeClass('rank0 rank3 rank4'); // 書き込みじゃ
+  }
+  // ユーザーID取得＆書き込み
+  var job_rarity = $('.type9 [name=c_type]').val(); // ジータかグランか
+  var job_id = parseInt($('input[name="user_id"]').val());
+  var job_id = (function() {
+    if (Number.isNaN(job_id)){ return ''; } // NaN
+    return job_id; // 1-9
+  })();
+  //$('.type9 .spec').html('<div>'+job_id+'</div>');
+  $('.type9 .info').html('<div>'+job_id+'</div>');
+
+  // 設定個々の処理
   $('.c_summon').each(function() {
     var summon_select=$(this).val(); // 召喚石のID取得
     var summon_rank=$(this).nextAll('.radio').find('input:radio:checked').val(); // Rank取得
     var summon_type=$(this).parent().attr('class'); // 親要素取得
-    var job_rarity = $('.type9 [name=c_type]').val(); // ジータかグランか
-    var type_icon=$('.setting .type8 .title').hasClass('type_icon');
-
-    // 設定画面に.type_iconがあったら
-    if (type_icon) {
-      $summon_screeen.find('.type8 .title').addClass('type_icon').html('フリー属性固定召喚石');
-      $('.type8 .content').removeClass('breakword');
-    // 設定画面に.type_iconがなかったら
-    } else if (!type_icon) {
-      $summon_screeen.find('.type8 .title').removeClass('type_icon').html('推しキャラ');
-      $('.type8 .content').addClass('breakword');
-      // エスケープ http://www.webdesignleaves.com/wp/htmlcss/1485/
-      var targets = ["&", "<", ">" ,'"', "'"]; // エスケープする文字はこれ！
-      var escapes = ["&amp;", "&lt;", "&gt;", "&quot;", "&#39;"]; // 変換先のジョブはこれ！
-      var converted = $('textarea[name="comment"]').val(); // 入力された文字取得をするのだ
-      for(var i=0; i<targets.length; i++){ // forでフォ～～～っと変換するのだ
-        converted = converted.replace(new RegExp(targets[i], 'g'), escapes[i]);
-      }
-      $('.type8 .spec').html(converted).removeClass('rank0 rank3 rank4'); // 書き込みじゃ
-    }
 
     for(var n=0; n<filterdata.length; n++){
-      //var fname=filterdata[n].name;
+      var fname=filterdata[n].name;
       //var ftype = filterdata[n].type;
       var fclass=filterdata[n].class;
       //var frarity=filterdata[n].rarity;
@@ -208,17 +222,20 @@ function table_display(){
           if (summon_rank === void 0) return 'rank0';
           return summon_rank;
         })();
-        $summon_screeen.find('.'+summon_type+' .spec').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
+        if(/summon/.test(fclass)){
+          $summon_screeen.find('.'+summon_type+' .name').text('Lv1 '+fname); // 召喚石名を記入
+          //$summon_screeen.find('.'+summon_type+' .spec').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
+          $summon_screeen.find('.'+summon_type+' .info').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
+        }
+        if(/character/.test(fclass)){
+          $summon_screeen.find('.type8 .title span').text('Lv1 '+fname); // タイトルを変更
+          $summon_screeen.find('.type8 .txt-npc-rank').text('6'); // タイトルを変更
+        }
+        if(/summon|character/.test(fclass)){
+          $summon_screeen.find('.'+summon_type+' .quality').text('+99'); // プラス値を記入
+        }
       }
     }
-    // ユーザーID取得＆書き込み
-    var job_id = parseInt($('input[name="user_id"]').val());
-    var job_id = (function() {
-      if (Number.isNaN(job_id)){ return ''; } // NaN
-      return job_id; // 1-9
-    })();
-    $('.type9 .spec').html('<div>'+job_id+'</div>');
-
   });
 }
 

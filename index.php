@@ -90,39 +90,66 @@ ob_start("sanitize_output");
     <div class="box">
       <div class="type1">
         <div class="title type_icon">火属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type2">
         <div class="title type_icon">水属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type3">
         <div class="title type_icon">土属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type4">
         <div class="title type_icon">風属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type5">
         <div class="title type_icon">光属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type6">
         <div class="title type_icon">闇属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type7">
         <div class="title type_icon">フリー属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type8">
         <div class="title type_icon">フリー属性固定召喚石</div>
-        <div class="content"><div class="image"><img></div><div class="spec"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info"></div></div>
+        </div>
       </div>
       <div class="type9">
         <div class="title type_icon">ユーザーID</div>
-        <div class="content"><div class="image"><img></div><div class="spec job"></div></div>
+        <div class="content">
+          <div class="image"><img><span class="quality"></span></div>
+          <div class="spec"><div class="name"></div><div class="info job"></div></div>
+        </div>
       </div>
     </div>
   </div>
