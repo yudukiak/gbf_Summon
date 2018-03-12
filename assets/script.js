@@ -199,6 +199,9 @@ function table_display(){
           if(job_rarity.match(/^Djeeta$/)) return '_1_01.png';
           if(job_rarity.match(/^Gran$/)) return '_0_01.png';
           }
+          if (fclass.match(/^summon$/) && summon_rank.match(/^rank4$/)) {
+            if(fid.match(/^20400(20|27|28|34)000$/)) return '_02.jpg';
+          }
           return '.jpg';
         })();
         $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/'+fid+ _extension); // 画像の書き換え
