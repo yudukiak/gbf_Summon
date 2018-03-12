@@ -85,7 +85,7 @@ ob_start("sanitize_output");
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
 
-  <div class="table" id="summon_screeen">
+  <div class="table screeen" id="summon_screeen">
     <h2>フレ石編成的ななにか</h2>
     <div class="box">
       <div class="type1">
@@ -172,12 +172,18 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type1"></select>
-        <div class="radio">
-          <input type="radio" name="type1" id="radio13" value="rank3" checked="">
-          <label for="radio13" class="r_rank3">3凸</label>
-          <input type="radio" name="type1" id="radio14" value="rank4">
-          <label for="radio14" class="r_rank4" style="display: none;">4凸</label>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
+        <div class="box smn_select">
+          <div>
+            <select class="c_summon" name="type1"></select>
+          </div>
+          <div class="radio">
+            <input type="radio" name="type1" id="radio13" value="rank3" checked="">
+            <label for="radio13" class="r_rank3">3凸</label>
+            <input type="radio" name="type1" id="radio14" value="rank4">
+            <label for="radio14" class="r_rank4" style="display: none;">4凸</label>
+          </div>
         </div>
       </div>
 
@@ -197,12 +203,18 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type2"></select>
-        <div class="radio">
-          <input type="radio" name="type2" id="radio23" value="rank3" checked="">
-          <label for="radio23" class="r_rank3">3凸</label>
-          <input type="radio" name="type2" id="radio24" value="rank4">
-          <label for="radio24" class="r_rank4" style="display: none;">4凸</label>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
+        <div class="box smn_select">
+          <div>
+            <select class="c_summon" name="type2"></select>
+          </div>
+          <div class="radio">
+            <input type="radio" name="type2" id="radio23" value="rank3" checked="">
+            <label for="radio23" class="r_rank3">3凸</label>
+            <input type="radio" name="type2" id="radio24" value="rank4">
+            <label for="radio24" class="r_rank4" style="display: none;">4凸</label>
+          </div>
         </div>
       </div>
 
@@ -222,12 +234,18 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type3"></select>
-        <div class="radio">
-          <input type="radio" name="type3" id="radio33" value="rank3" checked="">
-          <label for="radio33" class="r_rank3">3凸</label>
-          <input type="radio" name="type3" id="radio34" value="rank4">
-          <label for="radio34" class="r_rank4" style="display: none;">4凸</label>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
+        <div class="box smn_select">
+          <div class="radio">
+            <input type="radio" name="type3" id="radio33" value="rank3" checked="">
+            <label for="radio33" class="r_rank3">3凸</label>
+            <input type="radio" name="type3" id="radio34" value="rank4">
+            <label for="radio34" class="r_rank4" style="display: none;">4凸</label>
+          </div>
+          <div>
+            <select class="c_summon" name="type3"></select>
+          <div>
         </div>
       </div>
 
@@ -247,6 +265,8 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
         <select class="c_summon" name="type4"></select>
         <div class="radio">
           <input type="radio" name="type4" id="radio43" value="rank3" checked="">
@@ -272,6 +292,8 @@ ob_start("sanitize_output");
           <option value="n">N</option>
         </select>
         <select class="c_summon" name="type5"></select>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
         <div class="radio">
           <input type="radio" name="type5" id="radio53" value="rank3" checked="">
           <label for="radio53" class="r_rank3">3凸</label>
@@ -302,6 +324,8 @@ ob_start("sanitize_output");
           <input type="radio" name="type6" id="radio64" value="rank4">
           <label for="radio64" class="r_rank4" style="display: none;">4凸</label>
         </div>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
       </div>
       <div class="type7" data-select="summon">
         <div class="title type_icon" style="border-bottom:none;">フリー属性1</div>

@@ -334,10 +334,11 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
 　3凸・4凸ボタンの動作
 　http://hueruwakame.php.xdomain.jp/article/html_css3.php
 ******************** */
-$('div').on('click', '.radio label', function(event){
+//$('div').on('click', '.radio label', function(event){
+$('.radio label').on('click', function(event){
   // 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
   event.preventDefault();
-  var vc_summon=$(this).parent().prev().val();
+  var vc_summon=$(this).parent().prev().children().val();
   for(var n=0; n<filterdata.length; n++){
     if(
       filterdata[n].id.match(vc_summon) // 選択中の召喚石
@@ -353,6 +354,23 @@ $('div').on('click', '.radio label', function(event){
     }
   }
 });
+/* ********************
+　レベルのプルダウン
+******************** */
+level_select(150);
+function level_select(levelMax){
+  for(var i=levelMax; i>=1; i--) {
+    var val = 'Lv'+i;
+    $('.c_level').append('<option value="'+val+'">'+val+'</option>');
+  }
+}
+/* ********************
+　プラス値のプルダウン
+******************** */
+for(var i=0; i<=99; i++) {
+  var val = '+'+i;
+  $('.c_quality').append('<option value="'+val+'">'+val+'</option>');
+}
 /* ********************
 　画像化の処理
 ******************** */
