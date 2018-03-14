@@ -188,8 +188,10 @@ function table_display(){
   // 設定個々の処理
   $('.c_summon').each(function() {
     var summon_select=$(this).val(); // 召喚石のID取得
-    var summon_rank=$(this).nextAll('.radio').find('input:radio:checked').val(); // Rank取得
-    var summon_type=$(this).parent().attr('class'); // 親要素取得
+    //var summon_rank=$(this).nextAll('.radio').find('input:radio:checked').val(); // Rank取得
+    var summon_rank=$(this).parent().next().find('input:radio:checked').val(); // Rank取得
+    //var summon_type=$(this).parent().attr('class'); // 親要素取得
+    var summon_type=$(this).parent().parent().parent().attr('class'); // 親要素取得
 
     for(var n=0; n<filterdata.length; n++){
       var fname=filterdata[n].name;
