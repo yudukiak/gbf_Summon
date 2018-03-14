@@ -63,7 +63,7 @@ ob_start("sanitize_output");
 </head>
 
 <body>
-  <div id="menu">
+  <div class="menu">
     <ul>
     <li><a href="/">ブログ</a></li>
     <li><a href="/gbf-summon-usage/">使い方</a></li>
@@ -72,7 +72,7 @@ ob_start("sanitize_output");
     </ul>
   </div>
 
-  <div class="table setting">
+  <div class="table">
     <p>最終更新：<?php
       $LUDate = getLastUpdateDate();
       print $LUDate;
@@ -80,7 +80,7 @@ ob_start("sanitize_output");
   </div>
 
   <!-- AdSense  -->
-  <div class="adsense">
+  <div class="table p0 adsense">
     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3052144799289425" data-ad-slot="1704901599"></ins>
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
@@ -154,7 +154,7 @@ ob_start("sanitize_output");
     </div>
   </div>
 
-  <div class="table setting" id="summon_setting" onselectstart="return false;" unselectable="on">
+  <div class="table setting" id="summon_setting">
     <div class="box">
       <div class="type1" data-select="summon">
         <div class="title type_icon" style="border-bottom:none;">火属性</div>
@@ -174,15 +174,13 @@ ob_start("sanitize_output");
         </select>
         <select class="c_level" name="c_level"></select>
         <select class="c_quality" name="c_quality"></select>
-        <div class="box smn_select">
+        <div class="box select">
           <div>
             <select class="c_summon" name="type1"></select>
           </div>
-          <div class="radio">
-            <input type="radio" name="type1" id="radio13" value="rank3" checked="">
-            <label for="radio13" class="r_rank3">3凸</label>
-            <input type="radio" name="type1" id="radio14" value="rank4">
-            <label for="radio14" class="r_rank4" style="display: none;">4凸</label>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type1" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type1" value="rank4"><span>4凸</span></label>
           </div>
         </div>
       </div>
@@ -205,15 +203,13 @@ ob_start("sanitize_output");
         </select>
         <select class="c_level" name="c_level"></select>
         <select class="c_quality" name="c_quality"></select>
-        <div class="box smn_select">
+        <div class="box select">
           <div>
             <select class="c_summon" name="type2"></select>
           </div>
-          <div class="radio">
-            <input type="radio" name="type2" id="radio23" value="rank3" checked="">
-            <label for="radio23" class="r_rank3">3凸</label>
-            <input type="radio" name="type2" id="radio24" value="rank4">
-            <label for="radio24" class="r_rank4" style="display: none;">4凸</label>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type2" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type2" value="rank4"><span>4凸</span></label>
           </div>
         </div>
       </div>
@@ -236,16 +232,14 @@ ob_start("sanitize_output");
         </select>
         <select class="c_level" name="c_level"></select>
         <select class="c_quality" name="c_quality"></select>
-        <div class="box smn_select">
-          <div class="radio">
-            <input type="radio" name="type3" id="radio33" value="rank3" checked="">
-            <label for="radio33" class="r_rank3">3凸</label>
-            <input type="radio" name="type3" id="radio34" value="rank4">
-            <label for="radio34" class="r_rank4" style="display: none;">4凸</label>
-          </div>
+        <div class="box select">
           <div>
             <select class="c_summon" name="type3"></select>
-          <div>
+          </div>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type3" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type3" value="rank4"><span>4凸</span></label>
+          </div>
         </div>
       </div>
 
@@ -267,12 +261,14 @@ ob_start("sanitize_output");
         </select>
         <select class="c_level" name="c_level"></select>
         <select class="c_quality" name="c_quality"></select>
-        <select class="c_summon" name="type4"></select>
-        <div class="radio">
-          <input type="radio" name="type4" id="radio43" value="rank3" checked="">
-          <label for="radio43" class="r_rank3">3凸</label>
-          <input type="radio" name="type4" id="radio44" value="rank4">
-          <label for="radio44" class="r_rank4" style="display: none;">4凸</label>
+        <div class="box select">
+          <div>
+            <select class="c_summon" name="type4"></select>
+          </div>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type4" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type4" value="rank4"><span>4凸</span></label>
+          </div>
         </div>
       </div>
       <div class="type5" data-select="summon">
@@ -291,14 +287,16 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type5"></select>
         <select class="c_level" name="c_level"></select>
         <select class="c_quality" name="c_quality"></select>
-        <div class="radio">
-          <input type="radio" name="type5" id="radio53" value="rank3" checked="">
-          <label for="radio53" class="r_rank3">3凸</label>
-          <input type="radio" name="type5" id="radio54" value="rank4">
-          <label for="radio54" class="r_rank4" style="display: none;">4凸</label>
+        <div class="box select">
+          <div>
+            <select class="c_summon" name="type5"></select>
+          </div>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type5" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type5" value="rank4"><span>4凸</span></label>
+          </div>
         </div>
       </div>
       <div class="type6" data-select="summon">
@@ -317,15 +315,17 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type6"></select>
-        <div class="radio">
-          <input type="radio" name="type6" id="radio63" value="rank3" checked="">
-          <label for="radio63" class="r_rank3">3凸</label>
-          <input type="radio" name="type6" id="radio64" value="rank4">
-          <label for="radio64" class="r_rank4" style="display: none;">4凸</label>
-        </div>
         <select class="c_level" name="c_level"></select>
         <select class="c_quality" name="c_quality"></select>
+        <div class="box select">
+          <div>
+            <select class="c_summon" name="type6"></select>
+          </div>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type6" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type6" value="rank4"><span>4凸</span></label>
+          </div>
+        </div>
       </div>
       <div class="type7" data-select="summon">
         <div class="title type_icon" style="border-bottom:none;">フリー属性1</div>
@@ -343,12 +343,16 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type7"></select>
-        <div class="radio">
-          <input type="radio" name="type7" id="radio73" value="rank3" checked="">
-          <label for="radio73" class="r_rank3">3凸</label>
-          <input type="radio" name="type7" id="radio74" value="rank4">
-          <label for="radio74" class="r_rank4" style="display: none;">4凸</label>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
+        <div class="box select">
+          <div>
+            <select class="c_summon" name="type7"></select>
+          </div>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type7" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type7" value="rank4"><span>4凸</span></label>
+          </div>
         </div>
       </div>
       <div class="type8" data-select="summon">
@@ -371,12 +375,16 @@ ob_start("sanitize_output");
           <option value="r">R</option>
           <option value="n">N</option>
         </select>
-        <select class="c_summon" name="type8"></select>
-        <div class="radio">
-          <input type="radio" name="type8" id="radio83" value="rank3" checked="">
-          <label for="radio83" class="r_rank3">3凸</label>
-          <input type="radio" name="type8" id="radio84" value="rank4">
-          <label for="radio84" class="r_rank4" style="display: none;">4凸</label>
+        <select class="c_level" name="c_level"></select>
+        <select class="c_quality" name="c_quality"></select>
+        <div class="box select">
+          <div>
+            <select class="c_summon" name="type8"></select>
+          </div>
+          <div class="radio" onselectstart="return false;" unselectable="on">
+            <label class="r_rank3"><input type="radio" name="type8" value="rank3" checked=""><span>3凸</span></label>
+            <label class="r_rank4"><input type="radio" name="type8" value="rank4"><span>4凸</span></label>
+          </div>
         </div>
       </div>
       <div class="type9" data-select="job">
@@ -393,51 +401,53 @@ ob_start("sanitize_output");
           <option value="ex">Class Ex</option>
           <option value="skin">Skin</option>
         </select>
-        <select class="c_summon" name="type9"></select>
-        <input type="number" name="user_id" value="12345678">
+        <div class="box select">
+          <div>
+            <select class="c_summon" name="type9"></select>
+          </div>
+          <div>
+            <input type="number" name="user_id" value="12345678">
+          </div>
+        </div>
       </div>
-      <a class="change button">変更する</a>
     </div>
+    <div id="change" class="button">変更する</div>
   </div>
 
   <!-- AdSense  -->
-  <div class="adsense">
+  <div class="table p0 adsense">
     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3052144799289425" data-ad-slot="1704901599"></ins>
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
 
-  <div class="table setting">
-    <p>画像をTwitter向け（960&times;540）にリサイズする？</p>
-    <div class="radio resize">
-      <input type="radio" name="resize" id="resizeyes" value="yes" checked>
-      <label for="resizeyes" class="r_rank3">はい</label>
-      <input type="radio" name="resize" id="resizeno" value="no">
-      <label for="resizeno" class="r_rank4">いいえ</label>
+  <div class="table p0">
+    <div class="w640">
+      <p>画像をTwitter向け（960&times;540）にリサイズする？</p>
+      <span style="font-size: 6pt;">はい 960&times;540・いいえ 960&times;435</span>
+      <div class="radio resize" onselectstart="return false;" unselectable="on">
+        <label class="r_rank3"><input type="radio" name="resize" id="resizeyes" value="yes" checked=""><span>はい</span></label>
+        <label class="r_rank4"><input type="radio" name="resize" id="resizeno" value="no"><span>いいえ</span></label>
+      </div>
+      <p>画像生成を行わないと、ツイートできません</p>
+      <div class="box box_arrow">
+        <div><div id="screenshot" class="button">画像生成</div></div>
+        <div><span class="arrow"></span></div>
+        <div><div id="tweet_open" class="button">ツイート</div></div>
+      </div>
     </div>
-    <span style="font-size: 6pt;">はい 960&times;540・いいえ 960&times;435</span>
+    <div id="output_screen">
+      <p>以下のプレビューからも保存できます</p>
+      <img id="screen_image">
+    </div>
   </div>
 
-  <div class="table setting" onselectstart="return false;" unselectable="on">
-    <div class="box">
-      <div><div id="screenshot" class="button">画像生成</div></div>
-      <div><span class="arrow"></span></div>
-      <!-- <div><a href="#"><div id="download_screen" class="button" >ダウンロード</div></a></div> -->
-      <div><div id="tweet_open" class="button">ツイート</div></div>
-    </div>
-    <p>画像生成を行わないと、ツイートできません</p>
-  </div>
-  <div id="output_screen">
-    <p>以下のプレビューからも保存できます</p>
-    <img id="screen_image">
-  </div>
-
-  <div class="table setting">
+  <div class="table">
     <hr>
     <p>なにかありましたら<a href="https://twitter.com/micelle9" target="_blank" style="color:#59b1eb;">Twitter</a>までご報告ください（´・ω・｀）</p>
     <p>あと<a href="http://amzn.asia/5euNPQp" target="_blank" style="color:#59b1eb;">コレ</a>欲しいの（´・ω・｀）</p>
   </div>
 
-  <div class="table setting">
+  <div class="table">
     <p style="font-size:12px;">&copy; 2017 micelle</p>
   </div>
 
