@@ -244,7 +244,7 @@ function table_display(){
 /* ********************
 　変更するボタンをクリックしたら、テーブルを表示
 ******************** */
-$('.change').on('click', function (){
+$('#change').on('click', function (){
   table_display();
   jsCookie_save();
 });
@@ -253,7 +253,8 @@ $('.change').on('click', function (){
 　3凸・4凸ボタンを有効化・無効化の関数へ
 ******************** */
 $('div').on('change', '.c_summon', function() {
-  var $this_parent_class=$(this).parent().attr('class');
+  //var $this_parent_class=$(this).parent().attr('class');
+  var $this_parent_class=$(this).parent().parent().parent().attr('class');
   radio_display($this_parent_class);
 });
 /* ********************
@@ -337,10 +338,10 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
 　http://hueruwakame.php.xdomain.jp/article/html_css3.php
 ******************** */
 //$('div').on('click', '.radio label', function(event){
-$('.radio label').on('click', function(event){
+$('.radio label span').on('click', function(event){
   // 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
   event.preventDefault();
-  var vc_summon=$(this).parent().prev().children().val();
+  var vc_summon=$(this).parent().parent().prev().children().val();
   for(var n=0; n<filterdata.length; n++){
     if(
       filterdata[n].id.match(vc_summon) // 選択中の召喚石
@@ -469,11 +470,17 @@ function jsCookie_save(){
   $('.c_summon').each(function() {
     var objCookie = {};
     var $this=$(this);
-    var c_target=$this.parent().attr('class'); // 親要素
-    var c_type=$this.siblings('.c_type').val(); // 属性
-    var c_rarity=$this.siblings('.c_rarity').val(); // レアリティ
+    var c_target=$this.parent().parent().parent().attr('class'); // 親要素
+    var c_type=$this.parent().parent().siblings('.c_type').val(); // 属性
+    var c_rarity=$this.parent().parent().siblings('.c_rarity').val(); // レアリティ
     var c_id=$this.val(); // 召喚石
-    var _rank=$this.nextAll('.radio').find('input:radio:checked').val(); // 解放段階
+    //var _rank=$this.nextAll('.radio').find('input:radio:checked').val(); // 解放段階
+    var _rank=$this.parent().next().find('input:radio:checked').val();
+    console.log(c_target);
+    console.log(c_type);
+    console.log(c_rarity);
+    console.log(c_id);
+    console.log(_rank);
     var c_rank=(function(){
       if(_rank===void 0) return 'rank0';
       if(_rank.match(/rank3/)) return 'rank3';
