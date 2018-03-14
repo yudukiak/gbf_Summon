@@ -7,6 +7,7 @@
 body {
   background-color: #231E18;
   color: #f2eee2;
+  text-align: center;
 }
 input[type="number"], input[type="text"], textarea {
   user-select: text;
@@ -27,13 +28,19 @@ input[type="number"], input[type="text"], textarea {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  height: 20px;
+  /*height: 20px;
   padding: 8px 12px;
+  width: 166px;
+  margin: 2px 0;*/
   border: none;
   color: #231E18;
-  width: 166px;
   border-radius: 3px;
-  margin: 2px 0;
+}
+input[type="number"] {
+  padding: 0 5px;
+  margin: 0;
+  height: 100%;
+  width: calc(100% - 10px);
 }
 select {
   outline: none;
@@ -97,9 +104,9 @@ select:-moz-focusring {
   color: #E1E2CF;
   width: 100px;
   margin: 5px 10px;
-  text-align: left;
+  /*text-align: left;*/
   font-size: 14px;
-  text-align: center;
+  /*text-align: center;*/
 }
 .menu li:first-child a {
   margin-right: 410px;
@@ -128,7 +135,7 @@ select:-moz-focusring {
   .screeen>.box>div{width: 309px;}
 }
 .screeen h2 {
-  text-align: center;
+  /*text-align: center;*/
   color: #f2eee2;
   line-height: 1;
   text-shadow: 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 1px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f, 0 0 2px #150f0f;
@@ -156,7 +163,7 @@ select:-moz-focusring {
   position: relative;
   width: 90px;
   height: 51px;
-  text-align: center;
+  /*text-align: center;*/
 }
 .quality {
   bottom: 3px;
@@ -170,6 +177,7 @@ select:-moz-focusring {
   width: 200px;
   font-size: 14px;
   line-height: 1;
+  text-align: left;
 }
 @media all and (-ms-high-contrast:none){
   .spec {width: 195px;}
@@ -230,7 +238,7 @@ select:-moz-focusring {
   text-shadow: 0px 0px 1px #570980, 0px 0px 1px #570980, 0px 0px 1px #570980, 0px 0px 2px #570980, 0px 0px 2px #570980, 0px 0px 2px #570980;
   color: #ffffff;
   position: relative;
-  text-align: center;
+  /*text-align: center;*/
 }
 .rank0 {
   color: #f2eee2;
@@ -245,17 +253,19 @@ select:-moz-focusring {
 }
 .type8 textarea {
   font-size: 12px;
-  height: 70px;
   overflow:hidden;
   resize: none;
-  /*margin-top: 5px;*/
   margin-top: 4px;
+  height: 70px;
+  width: 166px;
+  margin: 2px 0;
+  padding: 8px 12px;
 }
 /* ********************
   .setting
 ******************** */
 .setting {
-  text-align: center;
+  /*text-align: center;*/
 }
 .setting>.box>div {
   border: none;
@@ -297,7 +307,7 @@ select:-moz-focusring {
 ******************** */
 .title {
   color: #f2eee2;
-  text-align: center;
+  /*text-align: center;*/
   border-bottom: 2px solid #343027;
   margin: 3px 10px;
 }
@@ -344,7 +354,7 @@ select:-moz-focusring {
   background: #37332e;
   color: #869198;
   font-size: 16px;
-  text-align: center;
+  /*text-align: center;*/
   line-height: 35px;
   transition: .2s;
 }
@@ -374,7 +384,7 @@ select:-moz-focusring {
   width: 960px;
   margin: 0 auto;
   padding: 10px 0;
-  text-align: center;
+  /*text-align: center;*/
 }
 .w640 {
   width: 640px;
@@ -429,7 +439,7 @@ select:-moz-focusring {
   display: inline-block;
   width: 200px;
   height: 54px;
-  text-align: center;
+  /*text-align: center;*/
   text-decoration: none;
   line-height: 54px;
   outline: none;
@@ -511,7 +521,7 @@ select:-moz-focusring {
 /* 吹き出しの設定 */
 .float span {
   display: none;
-  text-align: center;
+  /*text-align: center;*/
 }
 .float:hover {
   /* アニメーション止める */
