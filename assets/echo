@@ -3972,6 +3972,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type4",
+    "id": "3040154000",
+    "name": "ジャンヌダルク(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type6",
     "id": "3040080000",
     "name": "ジャンヌダルク(闇属性ver)",
