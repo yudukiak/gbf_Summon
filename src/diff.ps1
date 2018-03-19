@@ -64,6 +64,12 @@ $imageString = Get-Content tmp\diff_image.txt | Sort-Object # sort text
 #$imageString = $imageString -replace "3020065000_02.jpg ", ""
 #$imageString = $imageString -replace "3030158000_02.jpg ", ""
 #$imageString = $imageString -replace "3040097000_02.jpg ", ""
+$imageString = $imageString -replace "2040020000_02.jpg ", ""
+$imageString = $imageString -replace "2040027000_02.jpg ", ""
+$imageString = $imageString -replace "2040028000_02.jpg ", ""
+$imageString = $imageString -replace "2040034000_02.jpg ", ""
+$imageString = $imageString -replace "2040046000_02.jpg ", ""
+$imageString = $imageString -replace "2040047000_02.jpg ", ""
 $imageString = $imageString -replace " ", "`r`n"
 Out-File -InputObject $imageString -FilePath tmp\diff_image.txt -Encoding UTF8 # saving
 echo "create diff_image.txt"
