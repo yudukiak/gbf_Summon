@@ -434,6 +434,9 @@ select:-moz-focusring {
   width: 190px;
   margin: 10px;
 }
+.display_none {
+  display: none !important;
+}
 /* どこ? */
 .picture {
   width: : 960px !important;

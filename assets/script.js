@@ -200,7 +200,8 @@ function table_display(){
       return '';
     })();
     var summon_quality=$(this).parent().parent().siblings('.c_quality').val(); // ＋取得
-
+    var summon_bonus=$(this).parent().parent().siblings('.c_bonus').val(); // リミボ取得
+    console.log(summon_bonus);
     for(var n=0; n<filterdata.length; n++){
       var fname=filterdata[n].name;
       //var ftype = filterdata[n].type;
@@ -243,8 +244,13 @@ function table_display(){
           $summon_screeen.find('.'+summon_type+' .info').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
         }
         if(/character/.test(fclass)){
-          $summon_screeen.find('.type8 .title span').text(summon_level+fname); // タイトルを変更
-          $summon_screeen.find('.type8 .txt-npc-rank').text('6'); // タイトルを変更
+          $summon_screeen.find('.type8 .title span').text(summon_level+fname);
+          if(summon_bonus===void 0 || summon_bonus==0){
+            $summon_screeen.find('.type8 .npc-rank').addClass('display_none');
+          }else{
+            $summon_screeen.find('.type8 .npc-rank').removeClass('display_none');
+            $summon_screeen.find('.type8 .txt-npc-rank').text(summon_bonus);
+          }
         }
         if(/summon|character/.test(fclass) && summon_quality>0){
           $summon_screeen.find('.'+summon_type+' .quality').text('+'+summon_quality); // プラス値を記入
@@ -326,6 +332,7 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
     $radio.find('.r_rank3').text('上限解放');
     $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
     $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
+    $this.parent().append('<select class="c_bonus" name="c_bonus"></select>');
     list_display($this_parent_class); //リスト作成
   /* ********************
   　.type_iconがなかったら「召喚石」の設定にする
@@ -424,6 +431,10 @@ function level_select($this_parent_class){
   for(var i=0; i<=99; i++) {
     var iStr = '+'+i;
     $c_quality.append('<option value="'+i+'">'+iStr+'</option>');
+  }
+  $('.c_bonus').append('<optgroup label="リミボ">');
+  for(var i=0; i<=99; i++) {
+    $('.c_bonus').append('<option value="'+i+'">'+i+'</option>');
   }
 }
 /* ********************
@@ -605,6 +616,7 @@ function jsCookie_load(){
       $radio.find('.r_rank3').text('上限解放');
       $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
       $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
+      $this.parent().append('<select class="c_bonus" name="c_bonus"></select>');
       list_display($this_parent_class); //リスト作成
     }
     if(text!==void 0){$('textarea[name="comment"]').val(decodeURIComponent(text));}
@@ -636,6 +648,7 @@ function jsCookie_load_old(){
     $radio.find('.r_rank3').text('上限解放');
     $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
     $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
+    $this.parent().append('<select class="c_bonus" name="c_bonus"></select>');
     list_display($this_parent_class); //リスト作成
     $this.parent().find('textarea').val(decodeURIComponent(cJson.sChar));
   }
