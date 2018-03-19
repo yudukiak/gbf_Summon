@@ -90,6 +90,7 @@ function jsCookie_Noload(){
     var $this_parent_class=$(this).attr('class');
     list_display($this_parent_class); // リスト生成
     radio_display($this_parent_class); // 3凸・4凸ボタン
+    level_select($this_parent_class);
     table_display(); // 一覧表示
   });
 }
@@ -102,6 +103,7 @@ function list_display($this_parent_class){
   var nselect=$this_parent_class.data('select');
   var vtype=$this_parent_class.find('[name=c_type]').val();
   var vrarity=$this_parent_class.find('[name=c_rarity]').val();
+  $this_parent_class.find('.c_summon').empty();
   for(var n=0; n<filterdata.length; n++){
     var ftype=filterdata[n].type;
     var frarity=filterdata[n].rarity;
@@ -192,12 +194,18 @@ function table_display(){
     var summon_rank=$(this).parent().next().find('input:radio:checked').val(); // Rank取得
     //var summon_type=$(this).parent().attr('class'); // 親要素取得
     var summon_type=$(this).parent().parent().parent().attr('class'); // 親要素取得
+    var summon_level=$(this).parent().parent().siblings('.c_level').val(); // レベル取得
+    var summon_level=(function(){
+      if(summon_level>1) return 'Lv'+summon_level+' ';
+      return '';
+    })();
+    var summon_quality=$(this).parent().parent().siblings('.c_quality').val(); // ＋取得
 
     for(var n=0; n<filterdata.length; n++){
       var fname=filterdata[n].name;
       //var ftype = filterdata[n].type;
       var fclass=filterdata[n].class;
-      //var frarity=filterdata[n].rarity;
+      var frarity=filterdata[n].rarity;
       var fid=filterdata[n].id;
       if (fid.match(summon_select)){
         // 召喚石・キャラ・JOBの画像
@@ -224,17 +232,22 @@ function table_display(){
           if (summon_rank === void 0) return 'rank0';
           return summon_rank;
         })();
+        // スキン名の括弧を取り除く
+        var fname  = (function() {
+          if (frarity.match(/^skin$/)) return fname.replace(/\(.+\)/,'');
+          return fname;
+        })();
         if(/summon/.test(fclass)){
-          $summon_screeen.find('.'+summon_type+' .name').text('Lv1 '+fname); // 召喚石名を記入
+          $summon_screeen.find('.'+summon_type+' .name').text(summon_level+fname); // 召喚石名を記入
           //$summon_screeen.find('.'+summon_type+' .spec').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
           $summon_screeen.find('.'+summon_type+' .info').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
         }
         if(/character/.test(fclass)){
-          $summon_screeen.find('.type8 .title span').text('Lv1 '+fname); // タイトルを変更
+          $summon_screeen.find('.type8 .title span').text(summon_level+fname); // タイトルを変更
           $summon_screeen.find('.type8 .txt-npc-rank').text('6'); // タイトルを変更
         }
-        if(/summon|character/.test(fclass)){
-          $summon_screeen.find('.'+summon_type+' .quality').text('+99'); // プラス値を記入
+        if(/summon|character/.test(fclass) && summon_quality>0){
+          $summon_screeen.find('.'+summon_type+' .quality').text('+'+summon_quality); // プラス値を記入
         }
       }
     }
@@ -256,6 +269,7 @@ $('div').on('change', '.c_summon', function() {
   //var $this_parent_class=$(this).parent().attr('class');
   var $this_parent_class=$(this).parent().parent().parent().attr('class');
   radio_display($this_parent_class);
+  level_select($this_parent_class);
 });
 /* ********************
 　属性,レアリティのプルダウンが変わったら
@@ -266,9 +280,10 @@ $('div').on('change', 'div [name=c_type], div [name=c_rarity]', function() {
   var $vtype=$parent.find('[name=c_type]');
   var vtype=$vtype.val();
   var $this_parent_class=$parent.attr('class');
-  $starget.empty(); // とりま召喚石リストを削除
+  //$starget.empty(); // とりま召喚石リストを削除
   list_display($this_parent_class); //リスト作成
   radio_display($this_parent_class);//ラジオボタン
+  level_select($this_parent_class);
   // 属性それぞれ色を変える
   switch(vtype){
     case 'type1':$vtype.css('color', '#FF0000');break;
@@ -292,7 +307,7 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
   var $nclass=$this.hasClass('type_icon');
   var $this_parent_class=$this.parent().attr('class');
   $c_rarity.find('option').prop('selected', false);
-  $('.type8 .c_summon').empty();
+  //$('.type8 .c_summon').empty();
   $c_rarity.empty();
   /* ********************
   　.type_iconがあったら「推しキャラ」の設定にする
@@ -332,6 +347,7 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
   }
   // 最後にボタン制御
   radio_display($this_parent_class);
+  level_select($this_parent_class);
 });
 /* ********************
 　3凸・4凸ボタンの動作
@@ -356,23 +372,59 @@ $('.radio label span').on('click', function(event){
       }
     }
   }
+  var $this_parent_class=$(this).parent().parent().parent().parent().attr('class');
+  level_select($this_parent_class);
 });
 /* ********************
-　レベルのプルダウン
+　レベル・プラス値のプルダウン
 ******************** */
-level_select(150);
-function level_select(levelMax){
-  for(var i=levelMax; i>=1; i--) {
-    var val = 'Lv'+i;
-    $('.c_level').append('<option value="'+val+'">'+val+'</option>');
+function level_select($this_parent_class){
+  var $this_parent_class=$('#summon_setting .'+$this_parent_class);
+  var $c_level=$this_parent_class.find('.c_level');
+  var $c_quality=$this_parent_class.find('.c_quality')
+  var summonVal=$this_parent_class.find('.c_summon').val();
+  var classStr = $this_parent_class.attr('data-select');
+  var rarity=$this_parent_class.find('.c_rarity').val();
+  var rank=$this_parent_class.find('input:radio:checked').val();
+  var rankStr=(function(){
+    if (rank==void 0) return 'rank0';
+    return rank;
+  })();
+  $c_level.empty();
+  $c_quality.empty();
+  // 召喚石 N:10,40 / R:20,50 / SR:30,75 / SSR:40,100,150
+  // キャラ R:20,50 / SR:30,70 / SSR:40,80,100
+  var levelMax = (function(){
+    if (summonVal.match(/^20300(68|69|70|71|72)000$/)) return 20; // 例外 巫女SR
+    if (classStr.match(/^summon$/) && rarity.match(/^n$/) && rankStr.match(/^rank0$/)) return 10; // sN0
+    if (classStr.match(/^(summon|character)$/) && rarity.match(/^r$/) && rankStr.match(/^rank0$/)) return 20; // sR0 cR0
+    if (classStr.match(/^(summon|character)$/) && rarity.match(/^sr$/) && rankStr.match(/^rank0$/)) return 30; // sSR0 cSR0
+    if (classStr.match(/^summon$/) && rarity.match(/^n$/) && rankStr.match(/^rank3$/)) return 40; // sN3
+    if (classStr.match(/^(summon|character)$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank0$/)) return 40; // sSSR0 cSSR0
+    if (classStr.match(/^(summon|character)$/) && rarity.match(/^r$/) && rankStr.match(/^rank3$/)) return 50; // sR3 cR3
+    //if () return 60;
+    if (classStr.match(/^character$/) && rarity.match(/^sr$/) && rankStr.match(/^rank3$/)) return 70; // cSR3
+    if (classStr.match(/^summon$/) && rarity.match(/^sr$/) && rankStr.match(/^rank3$/)) return 75; // sSR3
+    if (classStr.match(/^character$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank3$/)) return 80; // cSSR3
+    //if () return 90;
+    if (classStr.match(/^summon$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank3$/)) return 100; // sSSR3
+    if (classStr.match(/^character$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank4$/)) return 100; // cSSR4
+    if (classStr.match(/^summon$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank4$/)) return 150; // sSSR4
+    return 0;
+  })();
+  if(levelMax === 0){
+    $c_level.append('<option value=""></option>');
+    $c_quality.append('<option value=""></option>');
+    return;
   }
-}
-/* ********************
-　プラス値のプルダウン
-******************** */
-for(var i=0; i<=99; i++) {
-  var val = '+'+i;
-  $('.c_quality').append('<option value="'+val+'">'+val+'</option>');
+  for(var i=levelMax; i>=1; i--) {
+    var iStr = 'Lv'+i;
+    $c_level.append('<option value="'+i+'">'+iStr+'</option>');
+  }
+  for(var i=0; i<=99; i++) {
+    var iStr = '+'+i;
+    $c_quality.append('<option value="'+i+'">'+iStr+'</option>');
+  }
 }
 /* ********************
 　画像化の処理
@@ -474,13 +526,7 @@ function jsCookie_save(){
     var c_type=$this.parent().parent().siblings('.c_type').val(); // 属性
     var c_rarity=$this.parent().parent().siblings('.c_rarity').val(); // レアリティ
     var c_id=$this.val(); // 召喚石
-    //var _rank=$this.nextAll('.radio').find('input:radio:checked').val(); // 解放段階
     var _rank=$this.parent().next().find('input:radio:checked').val();
-    console.log(c_target);
-    console.log(c_type);
-    console.log(c_rarity);
-    console.log(c_id);
-    console.log(_rank);
     var c_rank=(function(){
       if(_rank===void 0) return 'rank0';
       if(_rank.match(/rank3/)) return 'rank3';
@@ -532,6 +578,7 @@ function jsCookie_load(){
     } else if (rank==='rank4') {
       $target.find('.radio input:eq(1)').prop('checked', true);
     }
+    if(target!==void 0){level_select(target);}
     var user = value.user;
     var summon = value.summon;
     var text = value.text;
@@ -544,7 +591,7 @@ function jsCookie_load(){
       var $radio=$this.nextAll('.radio');
       var $this_parent_class=$this.parent().attr('class');
       $c_rarity.find('option').prop('selected', false);
-      $('.type8 .c_summon').empty();
+      //$('.type8 .c_summon').empty();
       $c_rarity.empty();
       $this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
       $c_type.css('color', '#FF0000').attr("selected", false).val('type1');
@@ -575,7 +622,7 @@ function jsCookie_load_old(){
     var $radio=$this.nextAll('.radio');
     var $this_parent_class=$this.parent().attr('class');
     $c_rarity.find('option').prop('selected', false);
-    $('.type8 .c_summon').empty();
+    //$('.type8 .c_summon').empty();
     $c_rarity.empty();
     $this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
     $c_type.css('color', '#FF0000').attr("selected", false).val('type1');
@@ -613,6 +660,7 @@ function jsCookie_load_old(){
     list_display($this_parent_class); // リストを生成
     $sCookieType.find('.c_summon').val(cookieJson.sSele); // 保存した召喚石を選択
     radio_display($this_parent_class); // 3凸・4凸ボタン
+    level_select($this_parent_class);
     if (cookieJson.sRank==='rank0') {
       $sCookieType.find('.radio input:eq(0)').prop('checked', false);
     } else if (cookieJson.sRank==='rank3') {
