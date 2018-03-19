@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 // PHPが吐き出すHTMLファイルを『自動的に最小化する』スクリプト
 // https://manablog.org/php-html-minify/
 function sanitize_output($buffer) {
