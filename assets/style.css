@@ -275,7 +275,7 @@ select optgroup {
   margin-top: 4px;
   height: 70px;
   width: 166px;
-  margin: 2px 0;
+  margin: 0;
   padding: 8px 12px;
 }
 /* ********************
@@ -296,10 +296,16 @@ select optgroup {
   width: calc(25% - 3px);
   margin: 2px;
 }
-.setting .c_type {
+.setting .type9 .c_type,
+.setting .type9 .c_rarity {
+  width: calc(50% - 2px);
+}
+.setting .c_type,
+.setting .type9 .c_type {
   margin-left: 0;
 }
-.setting .c_quality {
+.setting .c_quality,
+.setting .type9 .c_rarity {
   margin-right: 0;
 }
 .setting .select {
@@ -321,6 +327,10 @@ select optgroup {
 }
 .setting .select8 {
   height: auto;
+}
+.setting .select8 > div {
+  margin-top: 0;
+  margin-bottom: : 0;
 }
 .setting .select8 > div:first-child {
   width: calc(100% - 194px);
