@@ -200,6 +200,10 @@ function table_display(){
       return '';
     })();
     var summon_quality=$(this).parent().parent().siblings('.c_quality').val(); // ＋取得
+    var summon_quality=(function(){
+      if(summon_quality>1) return '+'+summon_quality+' ';
+      return '';
+    })();
     var summon_bonus=$(this).parent().parent().parent().find('.c_bonus').val(); // リミボ取得
     for(var n=0; n<filterdata.length; n++){
       var fname=filterdata[n].name;
@@ -251,8 +255,8 @@ function table_display(){
             $summon_screeen.find('.type8 .txt-npc-rank').text(summon_bonus);
           }
         }
-        if(/summon|character/.test(fclass) && summon_quality>0){
-          $summon_screeen.find('.'+summon_type+' .quality').text('+'+summon_quality); // プラス値を記入
+        if(/summon|character/.test(fclass)){
+          $summon_screeen.find('.'+summon_type+' .quality').text(summon_quality); // プラス値を記入
         }
       }
     }
@@ -529,6 +533,7 @@ function jsCookie_save(){
     return encodeURIComponent(_text);
   })();
   var c_summon=$('.setting .type8 .title').hasClass('type_icon'); // フリー2はtrue、推しキャラはfalse
+  var c_bonus=$('.c_bonus').val(); // リミボ取得
   objCookie.user   = c_user;
   objCookie.text  = c_text;
   objCookie.summon = c_summon;
@@ -546,11 +551,16 @@ function jsCookie_save(){
       if(_rank.match(/rank3/)) return 'rank3';
       if(_rank.match(/rank4/)) return 'rank4';
     })();
+    var c_level=$this.parent().parent().siblings('.c_level').val(); // レベル取得
+    var c_quality=$this.parent().parent().siblings('.c_quality').val(); // ＋取得
     objCookie.target = c_target;
     objCookie.type   = c_type;
     objCookie.rarity = c_rarity;
     objCookie.id     = c_id;
     objCookie.rank   = c_rank;
+    objCookie.level  = c_level;
+    objCookie.quality = c_quality;
+    if(c_target == "type8"){objCookie.bonus = c_bonus;}
     aryCookie.push(objCookie);
   });
   // Cookieを保存
@@ -570,6 +580,8 @@ function jsCookie_load(){
     var rarity = value.rarity;
     var id = value.id;
     var rank = value.rank;
+    var level = value.level;
+    var quality = value.quality;
     var $target = $('#summon_setting .'+target);
     var $c_type = $target.find('.c_type');
     $c_type.val(type); // 属性をセット
@@ -592,10 +604,10 @@ function jsCookie_load(){
     } else if (rank==='rank4') {
       $target.find('.radio input:eq(1)').prop('checked', true);
     }
-    if(target!==void 0){level_select(target);}
     var user = value.user;
     var summon = value.summon;
     var text = value.text;
+    var bonus = value.bonus;
     if(user!==void 0){$('input[name="user_id"]').val(user);}
     if(summon === false){
       var $this=$('.setting .type8 .title');
@@ -623,6 +635,10 @@ function jsCookie_load(){
       //$this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
       list_display($this_parent_class); //リスト作成
     }
+    if(target!==void 0){level_select(target);}
+    if(level!==void 0){$target.find('.c_level').val(level);} // 保存したレベルを選択
+    if(level!==void 0){$target.find('.c_quality').val(quality);} // 保存した＋を選択
+    if(bonus!==void 0){$('.c_bonus').val(bonus);}
     if(text!==void 0){$('textarea[name="comment"]').val(decodeURIComponent(text));}
   });
   table_display(); // 一覧表示
