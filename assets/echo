@@ -2591,6 +2591,16 @@
   },
   {
     "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "250301_wa",
+    "name": "黒猫道士",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "job",
     "rarity": "c2",
     "type": "Djeeta Gran",
     "id": "160101_me",
@@ -2947,6 +2957,16 @@
     "name": "桜庭薫",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "230301_sw",
+    "name": "ザ・グローリー",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
@@ -4017,7 +4037,7 @@
     "name": "シュヴァリエ・マグナ",
     "rank0": "スキル「騎解方陣」の効果が50%UP",
     "rank3": "スキル「騎解方陣」の効果が100%UP",
-    "rank4": ""
+    "rank4": "スキル「騎解方陣」の効果が120%UP"
   },
   {
     "class": "character",
@@ -4677,7 +4697,7 @@
     "name": "セレスト・マグナ",
     "rank0": "スキル「黒霧方陣」の効果が50%UP",
     "rank3": "スキル「黒霧方陣」の効果が100%UP",
-    "rank4": ""
+    "rank4": "スキル「黒霧方陣」の効果が120%UP"
   },
   {
     "class": "character",
