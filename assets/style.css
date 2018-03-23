@@ -178,6 +178,10 @@ select optgroup {
   height: 51px;
   /*text-align: center;*/
 }
+.type9 .image > img {
+  width: 65px;
+  height: auto;
+}
 .quality {
   bottom: 3px;
   right: 10px;
