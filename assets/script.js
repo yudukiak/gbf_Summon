@@ -200,8 +200,7 @@ function table_display(){
       return '';
     })();
     var summon_quality=$(this).parent().parent().siblings('.c_quality').val(); // ＋取得
-    var summon_bonus=$(this).parent().parent().siblings('.c_bonus').val(); // リミボ取得
-    console.log(summon_bonus);
+    var summon_bonus=$(this).parent().parent().parent().find('.c_bonus').val(); // リミボ取得
     for(var n=0; n<filterdata.length; n++){
       var fname=filterdata[n].name;
       //var ftype = filterdata[n].type;
