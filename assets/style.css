@@ -87,6 +87,9 @@ select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #828c9a;
 }
+select optgroup {
+  color: #333;
+}
 /* ********************
   .menu
 ******************** */
@@ -315,6 +318,15 @@ select:-moz-focusring {
 }
 .select {
   /*position: relative;*/
+}
+.setting .select8 {
+  height: auto;
+}
+.setting .select8 > div:first-child {
+  width: calc(100% - 194px);
+}
+.setting .select8 > div:last-child {
+  width: auto;
 }
 /* ********************
   .title

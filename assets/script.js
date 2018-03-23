@@ -315,6 +315,7 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
   $c_rarity.find('option').prop('selected', false);
   //$('.type8 .c_summon').empty();
   $c_rarity.empty();
+  $('.select8').remove();
   /* ********************
   　.type_iconがあったら「推しキャラ」の設定にする
   ******************** */
@@ -331,8 +332,9 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
     $this.parent().attr('data-select','character').data('select','character');
     $radio.find('.r_rank3').text('上限解放');
     $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
-    $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
-    $this.parent().append('<select class="c_bonus" name="c_bonus"></select>');
+    $this.parent().append('<div class="box select select8"><div><select class="c_bonus" name="c_bonus"></select></div>'+
+    '<div><textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45"></textarea></div></div>');
+    //$this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
     list_display($this_parent_class); //リスト作成
   /* ********************
   　.type_iconがなかったら「召喚石」の設定にする
@@ -388,7 +390,8 @@ $('.radio label span').on('click', function(event){
 function level_select($this_parent_class){
   var $this_parent_class=$('#summon_setting .'+$this_parent_class);
   var $c_level=$this_parent_class.find('.c_level');
-  var $c_quality=$this_parent_class.find('.c_quality')
+  var $c_quality=$this_parent_class.find('.c_quality');
+  var $c_bonus=$this_parent_class.find('.c_bonus');
   var summonVal=$this_parent_class.find('.c_summon').val();
   var classStr = $this_parent_class.attr('data-select');
   var rarity=$this_parent_class.find('.c_rarity').val();
@@ -397,8 +400,6 @@ function level_select($this_parent_class){
     if (rank==void 0) return 'rank0';
     return rank;
   })();
-  $c_level.empty();
-  $c_quality.empty();
   // 召喚石 N:10,40 / R:20,50 / SR:30,75 / SSR:40,100,150
   // キャラ R:20,50 / SR:30,70 / SSR:40,80,100
   var levelMax = (function(){
@@ -419,23 +420,26 @@ function level_select($this_parent_class){
     if (classStr.match(/^summon$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank4$/)) return 150; // sSSR4
     return 0;
   })();
+  $c_level.empty();
+  $c_quality.empty();
+  $c_bonus.empty();
   if(levelMax === 0){
     $c_level.append('<option value=""></option>');
     $c_quality.append('<option value=""></option>');
+    $c_bonus.append('<option value=""></option>');
     return;
   }
-  for(var i=levelMax; i>=1; i--) {
-    var iStr = 'Lv'+i;
-    $c_level.append('<option value="'+i+'">'+iStr+'</option>');
-  }
-  for(var i=0; i<=99; i++) {
-    var iStr = '+'+i;
-    $c_quality.append('<option value="'+i+'">'+iStr+'</option>');
-  }
-  $('.c_bonus').append('<optgroup label="リミボ">');
-  for(var i=0; i<=99; i++) {
-    $('.c_bonus').append('<option value="'+i+'">'+i+'</option>');
-  }
+  var levelOption = '';
+  for(var i=levelMax-1; i>1; i--) {levelOption += '<option value="'+i+'">Lv'+i+'</option>';}
+  $c_level.append('<optgroup label="レベル"><option value="'+levelMax+'">Lv'+levelMax+'</option><option value="1">Lv1</option></optgroup>');
+  $c_level.append('<optgroup label="その他">'+levelOption+'</optgroup>');
+  var qualityOption = '';
+  for(var i=1; i<99; i++) {qualityOption += '<option value="'+i+'">+'+i+'</option>';}
+  $c_quality.append('<optgroup label="ボーナス"><option value="0">+0</option><option value="99">+99</option></optgroup>');
+  $c_quality.append('<optgroup label="その他">'+qualityOption+'</optgroup>');
+  var bonusOption = '';
+  for(var i=0; i<=99; i++) {bonusOption += '<option value="'+i+'">'+i+'</option>';}
+  $c_bonus.append('<optgroup label="リミボ">'+bonusOption+'</optgroup>');
 }
 /* ********************
 　画像化の処理
@@ -615,8 +619,9 @@ function jsCookie_load(){
       $this.parent().attr('data-select','character').data('select','character');
       $radio.find('.r_rank3').text('上限解放');
       $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
-      $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
-      $this.parent().append('<select class="c_bonus" name="c_bonus"></select>');
+      $this.parent().append('<div class="box select select8"><div><select class="c_bonus" name="c_bonus"></select></div>'+
+      '<div><textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45"></textarea></div></div>');
+      //$this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
       list_display($this_parent_class); //リスト作成
     }
     if(text!==void 0){$('textarea[name="comment"]').val(decodeURIComponent(text));}
@@ -647,8 +652,9 @@ function jsCookie_load_old(){
     $this.parent().attr('data-select','character').data('select','character');
     $radio.find('.r_rank3').text('上限解放');
     $radio.find('.r_rank4').text('最終上限解放').css({'line-height':'16px','height':'16px','font-size':'12px'});
-    $this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
-    $this.parent().append('<select class="c_bonus" name="c_bonus"></select>');
+    $this.parent().append('<div class="box select select8"><div><select class="c_bonus" name="c_bonus"></select></div>'+
+    '<div><textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45"></textarea></div></div>');
+    //$this.parent().append('<textarea type="text" name="comment" placeholder="45文字まで入力可能です" maxlength="45">');
     list_display($this_parent_class); //リスト作成
     $this.parent().find('textarea').val(decodeURIComponent(cJson.sChar));
   }
