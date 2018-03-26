@@ -196,7 +196,7 @@ function table_display(){
     var summon_type=$(this).parent().parent().parent().attr('class'); // 親要素取得
     var summon_level=$(this).parent().parent().siblings('.c_level').val(); // レベル取得
     var summon_level=(function(){
-      if(summon_level>1) return 'Lv'+summon_level+' ';
+      if(summon_level>0) return 'Lv'+summon_level+' ';
       return '';
     })();
     var summon_quality=$(this).parent().parent().siblings('.c_quality').val(); // ＋取得
