@@ -143,11 +143,9 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
     <div><textarea type="text" name="tweTxt" maxlength="140"></textarea></div>
     <div id="140tweet" style="font-size: 12pt;text-align: right;">140</div>
     <div>ハッシュタグ「#フレ石編成的ななにか」をつける</div>
-    <div class="radio">
-      <input type="radio" name="hashtag" id="hashyes" value="yes">
-      <label for="hashyes" class="r_rank3">はい</label>
-      <input type="radio" name="hashtag" id="hashno" value="no" checked>
-      <label for="hashno" class="r_rank4">いいえ</label>
+    <div class="radio" onselectstart="return false;" unselectable="on">
+      <label class="r_rank3"><input type="radio" name="hashtag" value="yes" checked=""><span>はい</span></label>
+      <label class="r_rank4"><input type="radio" name="hashtag" value="no"><span>いいえ</span></label>
     </div>
     <div id="tweet" class="button">ツイートする</div>';
   } else {
