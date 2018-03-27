@@ -104,6 +104,9 @@ function list_display($this_parent_class){
   var vtype=$this_parent_class.find('[name=c_type]').val();
   var vrarity=$this_parent_class.find('[name=c_rarity]').val();
   $this_parent_class.find('.c_summon').empty();
+  if(ntype.match(/[1-8]/)){
+    $('.'+ntype+' .c_summon').append('<option value="unselected">【未選択】</option>');
+  }
   for(var n=0; n<filterdata.length; n++){
     var ftype=filterdata[n].type;
     var frarity=filterdata[n].rarity;
@@ -205,6 +208,20 @@ function table_display(){
       return '';
     })();
     var summon_bonus=$(this).parent().parent().parent().find('.c_bonus').val(); // リミボ取得
+    // 未選択の処理
+    if(summon_select=='unselected'){
+      $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/empty.jpg'); // 画像の書き換え
+      var $nclass=$(this).parent().parent().siblings().hasClass('type_icon');
+      if ($nclass) { // 召喚石
+        $summon_screeen.find('.'+summon_type+' .name').text('召喚石が設定されていません');
+        $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4').addClass('rank0');
+      } else { // キャラ
+        $summon_screeen.find('.'+summon_type+' .name').text('コメントが設定されていません');
+        $summon_screeen.find('.'+summon_type+' .title span').text('推しキャラが設定されていません');
+        $summon_screeen.find('.'+summon_type+' .npc-rank').addClass('display_none');
+        $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4');
+      }
+    }
     for(var n=0; n<filterdata.length; n++){
       var fname=filterdata[n].name;
       //var ftype = filterdata[n].type;
@@ -410,6 +427,7 @@ function level_select($this_parent_class){
   // 召喚石 N:10,40 / R:20,50 / SR:30,75 / SSR:40,100,150
   // キャラ R:20,50 / SR:30,70 / SSR:40,80,100
   var levelMax = (function(){
+    if (summonVal.match(/^unselected$/)) return 0; // 例外 未選択
     if (summonVal.match(/^20300(68|69|70|71|72)000$/)) return 20; // 例外 巫女SR
     if (classStr.match(/^summon$/) && rarity.match(/^n$/) && rankStr.match(/^rank0$/)) return 10; // sN0
     if (classStr.match(/^(summon|character)$/) && rarity.match(/^r$/) && rankStr.match(/^rank0$/)) return 20; // sR0 cR0
