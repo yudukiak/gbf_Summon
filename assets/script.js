@@ -211,6 +211,7 @@ function table_display(){
     // 未選択の処理
     if(summon_select=='unselected'){
       $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/empty.jpg'); // 画像の書き換え
+      $summon_screeen.find('.'+summon_type+' .quality').text(''); // ＋の書き換え
       var $nclass=$(this).parent().parent().siblings().hasClass('type_icon');
       if ($nclass) { // 召喚石
         $summon_screeen.find('.'+summon_type+' .name').text('召喚石が設定されていません');
