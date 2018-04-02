@@ -6020,6 +6020,16 @@
     "rank4": ""
   },
   {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "370001_me",
+    "name": "発光壊獣マーバ",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type6",
@@ -6520,6 +6530,16 @@
     "rank4": "TRUE"
   },
   {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "370201_me",
+    "name": "浮遊壊獣ブコン",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type5",
@@ -6957,6 +6977,16 @@
     "name": "辺獄の亡者",
     "rank0": "水属性攻撃力が10%UP",
     "rank3": "水属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "370301_me",
+    "name": "暴喰壊獣デルマ",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
