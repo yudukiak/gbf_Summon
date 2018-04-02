@@ -1961,6 +1961,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710067000",
+    "name": "カリオストロ(ソリオストロ)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type6",
     "id": "3040062000",
@@ -8063,6 +8073,16 @@
     "class": "character",
     "rarity": "skin",
     "type": "type0",
+    "id": "3710065000",
+    "name": "ランスロット(鎖と壁とランスロット)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
     "id": "3710032000",
     "name": "ランスロット(The&nbsp;Dragon&nbsp;Knights)",
     "rank0": "",
@@ -8707,6 +8727,16 @@
     "name": "ロゼッタ(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710066000",
+    "name": "ロゼッタ(ロゼッタさん)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
