@@ -2271,6 +2271,16 @@
   },
   {
     "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040279000",
+    "name": "兄弟砲ギガントブレイザー",
+    "rank0": "光属性攻撃40%UP/光属性キャラの奥義ダメージ10%UP",
+    "rank3": "光属性攻撃50％UP/光属性キャラの奥義ダメージ15％UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
     "rarity": "n",
     "type": "type1",
     "id": "2010003000",
@@ -4147,6 +4157,16 @@
     "name": "シルフィードベル",
     "rank0": "レアモンスターの出現確率UP",
     "rank3": "レアモンスターの出現確率UP★性能強化",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040156000",
+    "name": "シロウ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -6580,6 +6600,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040281000",
+    "name": "フレイ",
+    "rank0": "風属性攻撃力40%UP/再生効果",
+    "rank3": "風属性攻撃力60%UP/再生効果",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "r",
     "type": "type1",
@@ -8665,6 +8695,16 @@
     "type": "type4",
     "id": "3030144000",
     "name": "ロベルティナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040155000",
+    "name": "ロボミ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
