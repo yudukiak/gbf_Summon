@@ -195,6 +195,10 @@ select optgroup {
   font-size: 14px;
   line-height: 1;
   text-align: left;
+  margin-right: 10px;
+}
+.content .spec {
+  margin-right: 10px;
 }
 .name {
   font-size: 12px;
@@ -205,6 +209,10 @@ select optgroup {
 }
 @media all and (-ms-high-contrast:none){
   .spec {width: 195px;}
+}
+.info {
+  width: 182px;
+  font-size: 12px;
 }
 .breakword .info {
   width: 168px;
