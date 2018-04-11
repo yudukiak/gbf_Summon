@@ -1330,6 +1330,16 @@
     "rank4": "TRUE"
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040157000",
+    "name": "江戸川コナン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
