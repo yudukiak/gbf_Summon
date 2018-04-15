@@ -1,4 +1,7 @@
-# フレ石編成的ななにか
+フレ石編成的ななにか
+=====
+[![GitHub last commit](https://img.shields.io/github/last-commit/micelle/gbf_Summon.svg)](https://github.com/micelle/gbf_Summon/commits/)
+[![GitHub license](https://img.shields.io/github/license/micelle/gbf_Summon.svg)](https://github.com/micelle/gbf_Summon/blob/master/LICENSE)
 
 
 ## 説明 (Description)
