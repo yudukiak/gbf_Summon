@@ -310,6 +310,16 @@
     "rank4": "光属性攻撃力が80%UP/光属性キャラのHPが20%UP"
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030238000",
+    "name": "安室透",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "r",
     "type": "type4",
