@@ -481,13 +481,18 @@ $('#screenshot').on('click', function () {
     $summon_screeen.addClass('picture');
   }
   // 画像生成を開始
-  html2canvas($summon_screeen, {
-    onrendered: function (canvas) {
+  var target = $summon_screeen.get(0);
+  html2canvas(target).then(function(canvas) {
     var imgData = canvas.toDataURL();
-      $('#screen_image').attr('src', imgData);
-      $('#download_screen').attr('download', 'image.png').attr('href', imgData);
-    }
+    $('#screen_image').attr('src', imgData);
   });
+  //html2canvas($summon_screeen, {
+  //  onrendered: function (canvas) {
+  //  var imgData = canvas.toDataURL();
+  //    $('#screen_image').attr('src', imgData);
+  //    $('#download_screen').attr('download', 'image.png').attr('href', imgData);
+  //  }
+  //});
   setTimeout(function(){
     // 属性アイコンを0.1秒後に再表示させます
     /*

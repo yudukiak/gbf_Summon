@@ -464,6 +464,11 @@ ob_start("sanitize_output");
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.min.js"></script>
   <?php
+    // html2canvas v1.0.0-alpha.12
+    $file = "assets/html2canvas.min.js";
+    $FUDate = getFileUpdateDate($file);
+    $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+    print $fileStr;
     // script
     $file = "assets/script.min.js";
     $FUDate = getFileUpdateDate($file);
