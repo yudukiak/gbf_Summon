@@ -446,6 +446,10 @@ function level_select($this_parent_class){
     if (classStr.match(/^summon$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank4$/)) return 150; // sSSR4
     return 0;
   })();
+  var qualityMax = (function(){
+    if (classStr.match(/^character$/)) return 300;
+    return 99;
+  })();
   $c_level.empty();
   $c_quality.empty();
   $c_bonus.empty();
@@ -460,11 +464,11 @@ function level_select($this_parent_class){
   $c_level.append('<optgroup label="レベル"><option value="'+levelMax+'">Lv'+levelMax+'</option><option value="1">Lv1</option></optgroup>');
   $c_level.append('<optgroup label="その他">'+levelOption+'</optgroup>');
   var qualityOption = '';
-  for(var i=1; i<99; i++) {qualityOption += '<option value="'+i+'">+'+i+'</option>';}
-  $c_quality.append('<optgroup label="ボーナス"><option value="0">+0</option><option value="99">+99</option></optgroup>');
+  for(var i=1; i<qualityMax; i++) {qualityOption += '<option value="'+i+'">+'+i+'</option>';}
+  $c_quality.append('<optgroup label="ボーナス"><option value="0">+0</option><option value="'+qualityMax+'">+'+qualityMax+'</option></optgroup>');
   $c_quality.append('<optgroup label="その他">'+qualityOption+'</optgroup>');
   var bonusOption = '';
-  for(var i=0; i<=99; i++) {bonusOption += '<option value="'+i+'">'+i+'</option>';}
+  for(var i=0; i<=999; i++) {bonusOption += '<option value="'+i+'">'+i+'</option>';}
   $c_bonus.append('<optgroup label="リミボ">'+bonusOption+'</optgroup>');
 }
 /* ********************
