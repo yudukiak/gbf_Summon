@@ -71,6 +71,7 @@ $imageString = $imageString -replace "2040034000_02.jpg ", ""
 $imageString = $imageString -replace "2040046000_02.jpg ", ""
 $imageString = $imageString -replace "2040047000_02.jpg ", ""
 $imageString = $imageString -replace "empty.jpg", ""
+$imageString = $imageString -replace "tmp", ""
 $imageString = $imageString -replace " ", "`r`n"
 Out-File -InputObject $imageString -FilePath tmp\diff_image.txt -Encoding UTF8 # saving
 echo "create diff_image.txt"
