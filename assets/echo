@@ -4480,6 +4480,16 @@
     "rank4": ""
   },
   {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "310401_sw",
+    "name": "スマイルクルー",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "r",
     "type": "type2",
