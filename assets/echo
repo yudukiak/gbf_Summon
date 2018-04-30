@@ -351,6 +351,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030242000",
+    "name": "アリーザ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710022000",
@@ -1241,6 +1251,16 @@
   },
   {
     "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040203000",
+    "name": "ウリエル",
+    "rank0": "[メイン]土属性攻撃力が100%UP<br>[サブ]土属性キャラのダメージ上限5%UP",
+    "rank3": "[メイン]土属性攻撃力が120%UP<br>[サブ]土属性キャラのダメージ上限10%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
     "rarity": "r",
     "type": "type3",
     "id": "2020002000",
@@ -2102,6 +2122,16 @@
   {
     "class": "character",
     "rarity": "sr",
+    "type": "type3",
+    "id": "3030240000",
+    "name": "カルメリーナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
     "type": "type1",
     "id": "3030046000",
     "name": "カレン",
@@ -2357,6 +2387,16 @@
     "name": "グガランナ",
     "rank0": "風属性チェインバーストの威力が120%UP",
     "rank3": "風属性チェインバーストの威力が150%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040159000",
+    "name": "ククル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -2798,6 +2838,16 @@
     "rank0": "水属性攻撃力が40%UP",
     "rank3": "水属性攻撃力が50%UP",
     "rank4": "水属性攻撃力が60%UP"
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040282000",
+    "name": "古今独歩の大拳豪",
+    "rank0": "火属性攻撃力が40％UP",
+    "rank3": "火属性攻撃力が50%UP/1回攻撃時の奥義ゲージ上昇量UP",
+    "rank4": ""
   },
   {
     "class": "character",
