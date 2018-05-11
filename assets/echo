@@ -3781,6 +3781,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710068000",
+    "name": "シス(スクレ・オーンブルノワール)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type2",
     "id": "3030041000",
@@ -5707,6 +5717,16 @@
     "name": "ナルメア",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710069000",
+    "name": "ナルメア(黒蝶夢幻衣)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
