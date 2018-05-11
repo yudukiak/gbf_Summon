@@ -187,6 +187,7 @@ function table_display(){
     if (Number.isNaN(job_id)){ return ''; } // NaN
     return job_id; // 1-9
   })();
+  var job_id = String(job_id).replace(/\D/g, "").slice(0, 10);
   //$('.type9 .spec').html('<div>'+job_id+'</div>');
   $('.type9 .info').html('<div>'+job_id+'</div>');
 
@@ -533,6 +534,12 @@ $('#tweet_open').on('click', function () {
   } else {
     alert('画像生成してください。');
   }
+});
+// ID
+$("input[name=user_id]").bind("keydown keyup keypress mouseup focusout change", function() {
+  var val = $(this).val();
+  var val = String(val).replace(/\D/g, "").slice(0, 10);
+  $(this).val(val);
 });
 // --------------------------------------------------------
 // js-cookie、Cookeの処理

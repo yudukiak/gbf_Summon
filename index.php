@@ -406,7 +406,7 @@ ob_start("sanitize_output");
             <select class="c_summon" name="type9"></select>
           </div>
           <div>
-            <input type="number" name="user_id" value="12345678">
+            <input type="number" name="user_id" min="0" max="9999999999" value="12345678">
           </div>
         </div>
       </div>
