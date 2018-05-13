@@ -390,6 +390,8 @@ $('.setting .type8 .title').on('click', function () { // フリー2をクリッ�
 ******************** */
 //$('div').on('click', '.radio label', function(event){
 $('.radio label span').on('click', function(event){
+  var className = $(this).parent().parent().attr('class');
+  if(className.match(/resize/)){return;}
   // 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
   event.preventDefault();
   var vc_summon=$(this).parent().parent().prev().children().val();
@@ -429,7 +431,7 @@ function level_select($this_parent_class){
   // 召喚石 N:10,40 / R:20,50 / SR:30,75 / SSR:40,100,150
   // キャラ R:20,50 / SR:30,70 / SSR:40,80,100
   var levelMax = (function(){
-    if (summonVal.match(/^unselected$/)) return 0; // 例外 未選択
+    if (summonVal.match(/^unselected$/) || summonVal==null) return 0; // 例外 未選択
     if (summonVal.match(/^20300(68|69|70|71|72)000$/)) return 20; // 例外 巫女SR
     if (classStr.match(/^summon$/) && rarity.match(/^n$/) && rankStr.match(/^rank0$/)) return 10; // sN0
     if (classStr.match(/^(summon|character)$/) && rarity.match(/^r$/) && rankStr.match(/^rank0$/)) return 20; // sR0 cR0
