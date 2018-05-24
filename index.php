@@ -398,7 +398,8 @@ ob_start("sanitize_output");
           <option value="c3">Class III</option>
           <option value="c2">Class II</option>
           <option value="c1" selected>Class I</option>
-          <option value="ex">Class Ex</option>
+          <option value="ex1">Class Ex</option>
+          <option value="ex2">Class Ex II</option>
           <option value="skin">Skin</option>
         </select>
         <div class="box select">
