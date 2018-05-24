@@ -33,8 +33,8 @@ function init(data){
   var search = location.search;
   if(search.length > 1) {
     var searchRep = search.replace(/\?/g, "");
-    var searchJsn = decodeURIComponent(searchRep);
     try {
+      var searchJsn = decodeURIComponent(searchRep);
       var searchAry = JSON.parse(searchJsn);
     } catch (e) {
       alert('URLに不備があるため、初期設定で表示します。');
@@ -456,8 +456,8 @@ function jsAry_load(ary){
 $(function(){
   var $summon_screeen=$('#summon_screeen');
   // JSONを取得
-  $.getJSON('assets?json=echo',init);
   $.getJSON('assets?json=foxtrot',init2);
+  $.getJSON('assets?json=echo',init);
   // 変更するボタンをクリックしたら、テーブルを表示
   $('#change').on('click', function (){
     table_display();
