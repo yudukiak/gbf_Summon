@@ -5011,6 +5011,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040170000",
+    "name": "ソリッズ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type3",
     "id": "3030020000",
@@ -6251,6 +6261,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030239000",
+    "name": "バロワ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type1",
     "id": "3020034000",
@@ -6765,6 +6785,16 @@
     "type": "type6",
     "id": "3030190000",
     "name": "プレデター",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040158000",
+    "name": "ブローディア",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -8617,6 +8647,16 @@
     "name": "レーシングスーツ",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030241000",
+    "name": "レオナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
