@@ -2770,6 +2770,16 @@
     "rank4": ""
   },
   {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "220301_kt",
+    "name": "剣豪",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "r",
     "type": "type2",
@@ -5717,7 +5727,7 @@
     "name": "ナルメア",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
