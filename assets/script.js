@@ -4,8 +4,8 @@ $(function(){
 ******************** */
 // 変数設定
 var $summon_screeen=$('#summon_screeen');
-var alldata=[]; // すべてのデータを保持しておく配列
-var filterdata=[]; // フィルターを掛けたデータを保持する配列
+var echoData = [];
+var foxData = {};
 // Cookieの保存・読み込み
 // https://qiita.com/tatsuyankmura/items/8e09cbd5ee418d35f169
 var setCookie = function(cookieName, value, expire){
@@ -25,11 +25,14 @@ var getCookie = function(cookieName){
   }
   return str;
 }
-
-$.getJSON('assets/echo.php',init); // JSONを取得
+// JSONを取得
+$.getJSON('assets?json=echo',init);
+$.getJSON('assets?json=foxtrot',init2);
+function init2(data){
+  foxData = data;
+}
 function init(data){
-  alldata=data; // 全データを保持しておく
-  filterdata=alldata; // とりあえず全データを代入しておく
+  echoData = data;
   setCookie('ck_cookie', true);
   var checkCookie = getCookie('ck_cookie');
   if(!checkCookie){alert('Cookieが無効になっています。');}
@@ -107,12 +110,12 @@ function list_display($this_parent_class){
   if(ntype.match(/[1-8]/)){
     $('.'+ntype+' .c_summon').append('<option value="unselected">【未選択】</option>');
   }
-  for(var n=0; n<filterdata.length; n++){
-    var ftype=filterdata[n].type;
-    var frarity=filterdata[n].rarity;
-    var fclass=filterdata[n].class;
-    var fname=filterdata[n].name;
-    var fid=filterdata[n].id;
+  for(var n=0; n<echoData.length; n++){
+    var ftype=echoData[n].type;
+    var frarity=echoData[n].rarity;
+    var fclass=echoData[n].class;
+    var fname=echoData[n].name;
+    var fid=echoData[n].id;
     var fselected=(function() {
       if(
         fname.match(/マグナ/)&&ntype.match(/[1-7]/) ||
@@ -134,8 +137,8 @@ function list_display($this_parent_class){
 function radio_display($this_parent_class){
   var $this_parent_class=$('#summon_setting .'+$this_parent_class);
   var vc_summon=$this_parent_class.find('.c_summon').val();
-  for(var n=0; n<filterdata.length; n++){
-    if (filterdata[n].id.match(vc_summon)){
+  for(var n=0; n<echoData.length; n++){
+    if (echoData[n].id.match(vc_summon)){
       var $label_0=$this_parent_class.find('.radio label:eq(0)'); // 3凸のボタン（ラベル）
       var $label_1=$this_parent_class.find('.radio label:eq(1)'); // 4凸のボタン（ラベル）
       var $input_0=$this_parent_class.find('.radio input:eq(0)'); // 3凸のボタン（チェック）
@@ -145,9 +148,9 @@ function radio_display($this_parent_class){
       $label_1.css('display', 'none');
       $input_0.prop('checked', true);
       $input_1.prop('checked', false);
-      if (filterdata[n].rank4.length > 1) {
+      if (echoData[n].rank4.length > 1) {
         $label_1.css('display', ''); // 4凸を表示
-      } else if (filterdata[n].rank3.length===0) {
+      } else if (echoData[n].rank3.length===0) {
         $input_0.prop('checked', false); // 3凸の選択を外す
       }
     }
@@ -224,12 +227,12 @@ function table_display(){
         $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4');
       }
     }
-    for(var n=0; n<filterdata.length; n++){
-      var fname=filterdata[n].name;
-      //var ftype = filterdata[n].type;
-      var fclass=filterdata[n].class;
-      var frarity=filterdata[n].rarity;
-      var fid=filterdata[n].id;
+    for(var n=0; n<echoData.length; n++){
+      var fname=echoData[n].name;
+      //var ftype = echoData[n].type;
+      var fclass=echoData[n].class;
+      var frarity=echoData[n].rarity;
+      var fid=echoData[n].id;
       if (fid.match(summon_select)){
         // 召喚石・キャラ・JOBの画像
         //var _frarity = (function() {
@@ -266,8 +269,8 @@ function table_display(){
         })();
         if(/summon/.test(fclass)){
           $summon_screeen.find('.'+summon_type+' .name').text(summon_level+fname); // 召喚石名を記入
-          //$summon_screeen.find('.'+summon_type+' .spec').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
-          $summon_screeen.find('.'+summon_type+' .info').html(filterdata[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
+          //$summon_screeen.find('.'+summon_type+' .spec').html(echoData[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
+          $summon_screeen.find('.'+summon_type+' .info').html(echoData[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
         }
         if(/character/.test(fclass)){
           $summon_screeen.find('.type8 .title span').text(summon_level+fname);
@@ -395,11 +398,11 @@ $('.radio label span').on('click', function(event){
   // 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
   event.preventDefault();
   var vc_summon=$(this).parent().parent().prev().children().val();
-  for(var n=0; n<filterdata.length; n++){
+  for(var n=0; n<echoData.length; n++){
     if(
-      filterdata[n].id.match(vc_summon) // 選択中の召喚石
-      &&filterdata[n].rank0.length!==0 // 無凸の文字数
-      &&filterdata[n].rank3.length!==0 // 3凸の文字数
+      echoData[n].id.match(vc_summon) // 選択中の召喚石
+      &&echoData[n].rank0.length!==0 // 無凸の文字数
+      &&echoData[n].rank3.length!==0 // 3凸の文字数
     ){
       var $input=$(this).prev('input');
       if($input.prop('checked')){
@@ -428,9 +431,13 @@ function level_select($this_parent_class){
     if (rank==void 0) return 'rank0';
     return rank;
   })();
-  // 召喚石 N:10,40 / R:20,50 / SR:30,75 / SSR:40,100,150
-  // キャラ R:20,50 / SR:30,70 / SSR:40,80,100
-  var levelMax = (function(){
+  var levelAry = (function(){
+    if (summonVal.match(/^unselected$/) || summonVal==null || classStr=="job") return [0]; // 例外 未選択
+    if (String(summonVal).match(/^20300(68|69|70|71|72)000$/)) return [20]; // 例外 巫女SR
+    return foxData[classStr][rarity][rankStr];
+  })();
+  var levelMax = levelAry[levelAry.length - 1];
+  /*var levelMax = (function(){
     if (summonVal.match(/^unselected$/) || summonVal==null) return 0; // 例外 未選択
     if (summonVal.match(/^20300(68|69|70|71|72)000$/)) return 20; // 例外 巫女SR
     if (classStr.match(/^summon$/) && rarity.match(/^n$/) && rankStr.match(/^rank0$/)) return 10; // sN0
@@ -448,7 +455,7 @@ function level_select($this_parent_class){
     if (classStr.match(/^character$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank4$/)) return 100; // cSSR4
     if (classStr.match(/^summon$/) && rarity.match(/^ssr$/) && rankStr.match(/^rank4$/)) return 150; // sSSR4
     return 0;
-  })();
+  })();*/
   var qualityMax = (function(){
     if (classStr.match(/^character$/)) return 300;
     return 99;
@@ -462,9 +469,18 @@ function level_select($this_parent_class){
     $c_bonus.append('<option value=""></option>');
     return;
   }
+  var levelStr = levelAry.join('|');
+  var levelReg = new RegExp('^('+levelStr+')$');
+  var levelMaxOption = '';
   var levelOption = '';
-  for(var i=levelMax-1; i>1; i--) {levelOption += '<option value="'+i+'">Lv'+i+'</option>';}
-  $c_level.append('<optgroup label="レベル"><option value="'+levelMax+'">Lv'+levelMax+'</option><option value="1">Lv1</option></optgroup>');
+  for(var i=levelMax; i>1; i--) {
+    if (levelReg.test(i)) {
+      levelMaxOption += '<option value="'+i+'">Lv'+i+'</option>'
+    } else {
+      levelOption += '<option value="'+i+'">Lv'+i+'</option>';
+    }
+  }
+  $c_level.append('<optgroup label="レベル">'+levelMaxOption+'<option value="1">Lv1</option></optgroup>');
   $c_level.append('<optgroup label="その他">'+levelOption+'</optgroup>');
   var qualityOption = '';
   for(var i=1; i<qualityMax; i++) {qualityOption += '<option value="'+i+'">+'+i+'</option>';}
