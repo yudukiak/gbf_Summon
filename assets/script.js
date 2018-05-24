@@ -30,7 +30,18 @@ function init(data){
   var checkCookie = getCookie('ck_cookie');
   if(!checkCookie){alert('Cookieが無効になっています。');}
   var st_key = getCookie('st_key');
-  if (st_key) {
+  var search = location.search;
+  if(search.length > 1) {
+    var searchRep = search.replace(/\?/g, "");
+    var searchJsn = decodeURIComponent(searchRep);
+    try {
+      var searchAry = JSON.parse(searchJsn);
+    } catch (e) {
+      alert('URLに不備があるため、初期設定で表示します。');
+      jsCookie_Noload();
+    }
+    jsAry_load(searchAry);
+  } else if (st_key) {
     // cookieがあるとき
     swal({
       title: '前回の設定内容を復元する？',
@@ -429,7 +440,13 @@ function jsAry_load(ary){
     if(level!==void 0){$target.find('.c_level').val(level);} // 保存したレベルを選択
     if(level!==void 0){$target.find('.c_quality').val(quality);} // 保存した＋を選択
     if(bonus!==void 0){$('.c_bonus').val(bonus);}
-    if(text!==void 0){$('textarea[name="comment"]').val(decodeURIComponent(text));}
+    if(text!==void 0){
+      var textDec = "";
+      try {
+        textDec = decodeURIComponent(text);
+      } catch (e) {}
+      $('textarea[name="comment"]').val(textDec);
+    }
   });
   table_display(); // 一覧表示
 }
