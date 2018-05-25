@@ -55,13 +55,13 @@ function init(data){
       showCancelButton: true,
       confirmButtonText: 'する',
       cancelButtonText:  'しない'
-    }).then(function () {
-      jsAry_load(queryAry);
-    }, function (dismiss) {
-      if (dismiss === 'cancel', 'overlay' ) {
+    }).then(function (res) {
+      if (res.value) {
+        jsAry_load(queryAry);
+      } else {
         jsCookie_Noload();
       }
-    })
+    });
   // Cookieが存在する場合
   } else if (st_key) {
     swal({
@@ -73,13 +73,13 @@ function init(data){
       showCancelButton: true,
       confirmButtonText: 'する',
       cancelButtonText:  'しない'
-    }).then(function () {
-      jsCookie_load();
-    }, function (dismiss) {
-      if (dismiss === 'cancel', 'overlay' ) {
+    }).then(function (res) {
+      if (res.value) {
+        jsCookie_load();
+      } else {
         jsCookie_Noload();
       }
-    })
+    });
   // URLクエリパラメータ＆Cookieが存在しない場合
   } else {
     jsCookie_Noload();
