@@ -288,7 +288,7 @@ function level_select($this_parent_class){
     return rank;
   })();
   var levelAry = (function(){
-    if (summonVal.match(/^unselected$/) || summonVal==null || classStr=="job") return [0]; // 例外 未選択
+    if (summonVal==null || summonVal.match(/^unselected$/) || classStr=="job") return [0]; // 例外 未選択
     if (String(summonVal).match(/^20300(68|69|70|71|72)000$/)) return [20]; // 例外 巫女SR
     return foxData[classStr][rarity][rankStr];
   })();
