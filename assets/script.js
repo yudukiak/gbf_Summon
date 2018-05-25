@@ -1,6 +1,8 @@
 // 変数設定
 var echoData = [];
 var foxData = {};
+var url = location.href.replace(/\?.*/, '');
+var query = location.search.replace(/\?/g, "");
 // --------------------
 // 各種関数
 // --------------------
@@ -28,41 +30,58 @@ function init(data){
   echoData = data;
   setCookie('ck_cookie', true);
   var checkCookie = getCookie('ck_cookie');
-  if(!checkCookie){alert('Cookieが無効になっています。');}
+  if(!checkCookie){
+    //alert('Cookieが無効になっています。');
+    swal('Cookieが無効になっています', '設定内容が保存できません。<br>ご注意ください。', 'info');
+  }
   var st_key = getCookie('st_key');
-  var search = location.search;
-  if(search.length > 1) {
-    var searchRep = search.replace(/\?/g, "");
+  // URLクエリパラメータが存在する場合
+  if(query.length > 1) {
     try {
-      var searchJsn = decodeURIComponent(searchRep);
-      var searchAry = JSON.parse(searchJsn);
+      var queryJsn = decodeURIComponent(query);
+      var queryAry = JSON.parse(queryJsn);
     } catch (e) {
-      alert('URLに不備があるため、初期設定で表示します。');
+      //alert('URLに不備があるため、初期設定で表示します。');
+      swal('URLに不備があります', 'デフォルトの設定で表示します。', 'error');
       jsCookie_Noload();
+      return;
     }
-    jsAry_load(searchAry);
+    swal({
+      title: 'URLの設定内容を復元する？',
+      type: 'question',
+      html:
+      'URLに設定された召喚石やIDなどを呼び出せます。<br>'+
+      'しないを選択するとデフォルトの設定が表示されます。',
+      showCancelButton: true,
+      confirmButtonText: 'する',
+      cancelButtonText:  'しない'
+    }).then(function () {
+      jsAry_load(queryAry);
+    }, function (dismiss) {
+      if (dismiss === 'cancel', 'overlay' ) {
+        jsCookie_Noload();
+      }
+    })
+  // Cookieが存在する場合
   } else if (st_key) {
-    // cookieがあるとき
     swal({
       title: '前回の設定内容を復元する？',
       type: 'question',
       html:
       '前回、設定した召喚石やIDなどを呼び出せます。<br>'+
       'しないを選択するとデフォルトの設定が表示されます。',
-      //showCloseButton: true,
       showCancelButton: true,
       confirmButtonText: 'する',
       cancelButtonText:  'しない'
     }).then(function () {
       jsCookie_load();
     }, function (dismiss) {
-      // dismiss can be 'cancel', 'overlay', 'close', and 'timer'
       if (dismiss === 'cancel', 'overlay' ) {
         jsCookie_Noload();
       }
     })
+  // URLクエリパラメータ＆Cookieが存在しない場合
   } else {
-    // cookieがないとき
     jsCookie_Noload();
   }
 }
@@ -366,6 +385,7 @@ function jsCookie_save(){
   var jsnCookie = JSON.stringify(aryCookie);
   var jsnCookie_e = encodeURIComponent(jsnCookie);
   setCookie('st_key', jsnCookie_e, expire);
+  urlQuery(jsnCookie_e);
 }
 function jsCookie_load(){
   // cookieを取得し、配列にする
@@ -450,11 +470,32 @@ function jsAry_load(ary){
   });
   table_display(); // 一覧表示
 }
+// URLクエリパラメータの処理
+function urlQuery(data){
+  var urlData = (function(){
+    if (data == null) return url;
+    return url + '?' + data;
+  })();
+  $('input[name="query"]').val(urlData);
+}
+// クリップボードへコピー
+function copyTextToClipboard(textVal){
+  var copyFrom = document.createElement("textarea");
+  copyFrom.textContent = textVal;
+  var bodyElm = document.getElementsByTagName("body")[0];
+  bodyElm.appendChild(copyFrom);
+  copyFrom.select();
+  var retVal = document.execCommand('copy');
+  bodyElm.removeChild(copyFrom);
+  return retVal;
+}
 // --------------------
 // 読み込み時
 // --------------------
 $(function(){
   var $summon_screeen=$('#summon_screeen');
+  // クエリ
+  urlQuery();
   // JSONを取得
   $.getJSON('assets?json=foxtrot',init2);
   $.getJSON('assets?json=echo',init);
@@ -570,7 +611,7 @@ $(function(){
   // 画像化の処理
   $('#screenshot').on('click', function () {
     // サイトのURLを記載させる
-    $summon_screeen.append('<p class="add">https://prfac.com/gbf/summon/</p>');
+    $summon_screeen.append('<p class="add">'+url+'</p>');
     // Twitter用にサイズ変更
     var resize = $('input[name=resize]:checked').val();
     if (resize == 'yes') $summon_screeen.addClass('picture');
@@ -606,7 +647,8 @@ $(function(){
         ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no"
       );
     } else {
-      alert('画像生成してください。');
+      //alert('画像生成してください。');
+      swal("エラー", "画像生成してください。", "error");
     }
   });
   // ID
@@ -614,5 +656,23 @@ $(function(){
     var val = $(this).val();
     var val = String(val).replace(/\D/g, "").slice(0, 10);
     $(this).val(val);
+  });
+  // コピー
+  $('.svg svg').on('click', function (){
+    var val = $("input[name=query]").val();
+    var res = copyTextToClipboard(val);
+    if (res) {
+      swal({
+        title: 'コピーに成功しました。',
+        type: 'success',
+        timer: 2500
+      });
+    } else {
+      swal({
+        title: 'コピーに失敗しました。',
+        type: 'warning',
+        timer: 2500
+      });
+    }
   });
 });

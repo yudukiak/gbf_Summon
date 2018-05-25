@@ -36,11 +36,16 @@ input[type="number"], input[type="text"], textarea {
   color: #231E18;
   border-radius: 3px;
 }
-input[type="number"], input[type="text"] {
+input[type="number"] {
   padding: 0 5px;
   margin: 0;
   height: 100%;
   width: calc(100% - 10px);
+}
+input[type="text"] {
+  padding: 5px;
+  margin: 0;
+  width: 50%;
 }
 /* Chrome,Safari */
 input[type="number"]::-webkit-outer-spin-button,
@@ -476,6 +481,18 @@ select optgroup {
   width: : 960px !important;
   height: 420px !important;
   padding: 60px 0 !important;
+}
+.svg {
+  fill: #f2eee2;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
 }
 /* ********************
   .button

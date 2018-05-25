@@ -440,6 +440,13 @@ ob_start("sanitize_output");
       <p>以下のプレビューからも保存できます</p>
       <img id="screen_image">
     </div>
+    <div class="w640">
+      <p>今回の設定をURLとして保存できます。</p>
+      <p class="svg">
+        <input type="text" name="query" disabled="disabled">
+        <?php echo file_get_contents("image/copy.svg"); ?>
+      </p>
+    </div>
   </div>
 
   <div class="table">
@@ -461,18 +468,31 @@ ob_start("sanitize_output");
   <!-- 各種Script -->
   <script defer src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.min.js"></script>
-  <script defer src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
-  <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
-  <script defer src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.min.js"></script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.20.10/sweetalert2.min.js"></script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.5.6/core.min.js"></script>
   <?php
-    // script
-    $file = "assets/script.min.js";
-    $FUDate = getFileUpdateDate($file);
-    $fileStr = "<script defer src=\"{$FUDate}\"></script>";
-    print $fileStr;
-      // script_deploy
-    if(strpos($_SERVER["REQUEST_URI"],"test") !== false){
+    $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+    // localhostの場合
+    if(strpos($url,"localhost") !== false){
+      $file = "assets/script.js";
+      $FUDate = getFileUpdateDate($file);
+      $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+      print $fileStr;
+    }
+    // test環境の場合
+    elseif(strpos($url,"test") !== false){
+      $file = "assets/script.js";
+      $FUDate = getFileUpdateDate($file);
+      $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+      print $fileStr;
       $file = "assets/script_deploy.min.js";
+      $FUDate = getFileUpdateDate($file);
+      $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+      print $fileStr;
+    }
+    // それらに当てはまらない場合
+    else {
+      $file = "assets/script.min.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
       print $fileStr;
