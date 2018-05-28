@@ -512,6 +512,8 @@ function urlQuery(data){
 // クリップボードへコピー
 function copyTextToClipboard(textVal){
   var copyFrom = document.createElement('textarea');
+  //copyFrom.setAttribute('class', 'display_none');
+  copyFrom.setAttribute('class', 'clipboard');
   copyFrom.textContent = textVal;
   var bodyElm = document.getElementsByTagName('body')[0];
   bodyElm.appendChild(copyFrom);
@@ -694,7 +696,8 @@ $(function(){
   });
   // コピー
   $('.svg svg').on('click', function (){
-    var val = $('input[name=query]').val();
+    //var val = $('input[name=query]').val();
+    var val = $(this).prev().val();
     var res = copyTextToClipboard(val);
     if (res) {
       swal({

@@ -75,7 +75,7 @@ ob_start("sanitize_output");
   <div class="table">
     <p>最終更新：<?php
       $LUDate = getLastUpdateDate();
-      print $LUDate;
+      echo $LUDate;
     ?><br>情報が更新されない場合はキャッシュの削除をして下さい。</p>
   </div>
 
@@ -440,12 +440,26 @@ ob_start("sanitize_output");
       <p>以下のプレビューからも保存できます</p>
       <img id="screen_image">
     </div>
-    <div class="w640">
-      <p>今回の設定をURLとして保存できます。</p>
-      <p class="svg">
-        <input type="text" name="query" disabled="disabled">
-        <?php echo file_get_contents("image/copy.svg"); ?>
-      </p>
+    <div class="content">
+      <div class="w50">
+        <p>URL</p>
+        <p class="svg">
+          <input type="text" name="query" disabled="disabled">
+          <?php echo file_get_contents("image/copy.svg"); ?>
+        </p>
+      </div>
+      <div class="w50">
+        <p>ブックマークレット</p>
+        <p class="svg">
+          <?php
+            $str = file_get_contents("assets/bookmark.min.js");
+            $esc = htmlspecialchars($str, ENT_QUOTES|ENT_HTML5);
+            $htm = "<input type=\"text\" name=\"bookmarklet\" value=\"javascript:{$esc}\" disabled=\"disabled\">";
+            echo $htm;
+            echo file_get_contents("image/copy.svg");
+          ?>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -477,25 +491,25 @@ ob_start("sanitize_output");
       $file = "assets/script.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
-      print $fileStr;
+      echo $fileStr;
     }
     // test環境の場合
     elseif(strpos($url,"test") !== false){
       $file = "assets/script.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
-      print $fileStr;
+      echo $fileStr;
       $file = "assets/script_deploy.min.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
-      print $fileStr;
+      echo $fileStr;
     }
     // それらに当てはまらない場合
     else {
       $file = "assets/script.min.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
-      print $fileStr;
+      echo $fileStr;
     }
   ?>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56839189-1', 'auto');ga('send', 'pageview');</script>

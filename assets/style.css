@@ -95,6 +95,12 @@ select:-moz-focusring {
 select optgroup {
   color: #333;
 }
+p {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ********************
   .menu
 ******************** */
@@ -439,9 +445,18 @@ select optgroup {
   padding: 10px 0;
   /*text-align: center;*/
 }
+.w50 {
+  width: 50%;
+}
 .w640 {
   width: 640px;
   margin: 0 auto;
+}
+.clipboard {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
 }
 .p0 {
   padding: 0;
