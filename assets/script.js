@@ -512,8 +512,7 @@ function urlQuery(data){
 // クリップボードへコピー
 function copyTextToClipboard(textVal){
   var copyFrom = document.createElement('textarea');
-  //copyFrom.setAttribute('class', 'display_none');
-  copyFrom.setAttribute('class', 'clipboard');
+  copyFrom.className = 'clipboard';
   copyFrom.textContent = textVal;
   var bodyElm = document.getElementsByTagName('body')[0];
   bodyElm.appendChild(copyFrom);
