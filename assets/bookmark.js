@@ -21,9 +21,9 @@ if (location.hash == '#profile') {
       if (/rank2/.test(inf)) return 'rank4';
       return 'rank0';
     })();
-    var lv = $(this).find('.prt-fix-name').text().match(/Lv(\d+).+/)[1];
+    var level = $(this).find('.prt-fix-name').text().match(/Lv(\d+)/)[1];
     var quality = $(img).attr('data-quality');
-    var ary = {'target': target, 'type': null, 'rarity': rarity, 'id': id, 'rank': rank, 'level': lv, 'quality': quality};
+    var ary = {'target': target, 'type': null, 'rarity': rarity, 'id': id, 'rank': rank, 'level': level, 'quality': quality};
     obj[num] = ary;
   });
   var img = $('.img-pc').attr('data-image-name');
@@ -33,8 +33,7 @@ if (location.hash == '#profile') {
     if (/_1_01/.test(img)) return 'Djeeta';
   })();
   var user = $('.prt-user-id').text().match(/(\d+)/)[1];
-  var ary = {'target': 'type9', 'type': type, 'rarity': null, 'id': id, 'rank': 'rank0'};
-  obj['9'] = ary;
+  obj['9'] = {'target': 'type9', 'type': type, 'rarity': null, 'id': id, 'rank': 'rank0'};
   obj['0'] = {'user': user, 'text': '', 'summon': true};
   var jsn = JSON.stringify(obj);
   var qry = encodeURIComponent(jsn);

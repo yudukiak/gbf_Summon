@@ -96,7 +96,7 @@ select optgroup {
   color: #333;
 }
 p {
-  height: 24px;
+  min-height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,6 +178,7 @@ p {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  justify-content: center;
 }
 .content>div {
   margin: 5px 0;
@@ -469,6 +470,7 @@ p {
 .add {
   text-align: right;
   margin: 5px 10px;
+  justify-content: flex-end;
 }
 .breakword {
   word-wrap: break-word;

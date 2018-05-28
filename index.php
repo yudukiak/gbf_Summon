@@ -455,7 +455,7 @@ $url = str_replace("index.php", "", $url);
           ?>
         </p>
       </div>
-      <div class="w50">
+      <div class="w50 display_none">
         <p>ブックマークレット</p>
         <p class="svg">
           <?php

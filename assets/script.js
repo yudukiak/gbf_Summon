@@ -500,6 +500,9 @@ function jsAry_load(ary){
     }
   });
   table_display(); // 一覧表示
+  var jsn = JSON.stringify(ary);
+  var jsn_e = encodeURIComponent(jsn);
+  urlQuery(jsn_e);
 }
 // URLクエリパラメータの処理
 function urlQuery(data){
@@ -643,7 +646,7 @@ $(function(){
   // 画像化の処理
   $('#screenshot').on('click', function () {
     // サイトのURLを記載させる
-    $summon_screeen.append('<p class="add">'+url+'</p>');
+    $summon_screeen.append('<p class="add">'+url+'&nbsp;&nbsp;&nbsp;</p>');
     // Twitter用にサイズ変更
     var resize = $('input[name=resize]:checked').val();
     if (resize == 'yes') $summon_screeen.addClass('picture');
@@ -710,6 +713,29 @@ $(function(){
         type: 'error',
         timer: 2500
       });
+    }
+  });
+  var bookmark = 0;
+  $(window).keydown(function (e) {
+    var trg = $('div.w50:eq(1)');
+    if (!trg.hasClass('display_none')) return;
+    if ((e.ctrlKey||e.metaKey) && e.keyCode === 66) {
+      if (bookmark < 2) {
+        bookmark += 1;
+      } else {
+        swal({
+          title: 'ブックマークレットを表示する？',
+          type: 'warning',
+          html:
+          '<span style="font-size: 10pt;">【注意】<br>本サイトのブックマークレットを利用した事による、'+
+          '欠陥およびそれらが原因で発生した損失や損害については一切責任を負いません。</span>',
+          showCancelButton: true,
+          confirmButtonText: 'する',
+          cancelButtonText:  'しない'
+        }).then(function (res) {
+          if (res.value) trg.removeClass('display_none');
+        });
+      }
     }
   });
 });
