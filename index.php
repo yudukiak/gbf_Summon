@@ -42,6 +42,10 @@ function sanitize_output($buffer) {
   return $buffer;
 }
 ob_start("sanitize_output");
+// URL
+// http://www.flatflag.nir87.com/url-963
+$url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+$url = str_replace("index.php", "", $url);
 ?>
 
 <!DOCTYPE html>
@@ -444,8 +448,11 @@ ob_start("sanitize_output");
       <div class="w50">
         <p>URL</p>
         <p class="svg">
-          <input type="text" name="query" disabled="disabled">
-          <?php echo file_get_contents("image/copy.svg"); ?>
+          <?php
+            $htm = "<input type=\"text\" name=\"query\" value=\"{$url}\" disabled=\"disabled\">";
+            echo $htm;
+            echo file_get_contents("image/copy.svg");
+          ?>
         </p>
       </div>
       <div class="w50">
@@ -454,7 +461,8 @@ ob_start("sanitize_output");
           <?php
             $str = file_get_contents("assets/bookmark.min.js");
             $esc = htmlspecialchars($str, ENT_QUOTES|ENT_HTML5);
-            $htm = "<input type=\"text\" name=\"bookmarklet\" value=\"javascript:{$esc}\" disabled=\"disabled\">";
+            $rep = str_replace("https://prfac.com/gbf/summon/", $url, $esc);
+            $htm = "<input type=\"text\" name=\"bookmarklet\" value=\"javascript:{$rep}\" disabled=\"disabled\">";
             echo $htm;
             echo file_get_contents("image/copy.svg");
           ?>
@@ -474,7 +482,7 @@ ob_start("sanitize_output");
   </div>
 
   <?php
-    if(strpos($_SERVER['REQUEST_URI'],'test') !== false){
+    if(strpos($url,"test") !== false){
       require_once "deploy/change_index.php";
     }
   ?>
@@ -485,7 +493,6 @@ ob_start("sanitize_output");
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.20.10/sweetalert2.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.5.6/core.min.js"></script>
   <?php
-    $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
     // localhostの場合
     if(strpos($url,"localhost") !== false){
       $file = "assets/script.js";

@@ -527,7 +527,7 @@ function copyTextToClipboard(textVal){
 $(function(){
   var $summon_screeen=$('#summon_screeen');
   // クエリ
-  urlQuery();
+  //urlQuery();
   // JSONを取得
   $.getJSON('assets?json=foxtrot',init2);
   $.getJSON('assets?json=echo',init);
