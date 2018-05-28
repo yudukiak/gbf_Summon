@@ -42,7 +42,12 @@ function init(data){
       var queryAry = JSON.parse(queryJsn);
     } catch (e) {
       //alert('URLに不備があるため、初期設定で表示します。');
-      swal('URLに不備があります', 'デフォルトの設定で表示します。', 'error');
+      swal({
+        title: 'URLに不備があります',
+        text: 'デフォルトの設定で表示します。',
+        type: 'error',
+        timer: 2500
+      });
       jsCookie_Noload();
       return;
     }
@@ -648,7 +653,11 @@ $(function(){
       );
     } else {
       //alert('画像生成してください。');
-      swal('エラー', '画像生成してください。', 'error');
+      swal({
+        title: '画像生成してください。',
+        type: 'error',
+        timer: 2500
+      });
     }
   });
   // ID
@@ -670,7 +679,7 @@ $(function(){
     } else {
       swal({
         title: 'コピーに失敗しました。',
-        type: 'warning',
+        type: 'error',
         timer: 2500
       });
     }
