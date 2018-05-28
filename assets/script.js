@@ -2,7 +2,7 @@
 var echoData = [];
 var foxData = {};
 var url = location.href.replace(/\?.*/, '');
-var query = location.search.replace(/\?/g, '');
+var query = location.search.replace(/\?st_key=/g, '');
 // --------------------
 // 各種関数
 // --------------------
@@ -505,7 +505,7 @@ function jsAry_load(ary){
 function urlQuery(data){
   var urlData = (function(){
     if (data == null) return url;
-    return url + '?' + data;
+    return url + '?st_key=' + data;
   })();
   $('input[name=query]').val(urlData);
 }
