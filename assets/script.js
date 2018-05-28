@@ -2,23 +2,23 @@
 var echoData = [];
 var foxData = {};
 var url = location.href.replace(/\?.*/, '');
-var query = location.search.replace(/\?/g, "");
+var query = location.search.replace(/\?/g, '');
 // --------------------
 // 各種関数
 // --------------------
 // Cookieの保存・読み込み
 // https://qiita.com/tatsuyankmura/items/8e09cbd5ee418d35f169
 function setCookie(cookieName, value, expire){
-  var cookie = cookieName+"="+value+";path=/;";
+  var cookie = cookieName+'='+value+';path=/;';
   if(Number(expire) > 0){cookie += 'expires='+expire.toGMTString();}
   document.cookie = cookie;
 }
 function getCookie(cookieName){
   var l = cookieName.length+1;
-  var cookieAry = document.cookie.split("; ");
-  var str = "";
+  var cookieAry = document.cookie.split('; ');
+  var str = '';
   for(i=0,j=cookieAry.length; i<j; i++){
-    if(cookieAry[i].substr(0,l) === cookieName+"="){
+    if(cookieAry[i].substr(0,l) === cookieName+'='){
       str = cookieAry[i].substr(l,cookieAry[i].length);
       break;
     }
@@ -91,7 +91,7 @@ function init2(data){
 }
 // 初期の呼出
 function jsCookie_Noload(){
-  $('#summon_setting div[class^="type"]').each(function(){
+  $('#summon_setting div[class^=type]').each(function(){
     var $this_parent_class=$(this).attr('class');
     list_display($this_parent_class); // リスト生成
     radio_display($this_parent_class); // 3凸・4凸ボタン
@@ -169,9 +169,9 @@ function table_display(){
     $summon_screeen.find('.type8 .content').addClass('breakword'); // 改行CSSを追加
     $summon_screeen.find('.type8 .name').text(''); // 召喚石名を空に
     // エスケープ http://www.webdesignleaves.com/wp/htmlcss/1485/
-    var targets = ["&", "<", ">" ,'"', "'"]; // エスケープする文字はこれ！
-    var escapes = ["&amp;", "&lt;", "&gt;", "&quot;", "&#39;"]; // 変換先のジョブはこれ！
-    var converted = $('textarea[name="comment"]').val(); // 入力された文字取得をするのだ
+    var targets = ['&', '<', '>' ,'"', '\'']; // エスケープする文字はこれ！
+    var escapes = ['&amp;', '&lt;', '&gt;', '&quot;', '&#39;']; // 変換先のジョブはこれ！
+    var converted = $('textarea[name=comment]').val(); // 入力された文字取得をするのだ
     for(var i=0; i<targets.length; i++){ // forでフォ～～～っと変換するのだ
       converted = converted.replace(new RegExp(targets[i], 'g'), escapes[i]);
     }
@@ -179,12 +179,12 @@ function table_display(){
   }
   // ユーザーID取得＆書き込み
   var job_rarity = $('.type9 [name=c_type]').val(); // ジータかグランか
-  var job_id = parseInt($('input[name="user_id"]').val());
+  var job_id = parseInt($('input[name=user_id]').val());
   var job_id = (function() {
     if (Number.isNaN(job_id)){ return ''; } // NaN
     return job_id; // 1-9
   })();
-  var job_id = String(job_id).replace(/\D/g, "").slice(0, 10);
+  var job_id = String(job_id).replace(/\D/g, '').slice(0, 10);
   $('.type9 .info').html('<div>'+job_id+'</div>');
 
   // 設定個々の処理
@@ -288,7 +288,7 @@ function level_select($this_parent_class){
     return rank;
   })();
   var levelAry = (function(){
-    if (summonVal==null || summonVal.match(/^unselected$/) || classStr=="job") return [0]; // 例外 未選択
+    if (summonVal==null || summonVal.match(/^unselected$/) || classStr=='job') return [0]; // 例外 未選択
     if (String(summonVal).match(/^20300(68|69|70|71|72)000$/)) return [20]; // 例外 巫女SR
     return foxData[classStr][rarity][rankStr];
   })();
@@ -339,12 +339,12 @@ function jsCookie_save(){
   }
   var aryCookie = [];
   var objCookie = {};
-  var _user=$('input[name="user_id"]').val();
+  var _user=$('input[name=user_id]').val();
   var c_user=(function(){
     if(_user===void 0) return '';
     return encodeURIComponent(_user);
   })();
-  var _text=$('textarea[name="comment"]').val();
+  var _text=$('textarea[name=comment]').val();
   var c_text=(function(){
     if(_text===void 0) return '';
     return encodeURIComponent(_text);
@@ -377,7 +377,7 @@ function jsCookie_save(){
     objCookie.rank   = c_rank;
     objCookie.level  = c_level;
     objCookie.quality = c_quality;
-    if(c_target == "type8"){objCookie.bonus = c_bonus;}
+    if(c_target == 'type8'){objCookie.bonus = c_bonus;}
     aryCookie.push(objCookie);
   });
   // Cookieを保存
@@ -429,7 +429,7 @@ function jsAry_load(ary){
     var summon = value.summon;
     var text = value.text;
     var bonus = value.bonus;
-    if(user!==void 0){$('input[name="user_id"]').val(user);}
+    if(user!==void 0){$('input[name=user_id]').val(user);}
     if(summon === false){
       var $this=$('.setting .type8 .title');
       var $html=$this.html();
@@ -441,7 +441,7 @@ function jsAry_load(ary){
       //$('.type8 .c_summon').empty();
       $c_rarity.empty();
       $this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
-      $c_type.css('color', '#FF0000').attr("selected", false).val('type1');
+      $c_type.css('color', '#FF0000').attr('selected', false).val('type1');
       $c_rarity.append(
         '<option value="ssr">SSR</option>'+
         '<option value="sr">SR</option>'+
@@ -461,11 +461,11 @@ function jsAry_load(ary){
     if(level!==void 0){$target.find('.c_quality').val(quality);} // 保存した＋を選択
     if(bonus!==void 0){$('.c_bonus').val(bonus);}
     if(text!==void 0){
-      var textDec = "";
+      var textDec = '';
       try {
         textDec = decodeURIComponent(text);
       } catch (e) {}
-      $('textarea[name="comment"]').val(textDec);
+      $('textarea[name=comment]').val(textDec);
     }
   });
   table_display(); // 一覧表示
@@ -476,13 +476,13 @@ function urlQuery(data){
     if (data == null) return url;
     return url + '?' + data;
   })();
-  $('input[name="query"]').val(urlData);
+  $('input[name=query]').val(urlData);
 }
 // クリップボードへコピー
 function copyTextToClipboard(textVal){
-  var copyFrom = document.createElement("textarea");
+  var copyFrom = document.createElement('textarea');
   copyFrom.textContent = textVal;
-  var bodyElm = document.getElementsByTagName("body")[0];
+  var bodyElm = document.getElementsByTagName('body')[0];
   bodyElm.appendChild(copyFrom);
   copyFrom.select();
   var retVal = document.execCommand('copy');
@@ -549,7 +549,7 @@ $(function(){
     if ($nclass) {
       var $this=$('.setting .type8 .title');
       $this.removeClass('type_icon').html($html.replace(/フリー属性2/g,'推しキャラ'));
-      $c_type.css('color', '#FF0000').attr("selected", false).val('type1');
+      $c_type.css('color', '#FF0000').attr('selected', false).val('type1');
       $c_rarity.append(
         '<option value="ssr">SSR</option>'+
         '<option value="sr">SR</option>'+
@@ -566,7 +566,7 @@ $(function(){
     // .type_iconがなかったら「召喚石」の設定にする
     } else if (!$nclass) {
       $this.addClass('type_icon').html($html.replace(/推しキャラ/g,'フリー属性2'));
-      $c_type.css('color', '#FFFF00').attr("selected", false).val('type5');
+      $c_type.css('color', '#FFFF00').attr('selected', false).val('type5');
       $c_rarity.append(
         '<option value="ssr">SSR</option>'+
         '<option value="sr">SR</option>'+
@@ -639,27 +639,27 @@ $(function(){
       popPage = '.popup';
       window.open(
         'twitter/index.php',
-        "window",
-        "width= "+ w +
-        ",height=" + h +
-        ",left=" + l +
-        ",top=" + t +
-        ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no"
+        'window',
+        'width= '+ w +
+        ',height=' + h +
+        ',left=' + l +
+        ',top=' + t +
+        ', scrollbars = yes, location = no, toolbar = no, menubar = no, status = no'
       );
     } else {
       //alert('画像生成してください。');
-      swal("エラー", "画像生成してください。", "error");
+      swal('エラー', '画像生成してください。', 'error');
     }
   });
   // ID
-  $("input[name=user_id]").bind("keydown keyup keypress mouseup focusout change", function() {
+  $('input[name=user_id]').bind('keydown keyup keypress mouseup focusout change', function() {
     var val = $(this).val();
-    var val = String(val).replace(/\D/g, "").slice(0, 10);
+    var val = String(val).replace(/\D/g, '').slice(0, 10);
     $(this).val(val);
   });
   // コピー
   $('.svg svg').on('click', function (){
-    var val = $("input[name=query]").val();
+    var val = $('input[name=query]').val();
     var res = copyTextToClipboard(val);
     if (res) {
       swal({
