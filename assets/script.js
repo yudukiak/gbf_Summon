@@ -62,7 +62,10 @@ function init(data){
       cancelButtonText:  'しない'
     }).then(function (res) {
       if (res.value) {
-        jsAry_load(queryAry);
+        // ブックマークレットか判断
+        (!queryAry.info)
+        ?jsAry_load(queryAry)
+        :jsBookmark_load(queryAry);
       } else {
         jsCookie_Noload();
       }
@@ -398,6 +401,29 @@ function jsCookie_load(){
   var cookies_jsn = decodeURIComponent(cookies)
   var cookies_ary = JSON.parse(cookies_jsn);
   jsAry_load(cookies_ary);
+}
+function jsBookmark_load(obj){
+  // nullを書き換える用の関数
+  function echoDatafind(objId, trg){
+    for(var n=0; n<echoData.length; n++){
+      var echoId = echoData[n].id;
+      if (objId == echoId) return echoData[n][trg];
+    }
+  }
+  var ary = [];
+  for (var i in obj) {
+    var objTarget = obj[i].target
+    if (objTarget == null && obj[i] !== true){
+      ary.push(obj[i]);
+    } else if(/type[1-8]/.test(objTarget)) {
+      obj[i].type = echoDatafind(obj[i].id, 'type');
+      ary.push(obj[i]);
+    } else if(/type9/.test(objTarget)) {
+      obj[i].rarity = echoDatafind(obj[i].id, 'rarity');
+      ary.push(obj[i]);
+    }
+  }
+  jsAry_load(ary);
 }
 function jsAry_load(ary){
   $.each(ary, function(i, value) {
