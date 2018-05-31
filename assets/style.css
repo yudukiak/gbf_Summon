@@ -335,6 +335,9 @@ main > div {
   width: 310px;
   margin: 5px;
 }
+.setting .title {
+  border-bottom: none;
+}
 .setting .c_type,
 .setting .c_rarity,
 .setting .c_level,

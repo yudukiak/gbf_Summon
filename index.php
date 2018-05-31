@@ -11,7 +11,7 @@
   }
   // 曜日の設定
   function getLastUpdateDate() {
-    $weekday = array( "日", "月", "火", "水", "木", "金", "土" );
+    $weekday = array("日", "月", "火", "水", "木", "金", "土");
     chdir("assets");
     $file = exec("ls -tr");
     $LUDate = "";
@@ -44,7 +44,7 @@
   ob_start("sanitize_output");
   // URL
   // http://www.flatflag.nir87.com/url-963
-  $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+  $url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://").$_SERVER["HTTP_HOST"].$_SERVER["SCRIPT_NAME"];
   $url = str_replace("index.php", "", $url);
 ?>
 <!DOCTYPE html>
@@ -77,10 +77,7 @@
   </header>
   <main>
     <div>
-      <p>最終更新：<?php
-        $LUDate = getLastUpdateDate();
-        echo $LUDate;
-      ?><br>情報が更新されない場合はキャッシュの削除をして下さい。</p>
+      <p>最終更新：<?php echo getLastUpdateDate(); ?><br>情報が更新されない場合はキャッシュの削除をして下さい。</p>
       <!-- AdSense  -->
       <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3052144799289425" data-ad-slot="1704901599"></ins>
       <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
@@ -156,7 +153,7 @@
     <div class="setting" id="summon_setting">
       <div class="box">
         <div class="type1" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">火属性</div>
+          <div class="title type_icon">火属性</div>
           <select class="c_type" name="c_type" style="color:#FF0000;">
             <option value="type1" selected>火</option>
             <option value="type2">水</option>
@@ -185,7 +182,7 @@
         </div>
 
         <div class="type2" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">水属性</div>
+          <div class="title type_icon">水属性</div>
           <select class="c_type" name="c_type" style="color:#00FFFF;">
             <option value="type1">火</option>
             <option value="type2" selected>水</option>
@@ -214,7 +211,7 @@
         </div>
 
         <div class="type3" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">土属性</div>
+          <div class="title type_icon">土属性</div>
           <select class="c_type" name="c_type" style="color:#FF9872;">
             <option value="type1">火</option>
             <option value="type2">水</option>
@@ -243,7 +240,7 @@
         </div>
 
         <div class="type4" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">風属性</div>
+          <div class="title type_icon">風属性</div>
           <select class="c_type" name="c_type" style="color:#00FF00;">
             <option value="type1">火</option>
             <option value="type2">水</option>
@@ -271,7 +268,7 @@
           </div>
         </div>
         <div class="type5" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">光属性</div>
+          <div class="title type_icon">光属性</div>
           <select class="c_type" name="c_type" style="color:#FFFF00;">
             <option value="type1">火</option>
             <option value="type2">水</option>
@@ -299,7 +296,7 @@
           </div>
         </div>
         <div class="type6" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">闇属性</div>
+          <div class="title type_icon">闇属性</div>
           <select class="c_type" name="c_type" style="color:#FF00FF;">
             <option value="type1">火</option>
             <option value="type2">水</option>
@@ -327,7 +324,7 @@
           </div>
         </div>
         <div class="type7" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">フリー属性1</div>
+          <div class="title type_icon">フリー属性1</div>
           <select class="c_type" name="c_type" style="color:#FFFF00;">
             <option value="type1">火</option>
             <option value="type2">水</option>
@@ -355,7 +352,7 @@
           </div>
         </div>
         <div class="type8" data-select="summon">
-          <div class="title type_icon" style="border-bottom:none;">フリー属性2
+          <div class="title type_icon">フリー属性2
             <div class="float">
               💬<span>クリックすることで<br>[フリー⇔推し]<br>を切り替えることができます</span>
             </div>
@@ -387,7 +384,7 @@
           </div>
         </div>
         <div class="type9" data-select="job">
-          <div class="title type_icon" style="border-bottom:none;">ユーザーID</div>
+          <div class="title type_icon">ユーザーID</div>
           <select class="c_type" name="c_type">
             <option value="Djeeta">ジータ</option>
             <option value="Gran">グラン</option>
