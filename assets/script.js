@@ -53,7 +53,10 @@ function init(data){
     }
     swal({
       title: 'URLの設定内容を復元する？',
-      type: 'question',
+      //type: 'question',
+      imageUrl: 'image/url.svg',
+      imageWidth: '88px',
+      imageHeight: '88px',
       html:
       'URLに設定された召喚石やIDなどを呼び出せます。<br>'+
       'しないを選択するとデフォルトの設定が表示されます。',
@@ -74,7 +77,10 @@ function init(data){
   } else if (st_key) {
     swal({
       title: '前回の設定内容を復元する？',
-      type: 'question',
+      //type: 'question',
+      imageUrl: 'image/repair.svg',
+      imageWidth: '88px',
+      imageHeight: '88px',
       html:
       '前回、設定した召喚石やIDなどを呼び出せます。<br>'+
       'しないを選択するとデフォルトの設定が表示されます。',
@@ -717,9 +723,13 @@ $(function(){
   });
   var bookmark = 0;
   $(window).keydown(function (e) {
-    var trg = $('div.w50:eq(1)');
-    if (!trg.hasClass('display_none')) return;
-    if ((e.ctrlKey||e.metaKey) && e.keyCode === 66) {
+    var trg = $('#bookmarklet');
+    if (
+      !trg.hasClass('display_none') ||
+      $(':focus').is('input[type=number], input[type=text], textarea')
+    ) return;
+    //if ((e.ctrlKey||e.altKey||e.metaKey) && e.keyCode === 66) {
+    if (e.keyCode === 66) {
       if (bookmark < 2) {
         bookmark += 1;
       } else {

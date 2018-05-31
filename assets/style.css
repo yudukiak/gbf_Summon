@@ -3,6 +3,8 @@
 ******************** */
 * {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 body {
   background-color: #231E18;
@@ -15,19 +17,19 @@ input[type="number"], input[type="text"], textarea {
   -webkit-user-select: auto;
   -moz-user-select: text;
   outline: none;
-  -moz-appearance: none;
+  /*-moz-appearance: none;*/
   text-indent: 0.01px;
   text-overflow: '';
   background: #f2eee2;
   vertical-align: middle;
   font-size: inherit;
   color: inherit;
-  -webkit-appearance: button;
+  /*-webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
-  appearance: none;
+  appearance: button;*/
+  /*appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: none;*/
   /*height: 20px;
   padding: 8px 12px;
   width: 166px;
@@ -40,12 +42,8 @@ input[type="number"] {
   padding: 0 5px;
   margin: 0;
   height: 100%;
-  width: calc(100% - 10px);
-}
-input[type="text"] {
-  padding: 5px;
-  margin: 0;
-  width: 50%;
+  /*width: calc(100% - 10px);*/
+  width: 143px;
 }
 /* Chrome,Safari */
 input[type="number"]::-webkit-outer-spin-button,
@@ -57,9 +55,15 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+input[type="text"] {
+  padding: 5px;
+  margin: 0;
+  /*width: 50%;*/
+  width: 240px;
+}
 select {
   outline: none;
-  -moz-appearance: none;
+  /*-moz-appearance: none;*/
   text-indent: 0.01px;
   text-overflow: '';
   background: none transparent;
@@ -69,9 +73,9 @@ select {
   /*-webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;*/
-  appearance: none;
+  /*appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: none;*/
   height: 40px;
   padding: 8px 12px;
   border: 1px solid #4e4830;
@@ -81,10 +85,6 @@ select {
   /*margin: 3px 2px;*/
   margin: 2px 0;
 }
-select option{
-  background-color: #fff;
-  color: #333;
-}
 select::-ms-expand {
   display: none;
 }
@@ -92,51 +92,75 @@ select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #828c9a;
 }
+select option,
 select optgroup {
-  color: #333;
+  background-color: #f2eee2;
+  color: #231E18;
 }
 p {
   min-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 /* ********************
-  .menu
+  header
 ******************** */
-.menu {
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   width: 960px;
   height: 50px;
   margin: 0 auto;
-}
-.menu ul {
-  margin: 0;
   padding: 0;
-  list-style: none;
 }
-.menu li {
-  display: inline;
-  padding: 0;
-  margin: 0;
-  float: left;
+header > div:first-child {
+  margin-right: auto;
 }
-.menu li a {
+header a {
   display: block;
   border-bottom: 1px solid #f2eee2;
   padding: 3px 10px;
   text-decoration: none;
-  color: #E1E2CF;
+  color: #f2eee2;
   width: 100px;
   margin: 5px 10px;
-  /*text-align: left;*/
   font-size: 14px;
-  /*text-align: center;*/
 }
-.menu li:first-child a {
-  margin-right: 410px;
-}
-.menu li a:hover {
+header a:hover {
   background-color: rgba(71, 70, 85, 0.6);
+}
+/* ********************
+  footer
+******************** */
+footer {
+  border-top: 2px solid #f2eee2;
+  width: 960px;
+  margin: 0 auto;
+}
+footer a {
+  color: #3085d6;
+}
+footer .copy {
+  font-size: 12px;
+}
+/* ********************
+  main .screeen
+******************** */
+main {
+  width: 960px;
+  margin: 0 auto;
+}
+main > div {
+  padding: 10px 0;
+  /* IE用 */
+  width: 960px;
+  margin: 0 auto;
 }
 /* ********************
   .screeen
@@ -144,7 +168,11 @@ p {
 .screeen {
   background-color: #231E18;
 }
-.screeen>.box>div {
+.screeen.picture {
+  height: calc(540px - 100px); /* 最大540px */
+  padding: 50px 0;
+}
+.screeen > .box > div {
   border: solid 1px #4e4830;
   width: 310px;
   margin: 4px;
@@ -152,12 +180,12 @@ p {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
 }
-@media all and (-ms-high-contrast:none){
+/*@media all and (-ms-high-contrast:none){
   .screeen>.box>div{width: 309px;}
 }
 @media all and (-ms-high-contrast:active){
   .screeen>.box>div{width: 309px;}
-}
+}*/
 .screeen h2 {
   /*text-align: center;*/
   color: #f2eee2;
@@ -178,16 +206,18 @@ p {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
 }
-.content>div {
+/*.content > div {
   margin: 5px 0;
   padding: 5px;
-}
+}*/
 .image {
   position: relative;
   width: 90px;
   height: 51px;
+  margin: 5px 0;
+  padding: 5px;
   /*text-align: center;*/
 }
 .type9 .image > img {
@@ -207,28 +237,32 @@ p {
   font-size: 14px;
   line-height: 1;
   text-align: left;
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
+  padding: 5px;
+  /*margin-right: 10px;*/
 }
-.content .spec {
+/*.content .spec {
   margin-right: 10px;
-}
+}*/
 .name {
   font-size: 12px;
   margin-bottom: 2px;
 }
-@media all and (-ms-high-contrast:none){
+/*@media all and (-ms-high-contrast:none){
   .spec {width: 195px;}
 }
 @media all and (-ms-high-contrast:none){
   .spec {width: 195px;}
-}
+}*/
 .info {
   width: 182px;
   font-size: 12px;
 }
 .breakword .info {
   width: 168px;
-  font-size: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 .job {
   display: table;
@@ -239,7 +273,7 @@ p {
   text-align: center;
   /*position: relative;*/
 }
-.job>div {
+.job > div {
   display: table-cell;
   vertical-align: middle;
   /*height: 32px;
@@ -250,8 +284,6 @@ p {
   left: 0;
   margin: auto;*/
 }
-.chara {}
-.chara>div {}
 .type-npc {
   position: relative;
 }
@@ -292,23 +324,13 @@ p {
   color: #e3b7ff;
   text-shadow: 0 0 1px #7f12b7, 0 0 1px #7f12b7, 0 0 1px #7f12b7, 0 0 2px #7f12b7, 0 0 2px #7f12b7, 0 0 2px #7f12b7;
 }
-.type8 textarea {
-  font-size: 12px;
-  overflow:hidden;
-  resize: none;
-  margin-top: 4px;
-  height: 70px;
-  width: 166px;
-  margin: 0;
-  padding: 8px 12px;
-}
 /* ********************
   .setting
 ******************** */
 .setting {
   /*text-align: center;*/
 }
-.setting>.box>div {
+.setting > .box > div {
   border: none;
   width: 310px;
   margin: 5px;
@@ -335,19 +357,16 @@ p {
 .setting .select {
   height: 48px;
 }
-.setting .select>div {
+.setting .select > div {
   width: calc(50% - 2px);
   margin: 2px;
 }
-.setting .select>div:first-child {
+.setting .select > div:first-child {
   margin-left: 0;
 }
-.setting .select>div:last-child {
+.setting .select > div:last-child {
   margin-right: 0;
   padding: 3px 0;
-}
-.select {
-  /*position: relative;*/
 }
 .setting .select8 {
   height: auto;
@@ -361,6 +380,16 @@ p {
 }
 .setting .select8 > div:last-child {
   width: auto;
+}
+.setting textarea {
+  font-size: 12px;
+  overflow:hidden;
+  resize: none;
+  margin-top: 4px;
+  height: 70px;
+  width: 166px;
+  margin: 0;
+  padding: 8px 12px;
 }
 /* ********************
   .title
@@ -438,44 +467,12 @@ p {
   margin: 0 auto;
 }
 /* ********************
-  .table
-******************** */
-.table {
-  width: 960px;
-  margin: 0 auto;
-  padding: 10px 0;
-  /*text-align: center;*/
-}
-.w50 {
-  width: 50%;
-}
-.w640 {
-  width: 640px;
-  margin: 0 auto;
-}
-.clipboard {
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  margin: 0;
-  font-size: 0px;
-}
-.p0 {
-  padding: 0;
-}
-.adsense {}
-/* ********************
-
+  その他
 ******************** */
 .add {
   text-align: right;
   margin: 5px 10px;
   justify-content: flex-end;
-}
-.breakword {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-all;
 }
 .box {
   display: -webkit-box;
@@ -486,23 +483,22 @@ p {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.table .box_arrow>div {
-  border: none;
-  width: 190px;
-  margin: 10px;
+.clipboard {
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: 0;
+  font-size: 0px;
 }
 .display_none {
   display: none !important;
 }
-/* どこ? */
-.picture {
-  width: : 960px !important;
-  height: 420px !important;
-  padding: 60px 0 !important;
-}
 .svg {
   fill: #f2eee2;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,6 +507,14 @@ p {
   width: 24px;
   height: 24px;
   margin-left: 5px;
+}
+.w640 {
+  width: 640px;
+  margin: 0 auto;
+}
+.w480 {
+  width: 480px;
+  margin: 0 auto;
 }
 /* ********************
   .button
@@ -548,15 +552,23 @@ p {
   transition: all .3s;
 }
 .button {
-  background-color: #bdc3c7;
+  background-color: #aaa;
   color: #fff;
 }
 .button:hover {
-  background-color: #59b1eb;
+  background-color: #3085d6;
 }
 /* ********************
   .arrow
 ******************** */
+.box_arrow {
+  justify-content: space-around;
+}
+.box_arrow > div {
+  border: none;
+  width: 190px;
+  margin: 10px;
+}
 .arrow{
   position: relative;
   display: inline-block;
@@ -651,8 +663,8 @@ p {
 }
 
 /* ********************
-　フォント
-　http://qiita.com/RinoTsuka/items/4181efd43d072e246519
+  フォント
+  http://qiita.com/RinoTsuka/items/4181efd43d072e246519
 ******************** */
 @font-face{
   font-family: "Original Yu Gothic";

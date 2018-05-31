@@ -31,7 +31,7 @@ $branchNow = branchNow();
 
 // ブランチ切り替え用のHTMLを生成
 $branchList = "";
-$branchList .= '<div id="branch_table" class="table setting">';
+$branchList .= '<div id="branch_table" style="width:480px; margin: 0 auto;">';
 $branchList .= '<p>ブランチの切り替え</p>';
 $branchList .= '<select name="branch_list" id="branch_list">';
 for($i=0;$i<count($branchAry);$i++){
