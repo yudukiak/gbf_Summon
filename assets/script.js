@@ -3,6 +3,8 @@ var echoData = [];
 var foxData = {};
 var url = location.href.replace(/\?.*/, '');
 var query = location.search.replace(/\?st_key=/g, '');
+var path = location.pathname;
+history.replaceState(null, null, path); // URLクエリパラメータを除去
 // --------------------
 // 各種関数
 // --------------------
