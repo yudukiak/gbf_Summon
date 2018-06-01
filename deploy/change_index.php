@@ -43,7 +43,7 @@ for($i=0;$i<count($branchAry);$i++){
 }
 $branchList .= '</select>';
 $branchList .= '<p id="branch_result">[結果]</p>';
-$branchList .= '<button type="button" name="branch_change" id="branch_change">切り替え</button>';
+$branchList .= '<button type="button" name="branch_change" id="branch_change" class="button">切り替え</button>';
 $branchList .= '</div>';
 // HTMLを表示
 echo($branchList);

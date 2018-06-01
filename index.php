@@ -473,8 +473,8 @@
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
   <?php
-    // localhost環境、test環境の場合
-    if(strpos($url,"localhost") !== false || strpos($url,"test") !== false){
+    // localhost環境の場合
+    if(strpos($url,"localhost") !== false){
       $file = "assets/script.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
@@ -482,6 +482,10 @@
     }
     // test環境の場合
     elseif(strpos($url,"test") !== false){
+      $file = "assets/script.js";
+      $FUDate = getFileUpdateDate($file);
+      $fileStr = "<script defer src=\"{$FUDate}\"></script>";
+      echo $fileStr;
       $file = "assets/script_deploy.js";
       $FUDate = getFileUpdateDate($file);
       $fileStr = "<script defer src=\"{$FUDate}\"></script>";
