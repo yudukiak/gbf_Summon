@@ -520,15 +520,16 @@ function urlQuery(data){
 }
 // クリップボードへコピー
 function copyTextToClipboard(textVal){
-  var copyFrom = document.createElement('textarea');
-  copyFrom.className = 'clipboard';
-  copyFrom.textContent = textVal;
-  var bodyElm = document.getElementsByTagName('body')[0];
-  bodyElm.appendChild(copyFrom);
-  copyFrom.select();
-  var retVal = document.execCommand('copy');
-  bodyElm.removeChild(copyFrom);
-  return retVal;
+  var temp = document.createElement('div');
+  temp.appendChild(document.createElement('pre')).textContent = textVal;
+  var s = temp.style;
+  s.position = 'fixed';
+  s.left = '-100%';
+  document.body.appendChild(temp);
+  document.getSelection().selectAllChildren(temp);
+  var result = document.execCommand('copy');
+  document.body.removeChild(temp);
+  return result;
 }
 // --------------------
 // 読み込み時

@@ -486,13 +486,13 @@ main > div {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.clipboard {
+/*.clipboard {
   height: 1px;
   width: 1px;
   padding: 0;
   margin: 0;
   font-size: 0px;
-}
+}*/
 .display_none {
   display: none !important;
 }
