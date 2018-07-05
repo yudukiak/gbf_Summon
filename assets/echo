@@ -901,6 +901,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030243000",
+    "name": "ヴァンツァ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type3",
     "id": "3020037000",
@@ -1068,6 +1078,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040174000",
+    "name": "ウーフとレニー",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -4225,6 +4245,16 @@
     "type": "type2",
     "id": "3020040000",
     "name": "ジョエル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040173000",
+    "name": "ジョーカー",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -7798,6 +7828,16 @@
     "rank0": "火属性攻撃力が10%UP",
     "rank3": "火属性攻撃力が15%UP",
     "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040288000",
+    "name": "モルガナカー",
+    "rank0": "闇属性攻撃力が40%UP/闇属性キャラのHP10%UP",
+    "rank3": "闇属性攻撃力が50%UP/闇属性キャラのHP10%UP",
+    "rank4": "闇属性攻撃力が60%UP/闇属性キャラのHP10%UP/奥義ダメージ10%UP"
   },
   {
     "class": "character",
