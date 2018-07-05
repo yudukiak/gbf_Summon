@@ -1461,6 +1461,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030244000",
+    "name": "エルタ(光属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type1",
     "id": "3020025000",
@@ -4891,6 +4901,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040175000",
+    "name": "セレフィラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type4",
     "id": "3030026000",
@@ -5790,6 +5810,16 @@
     "rank4": "装備している闇属性召喚石の数が多いほど闇属性攻撃力がUP(最大110%)/闇属性キャラのHPが10%UP　★初回召喚時は全効果が発動"
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040291000",
+    "name": "ナリタ",
+    "rank0": "装備している闇属性召喚石の数が多いほど闇属性攻撃力がUP(最大60%)",
+    "rank3": "装備している闇属性召喚石の数が多いほど闇属性攻撃力がUP(最大70%)",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type6",
@@ -5988,6 +6018,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040290000",
+    "name": "ノビヨ",
+    "rank0": "",
+    "rank3": "全属性キャラのHPと攻撃力が20%UP/アイテムドロップ率と獲得経験値が10%UP",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -8197,6 +8237,16 @@
     "name": "ラスティナ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040202000",
+    "name": "ラファエル",
+    "rank0": "メイン装備時：風属性攻撃力が100%UP<br>サブ装備時：風属性キャラのダメージ上限5%UP",
+    "rank3": "メイン装備時：風属性攻撃力が120%UP<br>サブ装備時：風属性キャラのダメージ上限10%UP",
     "rank4": ""
   },
   {
