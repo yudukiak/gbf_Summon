@@ -3141,6 +3141,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040183000",
+    "name": "桜内梨子＆高海千歌＆渡辺曜",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type2",
     "id": "3030098000",
@@ -5367,6 +5377,16 @@
     "name": "ツクヨミ",
     "rank0": "バトルメンバーの種族数に応じて闇属性攻撃力がUP(最大80％)",
     "rank3": "バトルメンバーの種族数に応じて闇属性攻撃力がUP(最大100％)",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040184000",
+    "name": "津島善子＆国木田花丸＆黒澤ルビィ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -9337,6 +9357,16 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040185000",
+    "name": "松浦果南＆黒澤ダイヤ＆小原鞠莉",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   }
 ]
