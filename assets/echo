@@ -5081,6 +5081,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710072000",
+    "name": "ソーン(エターナルズ・サマーバケーション)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type2",
     "id": "3040044000",
