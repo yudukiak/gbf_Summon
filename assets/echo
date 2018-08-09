@@ -7951,6 +7951,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030245000",
+    "name": "ユイシス(浴衣ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type3",
     "id": "3040069000",
@@ -9027,6 +9037,16 @@
     "name": "ロゼッタ(深緋新春装)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040176000",
+    "name": "ロゼッタ(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
