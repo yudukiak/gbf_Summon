@@ -3771,6 +3771,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710074000",
+    "name": "シエテ(エターナルズ・サマーバケーション)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type1",
     "id": "3030132000",
