@@ -870,6 +870,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710071000",
+    "name": "ヴァジラ(薫風晴衣)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c3",
     "type": "Djeeta Gran",
