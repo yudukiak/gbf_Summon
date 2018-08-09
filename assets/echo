@@ -810,6 +810,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040177000",
+    "name": "イルザ(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -1695,6 +1705,16 @@
     "type": "type6",
     "id": "3040145000",
     "name": "オリヴィエ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030246000",
+    "name": "オリヴィエ(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -5622,6 +5642,16 @@
   {
     "class": "summon",
     "rarity": "ssr",
+    "type": "type5",
+    "id": "2040292000",
+    "name": "デンキンナギ",
+    "rank0": "光属性攻撃力が60%UP(ターン経過で20%まで減少)",
+    "rank3": "光属性攻撃力が70%UP(ターン経過で30%まで減少)",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
     "type": "",
     "id": "2040239000",
     "name": "テンペランス",
@@ -6038,6 +6068,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040178000",
+    "name": "ノイシュ(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "summon",
@@ -7453,6 +7493,16 @@
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
+    "id": "2040293000",
+    "name": "マキュラ・マリウス(水着ver)",
+    "rank0": "水属性攻撃力が60%(80%)(90%)UP",
+    "rank3": "水属性攻撃力が60%(80%)(90%)UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
     "id": "2040002000",
     "name": "マキュラ・マリウス",
     "rank0": "水属性攻撃力が50%UP",
@@ -8605,6 +8655,16 @@
     "type": "type2",
     "id": "3040066000",
     "name": "リルル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030247000",
+    "name": "リルル(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
