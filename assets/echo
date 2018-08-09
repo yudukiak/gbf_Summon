@@ -501,6 +501,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030249000",
+    "name": "アルルメイヤ(浴衣ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type3",
     "id": "3040002000",
@@ -6615,6 +6625,16 @@
     "type": "type4",
     "id": "3030103000",
     "name": "ファラ(風属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030248000",
+    "name": "ファラ(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
