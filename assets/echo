@@ -3820,6 +3820,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040294000",
+    "name": "ジェフティ",
+    "rank0": "",
+    "rank3": "全属性攻撃力が40%UP/HP10%UP/ダブルアタック確率10%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type1",
@@ -4517,7 +4527,7 @@
     "name": "スカーサハ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -5767,7 +5777,7 @@
     "name": "トール",
     "rank0": "光属性キャラの攻撃力が30%UP/光属性攻撃で弱点を突いた時、稀に大ダメージのクリティカルが発生",
     "rank3": "光属性キャラの攻撃力が40%UP/光属性攻撃で弱点を突いた時、稀に大ダメージのクリティカルが発生",
-    "rank4": ""
+    "rank4": "光属性キャラの攻撃力が50%UP/光属性攻撃で弱点を突いた時、稀に大ダメージのクリティカルが発生"
   },
   {
     "class": "job",
@@ -7590,6 +7600,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040185000",
+    "name": "松浦果南＆黒澤ダイヤ＆小原鞠莉",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -9357,16 +9377,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "character",
-    "rarity": "ssr",
-    "type": "type1",
-    "id": "3040185000",
-    "name": "松浦果南＆黒澤ダイヤ＆小原鞠莉",
-    "rank0": "TRUE",
-    "rank3": "TRUE",
     "rank4": ""
   }
 ]
