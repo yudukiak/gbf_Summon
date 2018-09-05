@@ -1811,6 +1811,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030251000",
+    "name": "カイラナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type2",
     "id": "3020062000",
@@ -2797,6 +2807,16 @@
     "name": "ケツァルカトル",
     "rank0": "風と土属性の攻撃力40%UP",
     "rank3": "風と土属性の攻撃力60%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040295000",
+    "name": "ケッタギア",
+    "rank0": "風属性攻撃力が40%UP",
+    "rank3": "風属性攻撃力が50%UP/風属性攻撃時にクリティカル確率UP",
     "rank4": ""
   },
   {
@@ -5410,6 +5430,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040180000",
+    "name": "ツバサ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "ex1",
     "type": "Djeeta Gran",
@@ -6183,6 +6213,16 @@
     "class": "character",
     "rarity": "skin",
     "type": "type0",
+    "id": "3710075000",
+    "name": "パーシヴァル(心のアニキ)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
     "id": "3710040000",
     "name": "パーシヴァル(The&nbsp;Dragon&nbsp;Knights)",
     "rank0": "",
@@ -6487,6 +6527,16 @@
     "name": "バロワ",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040296000",
+    "name": "ハンサ",
+    "rank0": "風属性攻撃力が80%UP/風属性キャラのHPが10%UP",
+    "rank3": "風属性攻撃力が100%UP/風属性キャラのHPが10%UP",
     "rank4": ""
   },
   {
@@ -6857,6 +6907,16 @@
     "name": "フォートレス",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040181000",
+    "name": "フォリア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
