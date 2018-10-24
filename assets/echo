@@ -50,6 +50,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040297000",
+    "name": "愛と戦いの神アナト",
+    "rank0": "風属性攻撃力が120%UP",
+    "rank3": "風属性攻撃力が140%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type3",
@@ -1351,6 +1361,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040190000",
+    "name": "エウロペ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type2",
     "id": "3030061000",
@@ -2277,7 +2297,7 @@
     "name": "ガンダゴウザ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -2497,6 +2517,16 @@
     "name": "ククル",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710076000",
+    "name": "ククル(ガンスミス・ワークウェア)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
@@ -2917,6 +2947,16 @@
     "name": "拘束破りし黒銀の翼",
     "rank0": "全属性攻撃20%UP(防衛戦では全属性キャラ攻撃50%UP/HP10%UP)",
     "rank3": "全属性攻撃40%UP(防衛戦では全属性キャラ攻撃80%UP/HP20%UP)",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040298000",
+    "name": "坑道用大型掘削機",
+    "rank0": "土属性攻撃力が25%UP(ターン経過で50%まで上昇)",
+    "rank3": "土属性攻撃力が30%UP(ターン経過で60%まで上昇)",
     "rank4": ""
   },
   {
@@ -4390,6 +4430,16 @@
     "rank4": "TRUE"
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040187000",
+    "name": "シルヴァ(光属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type1",
@@ -5370,6 +5420,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030252000",
+    "name": "チーム・ローアイン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "skin",
     "type": "Djeeta Gran",
@@ -5827,7 +5887,7 @@
     "name": "ドラゴンナイツ",
     "rank0": "全属性キャラの防御力が10%UP",
     "rank3": "全属性キャラの防御力が20%UP",
-    "rank4": ""
+    "rank4": "全属性キャラの防御力が30%UP/バトル開始時に弱体効果無効(1回)"
   },
   {
     "class": "job",
@@ -6770,6 +6830,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040182000",
+    "name": "フーちゃん",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type4",
@@ -6815,6 +6885,16 @@
     "type": "type5",
     "id": "3020020000",
     "name": "フェザー",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030254000",
+    "name": "フェザー(ハロウィンver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -6970,6 +7050,16 @@
     "rank4": "TRUE"
   },
   {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710077000",
+    "name": "フュンフ(スウィート・ウィッチ)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type6",
@@ -7007,6 +7097,16 @@
     "name": "プリースト",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040188000",
+    "name": "プリキュア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -7690,6 +7790,16 @@
     "rank4": ""
   },
   {
+    "class": "job",
+    "rarity": "ex2",
+    "type": "Djeeta Gran",
+    "id": "210301_kt",
+    "name": "魔法戦士",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type4",
@@ -8012,6 +8122,16 @@
   {
     "class": "summon",
     "rarity": "ssr",
+    "type": "type5",
+    "id": "2040299000",
+    "name": "メップル＆ミップル",
+    "rank0": "光属性攻撃力が40%UP",
+    "rank3": "光属性攻撃力が50UP/光属性キャラのHP10%UP",
+    "rank4": "光属性攻撃力が50UP/光属性キャラのHP20%UP/弱体耐性25%UP"
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
     "type": "type3",
     "id": "2040059000",
     "name": "メドゥーサ",
@@ -8067,6 +8187,16 @@
     "name": "メルトランサー",
     "rank0": "火属性攻撃力が10%UP",
     "rank3": "火属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040186000",
+    "name": "モニカ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -8175,6 +8305,16 @@
     "type": "type3",
     "id": "3030038000",
     "name": "ユーリ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030253000",
+    "name": "ユーリ(風属性ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -9055,6 +9195,16 @@
     "type": "type3",
     "id": "3030122000",
     "name": "レッドラック",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040189000",
+    "name": "レディ・グレイ(ハロウィンver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
