@@ -160,6 +160,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040192000",
+    "name": "アグロヴァル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "ex1",
     "type": "Djeeta Gran",
@@ -2530,6 +2540,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040300000",
+    "name": "クッキング・ヴェイン",
+    "rank0": "全属性キャラの防御力が10%UP",
+    "rank3": "全属性キャラの防御力が20%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "r",
     "type": "type1",
@@ -3197,7 +3217,7 @@
     "name": "ザオシェン",
     "rank0": "装備している火属性召喚石の数が多いほど火属性攻撃力がUP(最大100％)",
     "rank3": "装備している火属性召喚石の数が多いほど火属性攻撃力がUP(最大120％)",
-    "rank4": ""
+    "rank4": "装備している火属性召喚石の数が多いほど火属性攻撃力がUP(最大130％)/火属性キャラの防御力が10%UP ★初回召喚時は全効果が発動"
   },
   {
     "class": "character",
@@ -6432,6 +6452,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type1",
+    "id": "3040191000",
+    "name": "白竜の双騎士 ランスロット＆ヴェイン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type6",
     "id": "3040029000",
     "name": "バザラガ",
@@ -6687,6 +6717,16 @@
     "name": "氷竜ウィリヌス",
     "rank0": "水属性攻撃力が25%UP",
     "rank3": "水属性攻撃力が30%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030255000",
+    "name": "ひよこ班 アーサー＆モルドレッド",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -7920,6 +7960,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040306000",
+    "name": "ミカエル",
+    "rank0": "メイン装備時：火属性攻撃力が100%UP<br>サブ装備時：火属性キャラのダメージ上限5%UP",
+    "rank3": "メイン装備時：火属性攻撃力が120%UP<br>サブ装備時：火属性キャラのダメージ上限10%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type4",
@@ -8097,7 +8147,7 @@
     "name": "メーテラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -9127,6 +9177,16 @@
     "name": "ルリア",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710078000",
+    "name": "ルリア(キューティエプロン)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
