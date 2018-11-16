@@ -501,6 +501,16 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030250000",
+    "name": "アルメイダ(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type3",
     "id": "3040019000",
@@ -1387,7 +1397,7 @@
     "name": "エジェリー",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -2720,6 +2730,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040179000",
+    "name": "グレア(水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type3",
@@ -3688,6 +3708,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710073000",
+    "name": "サラーサ(エターナルズ・サマーバケーション)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
   },
   {
     "class": "character",
