@@ -8452,6 +8452,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type4",
+    "id": "3040199000",
+    "name": "ユリウス",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type2",
     "id": "3040064000",
     "name": "ヨダルラーハ",
@@ -9210,6 +9220,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040193000",
+    "name": "レヴィオン姉妹&nbsp;マイム＆ミイム＆メイム",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "skin",
     "type": "Djeeta Gran",
@@ -9395,6 +9415,16 @@
     "type": "type5",
     "id": "3020018000",
     "name": "ロザミア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030256000",
+    "name": "ロジーヌ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
