@@ -2070,6 +2070,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040301000",
+    "name": "カラクラキル",
+    "rank0": "闇属性攻撃力が50%UP/防御DOWN",
+    "rank3": "闇属性攻撃力が50%UP/闇属性攻撃時にクリティカル確率UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type3",
