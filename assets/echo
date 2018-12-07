@@ -2872,6 +2872,16 @@
   {
     "class": "summon",
     "rarity": "ssr",
+    "type": "type2",
+    "id": "2040302000",
+    "name": "気高き水神 ポセイドン",
+    "rank0": "水属性攻撃力が120%UP",
+    "rank3": "水属性攻撃力が140%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
     "type": "type4",
     "id": "2040009000",
     "name": "ケツァルカトル",
@@ -3600,6 +3610,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030258000",
+    "name": "サビルバラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "",
@@ -4275,6 +4295,16 @@
     "type": "type5",
     "id": "3040020000",
     "name": "シャルロッテ(ハロウィンver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040194000",
+    "name": "シャルロッテ(光属性ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -8674,6 +8704,16 @@
     "rarity": "ssr",
     "type": "type3",
     "id": "3040109000",
+    "name": "ラスティナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030257000",
     "name": "ラスティナ",
     "rank0": "TRUE",
     "rank3": "TRUE",
