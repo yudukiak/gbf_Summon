@@ -923,6 +923,16 @@
     "class": "character",
     "rarity": "skin",
     "type": "type0",
+    "id": "3710082000",
+    "name": "ヴァジラ(祈願の浄衣)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
     "id": "3710071000",
     "name": "ヴァジラ(薫風晴衣)",
     "rank0": "",
@@ -1138,6 +1148,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710080000",
+    "name": "ウーノ(マスタッシュサンタ・スタイル)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -3070,6 +3090,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040201000",
+    "name": "コッコロ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type3",
@@ -3867,6 +3897,16 @@
     "name": "シヴァ",
     "rank0": "火属性攻撃力が120%UP",
     "rank3": "火属性攻撃力が140%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040196000",
+    "name": "シヴァ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -5961,6 +6001,16 @@
   },
   {
     "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "200301_kn",
+    "name": "ドクター",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "job",
     "rarity": "c2",
     "type": "Djeeta Gran",
     "id": "190101_sp",
@@ -6510,6 +6560,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040304000",
+    "name": "白純の霊蝶シルフ",
+    "rank0": "火属性攻撃力が120%UP",
+    "rank3": "火属性攻撃力が140%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "r",
     "type": "type6",
@@ -7043,6 +7103,16 @@
     "class": "character",
     "rarity": "skin",
     "type": "type0",
+    "id": "3710079000",
+    "name": "フェリ(サンタライク・ミニドレス)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
     "id": "3710011000",
     "name": "フェリ(ソラのミチシルベ)",
     "rank0": "",
@@ -7242,6 +7312,16 @@
   {
     "class": "summon",
     "rarity": "ssr",
+    "type": "type5",
+    "id": "2040303000",
+    "name": "プリンセスナイト",
+    "rank0": "光と風属性攻撃力が30%UP/光と風属性キャラの奥義ダメージ10%UP",
+    "rank3": "光と風属性攻撃力が50%UP/光と風属性キャラの奥義ダメージ20%UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
     "type": "type4",
     "id": "2040184000",
     "name": "ブルーオービット",
@@ -7317,6 +7397,16 @@
     "name": "ベアトリクス",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710081000",
+    "name": "ベアトリクス(蒼き矜持)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   },
   {
@@ -7398,6 +7488,16 @@
     "rank0": "弱体耐性30%UP/光属性攻撃時にクリティカル確率UP",
     "rank3": "弱体耐性40%UP/光属性攻撃時にクリティカル確率UP",
     "rank4": "弱体耐性40%UP/光属性攻撃時にクリティカル確率UP(効果値UP)"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040200000",
+    "name": "ペコリーヌ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -8222,6 +8322,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type5",
+    "id": "3040195000",
+    "name": "メーテラ(クリスマスVer)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type1",
     "id": "3040072000",
     "name": "メーテラ(火属性ver)",
@@ -8358,6 +8468,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030259000",
+    "name": "ヤイア(クリスマスVer)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -9275,6 +9395,16 @@
     "type": "type0",
     "id": "3710078000",
     "name": "ルリア(キューティエプロン)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710083000",
+    "name": "ルリア(ホッピング・スノー)",
     "rank0": "",
     "rank3": "",
     "rank4": ""
