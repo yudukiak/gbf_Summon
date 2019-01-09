@@ -1,5 +1,15 @@
 [
   {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710084000",
+    "name": "ヴェイン(暁天羽織袴)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type5",
@@ -208,6 +218,16 @@
     "rank0": "火属性攻撃力が50%UP",
     "rank3": "火属性攻撃力が80%UP",
     "rank4": "火属性攻撃力が80%UP/火属性キャラのHPが20%UP"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040202000",
+    "name": "アテナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "summon",
@@ -1952,6 +1972,16 @@
   {
     "class": "character",
     "rarity": "sr",
+    "type": "type6",
+    "id": "3030262000",
+    "name": "カシウス",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
     "type": "type4",
     "id": "3030099000",
     "name": "柏木翼",
@@ -2078,6 +2108,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040311000",
+    "name": "ガブリエル",
+    "rank0": "メイン装備時：水属性攻撃力が100%UP/サブ装備時：水属性キャラのダメージ上限5%UP",
+    "rank3": "メイン装備時：水属性攻撃力が120%UP/サブ装備時：水属性キャラのダメージ上限10%UP",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -2587,6 +2627,16 @@
     "name": "クッキング・ヴェイン",
     "rank0": "全属性キャラの防御力が10%UP",
     "rank3": "全属性キャラの防御力が20%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040197000",
+    "name": "クビラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -7262,6 +7312,16 @@
   {
     "class": "summon",
     "rarity": "ssr",
+    "type": "type6",
+    "id": "2040309000",
+    "name": "フラメクの契約者",
+    "rank0": "闇属性攻撃力が40%UP/闇属性攻撃時にクリティカル確率UP",
+    "rank3": "闇属性攻撃力が50%UP/闇属性攻撃時にクリティカル確率UP",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
     "type": "type2",
     "id": "2040060000",
     "name": "ブランウェン",
@@ -7407,6 +7467,16 @@
     "name": "ベアトリクス(蒼き矜持)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030261000",
+    "name": "ベアトリクス(土属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -8535,6 +8605,16 @@
     "type": "type3",
     "id": "3040099000",
     "name": "ユーステス(ハロウィンver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040198000",
+    "name": "ユーステス(闇属性ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -9887,6 +9967,26 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710085000",
+    "name": "ベアトリクス(振袖 蒼空花時雨)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710086000",
+    "name": "オクトー(鯨幕晴甲)",
+    "rank0": "",
+    "rank3": "",
     "rank4": ""
   }
 ]
