@@ -1,15 +1,5 @@
 [
   {
-    "class": "character",
-    "rarity": "skin",
-    "type": "type0",
-    "id": "3710084000",
-    "name": "ヴェイン(暁天羽織袴)",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
     "class": "summon",
     "rarity": "sr",
     "type": "type5",
@@ -1223,6 +1213,16 @@
     "class": "character",
     "rarity": "skin",
     "type": "type0",
+    "id": "3710084000",
+    "name": "ヴェイン(暁天羽織袴)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
     "id": "3710039000",
     "name": "ヴェイン(The&nbsp;Dragon&nbsp;Knights)",
     "rank0": "",
@@ -1768,6 +1768,16 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE"
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710086000",
+    "name": "オクトー(鯨幕晴甲)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
   },
   {
     "class": "summon",
@@ -7491,6 +7501,16 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710085000",
+    "name": "ベアトリクス(振袖 蒼空花時雨)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type1",
     "id": "3040110000",
@@ -9967,26 +9987,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": ""
-  },
-  {
-    "class": "character",
-    "rarity": "skin",
-    "type": "type0",
-    "id": "3710085000",
-    "name": "ベアトリクス(振袖 蒼空花時雨)",
-    "rank0": "",
-    "rank3": "",
-    "rank4": ""
-  },
-  {
-    "class": "character",
-    "rarity": "skin",
-    "type": "type0",
-    "id": "3710086000",
-    "name": "オクトー(鯨幕晴甲)",
-    "rank0": "",
-    "rank3": "",
     "rank4": ""
   }
 ]
