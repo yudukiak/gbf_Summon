@@ -243,22 +243,28 @@ function table_display(){
       if (fid.match(summon_select)){
         // 召喚石・キャラ・JOBの画像
         var _extension = (function() {
-          if (fclass.match(/^character$/)) {
-            if(summon_rank===void 0) return '_01.jpg';
-            if(summon_rank.match(/^rank3$/)) return '_02.jpg';
-            if(summon_rank.match(/^rank4$/)) return '_03.jpg';
+          if (fclass.match(/^character$/) && !/_/.test(summon_select)) {
+            if(summon_rank===void 0) return fid + '_01.jpg';
+            if(summon_rank.match(/^rank3$/)) return fid + '_02.jpg';
+            if(summon_rank.match(/^rank4$/)) return fid + '_03.jpg';
+          }
+          if (fclass.match(/^character$/) && /_/.test(summon_select)) {
+            var summon_select_ary = summon_select.split('_');
+            if(summon_rank===void 0) return summon_select_ary[0] + '_01_' + summon_select_ary[1] + '.jpg';
+            if(summon_rank.match(/^rank3$/)) return summon_select_ary[0] + '_02_' + summon_select_ary[1] + '.jpg';
+            if(summon_rank.match(/^rank4$/)) return summon_select_ary[0] + '_03_' + summon_select_ary[1] + '.jpg';
           }
           if (fclass.match(/^job$/)) {
-          if(job_rarity.match(/^Djeeta$/)) return '_1_01.png';
-          if(job_rarity.match(/^Gran$/)) return '_0_01.png';
+            if(job_rarity.match(/^Djeeta$/)) return fid + '_1_01.png';
+            if(job_rarity.match(/^Gran$/)) return fid + '_0_01.png';
           }
           if (fclass.match(/^summon$/) && fid.match(/^20400(20|27|28|34|46|47)000$/)) {
-            if(summon_rank===void 0) return '.jpg';
-            if(summon_rank.match(/^rank4$/)) return '_02.jpg';
+            if(summon_rank===void 0) return fid + '.jpg';
+            if(summon_rank.match(/^rank4$/)) return fid + '_02.jpg';
           }
-          return '.jpg';
+          return fid + '.jpg';
         })();
-        $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/'+fid+ _extension); // 画像の書き換え
+        $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/'+_extension); // 画像の書き換え
         // 召喚石の文章
         var _summon_rank = (function() {
           if (summon_rank === void 0) return 'rank0';
