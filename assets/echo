@@ -647,7 +647,7 @@
     "name": "アンチラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -2510,6 +2510,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030264000",
+    "name": "キャサリン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type1",
@@ -3890,6 +3900,16 @@
     "rank4": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040310000",
+    "name": "三知一鎧の賢者 マギ",
+    "rank0": "光属性攻撃力が100%UP",
+    "rank3": "光属性攻撃力が120%UP",
+    "rank4": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type3",
@@ -4800,6 +4820,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030263000",
+    "name": "スカル(闇属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "summon",
     "rarity": "n",
     "type": "type4",
@@ -5271,6 +5301,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040204000",
+    "name": "セン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type1",
     "id": "3030127000",
@@ -5471,6 +5511,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040203000",
+    "name": "ターニャ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type6",
     "id": "3030167000",
@@ -5515,6 +5565,16 @@
     "type": "type1",
     "id": "3020044000",
     "name": "ダーント",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040205000",
+    "name": "ダーント＆フライハイト",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -6301,6 +6361,66 @@
   },
   {
     "class": "character",
+    "rarity": "r",
+    "type": "type1",
+    "id": "3020072000_01",
+    "name": "猫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "r",
+    "type": "type2",
+    "id": "3020072000_02",
+    "name": "猫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "r",
+    "type": "type3",
+    "id": "3020072000_03",
+    "name": "猫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "r",
+    "type": "type4",
+    "id": "3020072000_04",
+    "name": "猫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "r",
+    "type": "type5",
+    "id": "3020072000_05",
+    "name": "猫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "r",
+    "type": "type6",
+    "id": "3020072000_06",
+    "name": "猫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type4",
     "id": "3040003000",
@@ -6867,6 +6987,16 @@
     "name": "ビショップ",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040312000",
+    "name": "ビッグマーチ・オブ・ネコ",
+    "rank0": "土属性攻撃力が60%UP(ターン経過で20%まで減少)",
+    "rank3": "土属性攻撃力が70%UP(ターン経過で30%まで減少)",
     "rank4": ""
   },
   {
@@ -8397,6 +8527,16 @@
     "name": "ミンストレル",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040305000",
+    "name": "冥界の三魔犬 ケルベロス",
+    "rank0": "闇属性攻撃力が100%UP",
+    "rank3": "闇属性攻撃力が120%UP",
     "rank4": ""
   },
   {
