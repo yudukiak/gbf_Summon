@@ -32,12 +32,24 @@ for($i=0;  $i -lt $echoNameLen; $i++){
       $echoString += $echoConvert.id[$i] + ".jpg`r`n"
     }
     "character"{
-      $echoString += $echoConvert.id[$i] + "_01.jpg`r`n"
-      if($echoConvert.rarity[$i] -ne "skin"){
-        $echoString += $echoConvert.id[$i] + "_02.jpg`r`n"
-      }
-      if($echoConvert.rank4[$i].Length -ne 0){
-        $echoString += $echoConvert.id[$i] + "_03.jpg`r`n"
+      $characterId = $echoConvert.id[$i]
+      if ($characterId.Contains("_")) {
+        $characterIdAry = $characterId -split "_"
+        $echoString += $characterIdAry[0] + "_01_" + $characterIdAry[1] +".jpg`r`n"
+        if($echoConvert.rarity[$i] -ne "skin"){
+          $echoString += $characterIdAry[0] + "_02_" + $characterIdAry[1] +".jpg`r`n"
+        }
+        if($echoConvert.rank4[$i].Length -ne 0){
+          $echoString += $characterIdAry[0] + "_03_" + $characterIdAry[1] +".jpg`r`n"
+        }
+      } else {
+        $echoString += $characterId + "_01.jpg`r`n"
+        if($echoConvert.rarity[$i] -ne "skin"){
+          $echoString += $characterId + "_02.jpg`r`n"
+        }
+        if($echoConvert.rank4[$i].Length -ne 0){
+          $echoString += $characterId + "_03.jpg`r`n"
+        }
       }
     }
     "job"{
@@ -96,6 +108,7 @@ for($i=0;  $i -lt $diffLen; $i++){
       switch -Regex ($diffInputStr){
         # character
         "_0[123].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
+        "_0[123]_0?[123456].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
         # job
         "_01.png"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/leader/talk/" + $diffInputStr}
         # summon
