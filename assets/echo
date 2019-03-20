@@ -363,6 +363,16 @@
     "class": "character",
     "rarity": "ssr",
     "type": "type1",
+    "id": "3040167000",
+    "name": "アラナン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
     "id": "3040083000",
     "name": "アリーザ",
     "rank0": "TRUE",
@@ -487,7 +497,7 @@
     "name": "アルベール",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -1461,6 +1471,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040163000",
+    "name": "エスタリオラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type1",
     "id": "3030027000",
@@ -1901,6 +1921,26 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040162000",
+    "name": "ガイゼンボーガ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040164000",
+    "name": "カイム",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type2",
     "id": "3030251000",
@@ -2108,6 +2148,16 @@
     "rank0": "装備している水属性召喚石の数が多いほど水属性攻撃力がUP(最大100％)",
     "rank3": "装備している水属性召喚石の数が多いほど水属性攻撃力がUP(最大120％)",
     "rank4": "装備している水属性召喚石の数が多いほど水属性攻撃力がUP(最大130％)/水属性キャラの防御が10%UP ★初回召喚時は全効果が発動"
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040166000",
+    "name": "カッツェリーラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
   },
   {
     "class": "character",
@@ -2742,6 +2792,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type6",
+    "id": "3040206000",
+    "name": "クラリス(バレンタインver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type5",
     "id": "3040121000",
     "name": "クラリス(光属性ver)",
@@ -3367,7 +3427,7 @@
     "name": "桜内梨子＆高海千歌＆渡辺曜",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "character",
@@ -3897,7 +3957,7 @@
     "name": "サンダルフォン",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": ""
+    "rank4": "TRUE"
   },
   {
     "class": "summon",
@@ -4727,6 +4787,16 @@
     "name": "ジン(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "",
+    "id": "2040324000",
+    "name": "神撃の竜",
+    "rank0": "全属性攻撃力が40%UP",
+    "rank3": "全属性攻撃力が50%UP/全属性キャラのHPが10%UP",
     "rank4": ""
   },
   {
@@ -6322,6 +6392,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type6",
+    "id": "3040169000",
+    "name": "ニーア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type1",
     "id": "3040133000",
     "name": "ニーナ・ドランゴ",
@@ -6630,6 +6710,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040168000",
+    "name": "ハーゼリーラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c1",
     "type": "Djeeta Gran",
@@ -6727,6 +6817,16 @@
     "name": "覇王丸",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040323000",
+    "name": "破格の戦鬼 マルドゥーク",
+    "rank0": "土属性攻撃力が120%UP",
+    "rank3": "土属性攻撃力が140%UP",
     "rank4": ""
   },
   {
@@ -7331,6 +7431,16 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040209000",
+    "name": "フェリ(リミテッドver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710045000",
@@ -7427,6 +7537,16 @@
     "name": "フュンフ(スウィート・ウィッチ)",
     "rank0": "",
     "rank3": "",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040161000",
+    "name": "フラウ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
@@ -7852,6 +7972,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type4",
+    "id": "3040208000",
+    "name": "ヘルエス(風属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type5",
     "id": "3040091000",
     "name": "ヘルエス(水着ver)",
@@ -8262,6 +8392,16 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type2",
+    "id": "3040160000",
+    "name": "マリア・テレサ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type5",
     "id": "3040143000",
     "name": "マリー",
@@ -8520,6 +8660,16 @@
     "rank4": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030265000",
+    "name": "ミリン(光属性ver) ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
     "class": "job",
     "rarity": "c2",
     "type": "Djeeta Gran",
@@ -8625,6 +8775,16 @@
     "type": "type4",
     "id": "3040102000",
     "name": "メリッサベル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040207000",
+    "name": "メリッサベル(バレンタインver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -8845,6 +9005,16 @@
     "type": "type2",
     "id": "3030223000",
     "name": "ユエル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040210000",
+    "name": "ユエル(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": ""
@@ -9967,6 +10137,16 @@
     "name": "ロッド",
     "rank0": "風属性攻撃力が10%UP",
     "rank3": "風属性攻撃力が15%UP",
+    "rank4": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040165000",
+    "name": "ロベリア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": ""
   },
   {
