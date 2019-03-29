@@ -324,6 +324,10 @@ main > div {
   color: #e3b7ff;
   text-shadow: 0 0 1px #7f12b7, 0 0 1px #7f12b7, 0 0 1px #7f12b7, 0 0 2px #7f12b7, 0 0 2px #7f12b7, 0 0 2px #7f12b7;
 }
+.rank5 {
+  color: #a1e3ff;
+  text-shadow: 0px 0px 1px #371eb4, 0px 0px 1px #371eb4, 0px 0px 1px #371eb4, 0px 0px 2px #371eb4, 0px 0px 2px #371eb4, 0px 0px 2px #371eb4, 0px 0px 3px #371eb4, 0px 0px 3px #371eb4, 0px 0px 3px #371eb4;
+}
 /* ********************
   .setting
 ******************** */
@@ -441,7 +445,7 @@ main > div {
   display: block;
   float: left;
   cursor: pointer;
-  width: 50%;
+  width: 33%;
   height: 100%;
   background: #37332e;
   color: #869198;
@@ -450,11 +454,8 @@ main > div {
   line-height: 35px;
   transition: .2s;
 }
-.radio label:first-child span {
-  border-radius: 3px 0 0 3px;
-}
-.radio label:last-child span {
-  border-radius: 0 3px 3px 0;
+.radio label span {
+  border-radius: 3px;
 }
 .radio .r_rank3 input:checked + span {
   background-color: #ffa826;
@@ -462,6 +463,10 @@ main > div {
 }
 .radio .r_rank4 input:checked + span {
   background-color: #7f12b7;
+  color: #fff;
+}
+.radio .r_rank5 input:checked + span {
+  background-color: #371eb4;
   color: #fff;
 }
 .radio.resize {

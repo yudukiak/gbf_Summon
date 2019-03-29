@@ -177,6 +177,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type1" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type1" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type1" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -206,6 +207,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type2" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type2" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type2" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -235,6 +237,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type3" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type3" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type3" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -264,6 +267,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type4" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type4" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type4" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -292,6 +296,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type5" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type5" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type5" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -320,6 +325,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type6" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type6" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type6" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -348,6 +354,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type7" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type7" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type7" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -380,6 +387,7 @@
             <div class="radio" onselectstart="return false;" unselectable="on">
               <label class="r_rank3"><input type="radio" name="type8" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type8" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type8" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>

@@ -155,18 +155,20 @@ function radio_display($this_parent_class){
     if (echoData[n].id.match(vc_summon)){
       var $label_0=$this_parent_class.find('.radio label:eq(0)'); // 3凸のボタン（ラベル）
       var $label_1=$this_parent_class.find('.radio label:eq(1)'); // 4凸のボタン（ラベル）
+      var $label_2=$this_parent_class.find('.radio label:eq(2)'); // 5凸のボタン（ラベル）
       var $input_0=$this_parent_class.find('.radio input:eq(0)'); // 3凸のボタン（チェック）
       var $input_1=$this_parent_class.find('.radio input:eq(1)'); // 4凸のボタン（チェック）
+      var $input_2=$this_parent_class.find('.radio input:eq(2)'); // 5凸のボタン（チェック）
       // 3凸の表示＆選択、4凸の非表示＆選択を外す
       $label_0.css('display', '');
       $label_1.css('display', 'none');
+      $label_2.css('display', 'none');
       $input_0.prop('checked', true);
       $input_1.prop('checked', false);
-      if (echoData[n].rank4.length > 1) {
-        $label_1.css('display', ''); // 4凸を表示
-      } else if (echoData[n].rank3.length===0) {
-        $input_0.prop('checked', false); // 3凸の選択を外す
-      }
+      $input_2.prop('checked', false);
+      if (echoData[n].rank4.length > 1) $label_1.css('display', ''); // 4凸を表示
+      if (echoData[n].rank5.length > 1) $label_2.css('display', ''); // 5凸を表示
+      if (echoData[n].rank3.length===0) $input_0.prop('checked', false); // 3凸の選択を外す
     }
   }
 }
@@ -191,7 +193,7 @@ function table_display(){
     for(var i=0; i<targets.length; i++){ // forでフォ～～～っと変換するのだ
       converted = converted.replace(new RegExp(targets[i], 'g'), escapes[i]);
     }
-    $('.type8 .info').html(converted).removeClass('rank0 rank3 rank4'); // 書き込みじゃ
+    $('.type8 .info').html(converted).removeClass('rank0 rank3 rank4 rank5'); // 書き込みじゃ
   }
   // ユーザーID取得＆書き込み
   var job_rarity = $('.type9 [name=c_type]').val(); // ジータかグランか
@@ -226,12 +228,12 @@ function table_display(){
       var $nclass=$(this).parent().parent().siblings().hasClass('type_icon');
       if ($nclass) { // 召喚石
         $summon_screeen.find('.'+summon_type+' .name').text('召喚石が設定されていません');
-        $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4').addClass('rank0');
+        $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4 rank5').addClass('rank0');
       } else { // キャラ
         $summon_screeen.find('.'+summon_type+' .name').text('コメントが設定されていません');
         $summon_screeen.find('.'+summon_type+' .title span').text('推しキャラが設定されていません');
         $summon_screeen.find('.'+summon_type+' .npc-rank').addClass('display_none');
-        $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4');
+        $summon_screeen.find('.'+summon_type+' .info').html('').removeClass('rank0 rank3 rank4 rank5');
       }
     }
     for(var n=0; n<echoData.length; n++){
@@ -262,6 +264,10 @@ function table_display(){
             if(summon_rank===void 0) return fid + '.jpg';
             if(summon_rank.match(/^rank4$/)) return fid + '_02.jpg';
           }
+          if (fclass.match(/^summon$/) && fid.match(/^20400(03|56)000$/)) {
+            if(summon_rank===void 0) return fid + '.jpg';
+            if(summon_rank.match(/^rank5$/)) return fid + '_02.jpg';
+          }
           return fid + '.jpg';
         })();
         $summon_screeen.find('.'+summon_type+' img').attr('src', 'image/thumbnail/'+_extension); // 画像の書き換え
@@ -277,7 +283,7 @@ function table_display(){
         })();
         if(/summon/.test(fclass)){
           $summon_screeen.find('.'+summon_type+' .name').text(summon_level+fname); // 召喚石名を記入
-          $summon_screeen.find('.'+summon_type+' .info').html(echoData[n][_summon_rank]).removeClass('rank0 rank3 rank4').addClass(_summon_rank); // 文章・Class処理
+          $summon_screeen.find('.'+summon_type+' .info').html(echoData[n][_summon_rank]).removeClass('rank0 rank3 rank4 rank5').addClass(_summon_rank); // 文章・Class処理
         }
         if(/character/.test(fclass)){
           $summon_screeen.find('.type8 .title span').text(summon_level+fname);
@@ -389,6 +395,7 @@ function jsCookie_save(){
       if(_rank===void 0) return 'rank0';
       if(_rank.match(/rank3/)) return 'rank3';
       if(_rank.match(/rank4/)) return 'rank4';
+      if(_rank.match(/rank5/)) return 'rank5';
     })();
     var c_level=$this.parent().parent().siblings('.c_level').val(); // レベル取得
     var c_quality=$this.parent().parent().siblings('.c_quality').val(); // ＋取得
@@ -469,6 +476,8 @@ function jsAry_load(ary){
       $target.find('.radio input:eq(0)').prop('checked', true);
     } else if (rank==='rank4') {
       $target.find('.radio input:eq(1)').prop('checked', true);
+    } else if (rank==='rank5') {
+      $target.find('.radio input:eq(2)').prop('checked', true);
     }
     var user = value.user;
     var summon = value.summon;
@@ -626,6 +635,7 @@ $(function(){
       $this.parent().attr('data-select','summon').data('select','summon');
       $radio.find('.r_rank3').text('3凸');
       $radio.find('.r_rank4').text('4凸').css({'line-height':'','height':'','font-size':''});
+      $radio.find('.r_rank5').text('5凸').css({'line-height':'','height':'','font-size':''});
       $this.nextAll('textarea').remove();
       list_display($this_parent_class); //リスト作成
     }
