@@ -5,7 +5,7 @@ echo "create /tmp directory"
 # echo download
 function echoDownload {
   $echoCli = New-Object System.Net.WebClient
-  $echoUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=V2dSgGgpHEOtkw145pjiRj8jlPQaJgXUu9DxlO16XYlPsCcTOFeyPaqgOFDcutIRRpZGUGelkTq64DRb4oRF3SfHN6xCCGPmm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnC3copGAEdbSK4MX4SE7BCtkAc7vphEAzqQwqLh8Ua4Ne5LGz9p6MfbMJow3_RLhDUWY2nZ7HPw5&lib=Mbcxpxk0kJwSTawiB6caybAihSNpSWJKa"
+  $echoUrl = "https://script.google.com/macros/s/AKfycbxo5Ny0LL8HcNvE4QH8NdrBwYQW8gsX3Nkpp-SHPshtyjqLP6U/exec"
   $echoUri = New-Object System.Uri($echoUrl)
   $echoFile = "echo"
   $echoCli.DownloadFile($echoUri, (Join-Path "tmp" $echoFile))
@@ -30,6 +30,9 @@ for($i=0;  $i -lt $echoNameLen; $i++){
   switch($echoConvert.class[$i]){
     "summon"{
       $echoString += $echoConvert.id[$i] + ".jpg`r`n"
+      if($echoConvert.rank5[$i].Length -ne 0){
+        $echoString += $echoConvert.id[$i] + "_02.jpg`r`n"
+      }
     }
     "character"{
       $characterId = $echoConvert.id[$i]
@@ -106,6 +109,8 @@ for($i=0;  $i -lt $diffLen; $i++){
     # download
     function dlUrl($diffInputStr){
       switch -Regex ($diffInputStr){
+        # 2040003000_02, 2040056000_02
+        "20400(03|56)000_02.jpg" {return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/summon/m/" + $diffInputStr}
         # character
         "_0[123].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
         "_0[123]_0?[123456].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
