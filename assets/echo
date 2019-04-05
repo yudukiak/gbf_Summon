@@ -1189,6 +1189,17 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040211000",
+    "name": "ヴィーラ(風属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710007000",
@@ -2384,6 +2395,17 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710091000",
+    "name": "カトル(ブッ殺殺ぽんマン)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
     "rank5": ""
   },
   {
@@ -3642,6 +3664,17 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030266000",
+    "name": "コルワ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type4",
     "id": "3040127000",
@@ -4433,6 +4466,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710089000",
+    "name": "サンダルフォン(約束の天司長)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type5",
@@ -4460,6 +4504,17 @@
     "type": "type0",
     "id": "3710038000",
     "name": "ジークフリート(The&nbsp;Dragon&nbsp;Knights)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710093000",
+    "name": "ジークフリート(ジー君)",
     "rank0": "",
     "rank3": "",
     "rank4": "",
@@ -5089,6 +5144,17 @@
     "name": "ジャンヌダルク",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710090000",
+    "name": "ジャンヌダルク(聖乙女の休息)",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -6497,6 +6563,17 @@
     "name": "土のエレメンタル",
     "rank0": "土属性キャラのHPが10%UP",
     "rank3": "土属性キャラのHPが15%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040325000",
+    "name": "ツッパリ魂",
+    "rank0": "風属性攻撃力が50%UP",
+    "rank3": "風属性攻撃力が60%UP/風属性キャラの弱体耐性が20%UP",
     "rank4": "",
     "rank5": ""
   },
@@ -9284,6 +9361,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040326000",
+    "name": "魔鯛",
+    "rank0": "装備している風属性召喚石の数が多いほど風属性攻撃力がUP(最大100%)",
+    "rank3": "装備している風属性召喚石の数が多いほど風属性攻撃力がUP(最大120%)",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type1",
@@ -10917,6 +11005,17 @@
     "type": "type0",
     "id": "3710078000",
     "name": "ルリア(キューティエプロン)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710092000",
+    "name": "ルリア(バトル・ザ・ルリア)",
     "rank0": "",
     "rank3": "",
     "rank4": "",
