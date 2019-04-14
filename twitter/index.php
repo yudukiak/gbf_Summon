@@ -257,7 +257,7 @@ if ( isset( $_GET['oauth_token'] ) || isset($_GET["oauth_verifier"]) ) {
 }
 ?>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/jquery-3.4.0.min.js"></script>
 <script src="<?php
   $file = "assets/script.min.js";
   $FUDate = getFileUpdateDate($file);

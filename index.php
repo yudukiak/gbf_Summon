@@ -477,7 +477,7 @@
     ?>
   </footer>
   <!-- 各種Script -->
-  <script defer src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="assets/jquery-3.4.0.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.min.js"></script>
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
   <?php
