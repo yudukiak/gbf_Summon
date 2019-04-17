@@ -7019,17 +7019,6 @@
   },
   {
     "class": "job",
-    "rarity": "skin",
-    "type": "Djeeta Gran",
-    "id": "200301_kn",
-    "name": "ドクター",
-    "rank0": "",
-    "rank3": "",
-    "rank4": "",
-    "rank5": ""
-  },
-  {
-    "class": "job",
     "rarity": "c2",
     "type": "Djeeta Gran",
     "id": "190101_sp",
@@ -11568,6 +11557,17 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "ex2",
+    "type": "Djeeta Gran",
+    "id": "200301_kn",
+    "name": "ドクター",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   }
