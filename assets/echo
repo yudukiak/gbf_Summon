@@ -11562,6 +11562,28 @@
   },
   {
     "class": "job",
+    "rarity": "c3",
+    "type": "Djeeta Gran",
+    "id": "300201_sw",
+    "name": "グラディエーター",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "c4",
+    "type": "Djeeta Gran",
+    "id": "300301_sw",
+    "name": "クリュサオル",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
     "rarity": "ex2",
     "type": "Djeeta Gran",
     "id": "200301_kn",
