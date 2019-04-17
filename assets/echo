@@ -3058,6 +3058,17 @@
     "rank5": ""
   },
   {
+    "class": "job",
+    "rarity": "c3",
+    "type": "Djeeta Gran",
+    "id": "300201_sw",
+    "name": "グラディエーター",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -3164,6 +3175,17 @@
     "name": "グリフォン",
     "rank0": "風属性ダメージを15%軽減",
     "rank3": "風属性ダメージを20%軽減",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "c4",
+    "type": "Djeeta Gran",
+    "id": "300301_sw",
+    "name": "クリュサオル",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -7015,6 +7037,17 @@
     "rank0": "光属性キャラの攻撃力が30%UP/光属性攻撃で弱点を突いた時、稀に大ダメージのクリティカルが発生",
     "rank3": "光属性キャラの攻撃力が40%UP/光属性攻撃で弱点を突いた時、稀に大ダメージのクリティカルが発生",
     "rank4": "光属性キャラの攻撃力が50%UP/光属性攻撃で弱点を突いた時、稀に大ダメージのクリティカルが発生",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "ex2",
+    "type": "Djeeta Gran",
+    "id": "200301_kn",
+    "name": "ドクター",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
     "rank5": ""
   },
   {
@@ -11557,39 +11590,6 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
-    "rank4": "",
-    "rank5": ""
-  },
-  {
-    "class": "job",
-    "rarity": "c3",
-    "type": "Djeeta Gran",
-    "id": "300201_sw",
-    "name": "グラディエーター",
-    "rank0": "",
-    "rank3": "",
-    "rank4": "",
-    "rank5": ""
-  },
-  {
-    "class": "job",
-    "rarity": "c4",
-    "type": "Djeeta Gran",
-    "id": "300301_sw",
-    "name": "クリュサオル",
-    "rank0": "",
-    "rank3": "",
-    "rank4": "",
-    "rank5": ""
-  },
-  {
-    "class": "job",
-    "rarity": "ex2",
-    "type": "Djeeta Gran",
-    "id": "200301_kn",
-    "name": "ドクター",
-    "rank0": "",
-    "rank3": "",
     "rank4": "",
     "rank5": ""
   }
