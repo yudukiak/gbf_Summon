@@ -3160,6 +3160,17 @@
     "class": "character",
     "rarity": "ssr",
     "type": "type4",
+    "id": "3040212000",
+    "name": "グリームニル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
     "id": "3040018000",
     "name": "クリスティーナ",
     "rank0": "TRUE",
@@ -9328,6 +9339,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040213000",
+    "name": "マキュラ・マリウス",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -10776,7 +10798,7 @@
     "name": "リリィ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
