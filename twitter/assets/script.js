@@ -1,10 +1,10 @@
 $(function(){
-  var $imgUrl = (function() {
-    var w = window.opener.$('#screen_image').attr('src');
-    if (w) return w;
-    return localStorage.getItem('imageData');
-  })();
-  var $imgUrl = $imgUrl.replace('data:image/png;base64,','');
+  //var $imgUrl = (function() {
+  //  var w = window.opener.$('#screen_image').attr('src');
+  //  if (w) return w;
+  //  return localStorage.getItem('imageData');
+  //})();
+  var $imgUrl = localStorage.getItem('imageData').replace('data:image/png;base64,','');
   // http://qiita.com/mpyw/items/62e6e415f86eb30a5ff4
   $('#tweet').on('click', function () {
     var num = $('#140tweet').text();
