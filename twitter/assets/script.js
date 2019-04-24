@@ -1,5 +1,9 @@
 $(function(){
-  var $imgUrl = window.opener.$('#screen_image').attr('src');
+  var $imgUrl = (function() {
+    var w = window.opener.$('#screen_image').attr('src');
+    if (w) return w;
+    return sessionStorage.getItem('imageData');
+  })();
   var $imgUrl = $imgUrl.replace('data:image/png;base64,','');
   // http://qiita.com/mpyw/items/62e6e415f86eb30a5ff4
   $('#tweet').on('click', function () {

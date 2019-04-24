@@ -690,7 +690,9 @@ $(function(){
   // ツイート
   // http://qiita.com/mpyw/items/62e6e415f86eb30a5ff4
   $('#tweet_open').on('click', function () {
-    if ($('#screen_image').attr('src')) {
+    var src = $('#screen_image').attr('src');
+    if (src) {
+      sessionStorage.imageData = src;
       var
       w=770,
       h=600,
