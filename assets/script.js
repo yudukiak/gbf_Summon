@@ -692,7 +692,7 @@ $(function(){
   $('#tweet_open').on('click', function () {
     var src = $('#screen_image').attr('src');
     if (src) {
-      sessionStorage.imageData = src;
+      localStorage.imageData = src;
       var
       w=770,
       h=600,

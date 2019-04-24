@@ -2,7 +2,7 @@ $(function(){
   var $imgUrl = (function() {
     var w = window.opener.$('#screen_image').attr('src');
     if (w) return w;
-    return sessionStorage.getItem('imageData');
+    return localStorage.getItem('imageData');
   })();
   var $imgUrl = $imgUrl.replace('data:image/png;base64,','');
   // http://qiita.com/mpyw/items/62e6e415f86eb30a5ff4
@@ -49,6 +49,7 @@ $(function(){
           $('#overlay').remove();
             // 結果
           $('#tweet').after('<p>ツイートに成功しました。</p>');
+          localStorage.removeItem('imageData');
         });
       })
       // ・サーバからステータスコード400以上が返ってきたとき
