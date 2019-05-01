@@ -1118,7 +1118,7 @@
     "name": "ヴァンピィ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -2031,6 +2031,17 @@
     "name": "オリヴィエ(水着ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "310701_sw",
+    "name": "オルターエゴ・コンジュラー",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -3685,6 +3696,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040328000",
+    "name": "ゴルゴーン三姉妹",
+    "rank0": "土属性攻撃力が50%UP",
+    "rank3": "土属性攻撃力が50%UP/弱体効果1ターン短縮",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "character",
     "rarity": "ssr",
     "type": "type4",
@@ -4429,6 +4451,17 @@
     "name": "サラーサ(エターナルズ・サマーバケーション)",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040327000",
+    "name": "サリエル",
+    "rank0": "[メイン]闇属性攻撃力が100%UP<br>[サブ]闇属性キャラのダメージ上限5%UP",
+    "rank3": "[メイン]闇属性攻撃力が120%UP<br>[サブ]闇属性キャラのダメージ上限10%UP",
     "rank4": "",
     "rank5": ""
   },
@@ -5265,6 +5298,28 @@
     "name": "十時愛梨",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "310601_sw",
+    "name": "十天衆を総べし者",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
+    "rarity": "skin",
+    "type": "Djeeta Gran",
+    "id": "310501_sw",
+    "name": "十天の極みに至りし者",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -6200,6 +6255,17 @@
     "name": "ゾーイ(ガチャVer)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710096000",
+    "name": "ゾーイ(調停者の使命)",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -9903,6 +9969,17 @@
     "class": "character",
     "rarity": "ssr",
     "type": "type3",
+    "id": "3040214000",
+    "name": "メドゥーサ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
     "id": "3040151000",
     "name": "メドゥーサ(バレンタインver)",
     "rank0": "TRUE",
@@ -10711,6 +10788,17 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030267000",
+    "name": "リチャード",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
     "rank5": ""
   },
   {
