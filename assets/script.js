@@ -197,12 +197,7 @@ function table_display(){
   }
   // ユーザーID取得＆書き込み
   var job_rarity = $('.type9 [name=c_type]').val(); // ジータかグランか
-  var job_id = parseInt($('input[name=user_id]').val());
-  var job_id = (function() {
-    if (Number.isNaN(job_id)){ return ''; } // NaN
-    return job_id; // 1-9
-  })();
-  var job_id = String(job_id).replace(/\D/g, '').slice(0, 10);
+  var job_id = $('input[name=user_id]').val().replace(/[^0-9]/g, '').slice(0, 10);
   $('.type9 .info').html('<div>'+job_id+'</div>');
 
   // 設定個々の処理
