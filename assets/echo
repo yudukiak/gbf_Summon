@@ -220,6 +220,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030268000",
+    "name": "アステール(火属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type1",
@@ -1998,7 +2009,7 @@
     "name": "オケアノス",
     "rank0": "水と光属性攻撃力が40%UP",
     "rank3": "水と光属性攻撃力が60%UP",
-    "rank4": "",
+    "rank4": "水と光属性攻撃力が70%UP/水と光属性キャラのHPが25%UP",
     "rank5": ""
   },
   {
@@ -2882,6 +2893,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040216000",
+    "name": "キャル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type3",
@@ -3692,7 +3714,7 @@
     "name": "ゴリラ",
     "rank0": "土属性攻撃力が50%UP",
     "rank3": "土属性攻撃力が60%UP",
-    "rank4": "",
+    "rank4": "土属性攻撃力が110%/バトル開始時に味方全体にバナナ効果",
     "rank5": ""
   },
   {
@@ -4209,7 +4231,7 @@
     "name": "サテュロス",
     "rank0": "火属性キャラの攻撃力が30%UP/再生効果",
     "rank3": "火属性キャラの攻撃力が40%UP/再生効果",
-    "rank4": "",
+    "rank4": "火属性キャラの攻撃力が50%UP/再生効果",
     "rank5": ""
   },
   {
@@ -4863,6 +4885,17 @@
   },
   {
     "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710098000",
+    "name": "シス(マスク・ブルクレー)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type2",
     "id": "3030041000",
@@ -4902,7 +4935,7 @@
     "name": "シャオ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -5100,6 +5133,17 @@
     "name": "ジャミル(闇属性ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
+    "id": "3710097000",
+    "name": "ジャミル(ユニフォーム・オブ・ラードゥガ)",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -6403,6 +6447,17 @@
   },
   {
     "class": "job",
+    "rarity": "ex2",
+    "type": "Djeeta Gran",
+    "id": "240301_gu",
+    "name": "ソルジャー",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "job",
     "rarity": "c3",
     "type": "Djeeta Gran",
     "id": "150201_sw",
@@ -7590,6 +7645,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030269000",
+    "name": "ノーブルナイツ&nbsp;ブリジール＆コーデリア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type5",
@@ -7733,6 +7799,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040215000",
+    "name": "バアル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type5",
@@ -7752,6 +7829,17 @@
     "rank0": "弱体耐性30%UP/風属性攻撃時にクリティカル確率UP",
     "rank3": "弱体耐性40%UP/風属性攻撃時にクリティカル確率UP",
     "rank4": "弱体効果耐性40%UP/風属性攻撃時にクリティカル確率UP(効果値UP)",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040218000",
+    "name": "バイヴカハ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
     "rank5": ""
   },
   {
@@ -8048,7 +8136,7 @@
     "name": "ハンサ",
     "rank0": "風属性攻撃力が80%UP/風属性キャラのHPが10%UP",
     "rank3": "風属性攻撃力が100%UP/風属性キャラのHPが10%UP",
-    "rank4": "",
+    "rank4": "風属性攻撃力が110%UP/風属性キャラのHPが20%UP",
     "rank5": ""
   },
   {
@@ -8191,6 +8279,17 @@
     "name": "ファイター",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040217000",
+    "name": "ファスティバ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   },
@@ -9936,6 +10035,17 @@
     "class": "summon",
     "rarity": "ssr",
     "type": "type5",
+    "id": "2040330000",
+    "name": "メタトロン",
+    "rank0": "[メイン]光属性攻撃力が100%UP<br>[サブ]光属性キャラのダメージ上限5%UP",
+    "rank3": "[メイン]光属性攻撃力が120%UP<br>[サブ]光属性キャラのダメージ上限10%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
     "id": "2040299000",
     "name": "メップル＆ミップル",
     "rank0": "光属性攻撃力が40%UP",
@@ -11238,6 +11348,17 @@
     "name": "レスラー",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040329000",
+    "name": "レスラーより愛をこめて",
+    "rank0": "光属性攻撃力が40%UP",
+    "rank3": "光属性攻撃力が40%UP/光属性キャラの奥義ダメージ20%UP",
     "rank4": "",
     "rank5": ""
   },
