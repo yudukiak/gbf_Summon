@@ -3247,6 +3247,17 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type4",
+    "id": "3040220000",
+    "name": "枢木スザク",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type1",
     "id": "3040130000",
     "name": "グレア",
@@ -3564,6 +3575,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040221000",
+    "name": "紅月カレン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type3",
@@ -3725,6 +3747,17 @@
     "name": "ゴルゴーン三姉妹",
     "rank0": "土属性攻撃力が50%UP",
     "rank3": "土属性攻撃力が50%UP/弱体効果1ターン短縮",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040222000",
+    "name": "コルル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   },
@@ -4555,6 +4588,17 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040224000",
+    "name": "サンダルフォン(水着Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710089000",
@@ -4638,6 +4682,17 @@
     "name": "ジークフリート(浴衣ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040331000",
+    "name": "C.C.",
+    "rank0": "全属性キャラのHPと攻撃力が20%UP",
+    "rank3": "パーティ全体に自動復活効果(1回)/全属性キャラのHPと攻撃力が20%UP",
     "rank4": "",
     "rank5": ""
   },
@@ -7810,6 +7865,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040223000",
+    "name": "ハールート・マールート",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type5",
@@ -8398,6 +8464,17 @@
     "type": "type5",
     "id": "3030228000",
     "name": "フィーナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030270000",
+    "name": "フィラソピラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -10398,6 +10475,17 @@
     "class": "summon",
     "rarity": "ssr",
     "type": "type3",
+    "id": "2040333000",
+    "name": "ユグドラシル(水着Ver)",
+    "rank0": "土属性攻撃力が80%UP",
+    "rank3": "土属性攻撃力が100%UP",
+    "rank4": "土属性攻撃力が110%UP",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
     "id": "2040027000",
     "name": "ユグドラシル・マグナ",
     "rank0": "スキル「創樹方陣」の効果が50%UP",
@@ -11256,6 +11344,17 @@
     "class": "character",
     "rarity": "skin",
     "type": "type0",
+    "id": "3710105000",
+    "name": "ルリア(パール・オブ・ビーチ)",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "skin",
+    "type": "type0",
     "id": "3710092000",
     "name": "ルリア(バトル・ザ・ルリア)",
     "rank0": "",
@@ -11275,6 +11374,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "3040219000",
+    "name": "ルルーシュ・ランペルージ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "job",
     "rarity": "c2",
     "type": "Djeeta Gran",
@@ -11282,6 +11392,17 @@
     "name": "レイダー",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040332000",
+    "name": "RAINY&nbsp;DAY",
+    "rank0": "闇属性攻撃力が40%UP/闇属性キャラの防御力10%UP",
+    "rank3": "闇属性攻撃力が50%UP/闇属性キャラの防御力20%UP",
     "rank4": "",
     "rank5": ""
   },
