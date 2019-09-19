@@ -646,19 +646,15 @@ $(function(){
     // 既定の動作をキャンセル(今回はinputにcheckedが入るのをキャンセル)
     event.preventDefault();
     var vc_summon=$(this).parent().parent().prev().children().val();
+    var $input=$(this).prev('input');
+    var inputVal = $input.val();
+    $input.prop('checked', !$input.prop('checked'));
     for(var n=0; n<echoData.length; n++){
       if(
         echoData[n].id.match(vc_summon) // 選択中の召喚石
-        &&echoData[n].rank0.length!==0 // 無凸の文字数
+        &&echoData[n].rank0.length===0 // 無凸の文字数
         &&echoData[n].rank3.length!==0 // 3凸の文字数
-      ){
-        var $input=$(this).prev('input');
-        if($input.prop('checked')){
-          $input.prop('checked', false);
-        } else {
-          $input.prop('checked', true);
-        }
-      }
+      ) $input.prop('checked', true);
     }
     var $this_parent_class=$(this).parent().parent().parent().parent().attr('class');
     level_select($this_parent_class);
