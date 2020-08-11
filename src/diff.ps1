@@ -73,22 +73,6 @@ $image = Get-ChildItem ("..\image\thumbnail")
 $imageName = $image.name
 Out-File -InputObject $imageName -FilePath tmp\diff_image.txt -Encoding UTF8 # temporary saving
 $imageString = Get-Content tmp\diff_image.txt | Sort-Object # sort text
-#$imageString = $imageString -replace "2040146000.jpg ", ""
-#$imageString = $imageString -replace "2040149000.jpg ", ""
-#$imageString = $imageString -replace "2040151000.jpg ", ""
-$imageString = $imageString -replace "2030004000.jpg ", ""
-$imageString = $imageString -replace "2030014000.jpg ", ""
-$imageString = $imageString -replace "3020065000_02.jpg ", ""
-$imageString = $imageString -replace "3030158000_02.jpg ", ""
-$imageString = $imageString -replace "3040097000_02.jpg ", ""
-$imageString = $imageString -replace "2040020000_02.jpg ", ""
-$imageString = $imageString -replace "2040027000_02.jpg ", ""
-$imageString = $imageString -replace "2040028000_02.jpg ", ""
-$imageString = $imageString -replace "2040034000_02.jpg ", ""
-$imageString = $imageString -replace "2040046000_02.jpg ", ""
-$imageString = $imageString -replace "2040047000_02.jpg ", ""
-$imageString = $imageString -replace "empty.jpg", ""
-$imageString = $imageString -replace "tmp", ""
 $imageString = $imageString -replace " ", "`r`n"
 Out-File -InputObject $imageString -FilePath tmp\diff_image.txt -Encoding UTF8 # saving
 echo "create diff_image.txt"
@@ -100,6 +84,19 @@ echo "create diff_image.txt"
 $diffEcho = Get-Content tmp\diff_echo.txt
 $diffImage = Get-Content tmp\diff_image.txt
 $diff = Compare-Object $diffEcho $diffImage
+$diff = $diff -replace "2030004000.jpg ", ""
+$diff = $diff -replace "2030014000.jpg ", ""
+$diff = $diff -replace "3020065000_02.jpg ", ""
+$diff = $diff -replace "3030158000_02.jpg ", ""
+$diff = $diff -replace "3040097000_02.jpg ", ""
+$diff = $diff -replace "2040020000_02.jpg ", ""
+$diff = $diff -replace "2040027000_02.jpg ", ""
+$diff = $diff -replace "2040028000_02.jpg ", ""
+$diff = $diff -replace "2040034000_02.jpg ", ""
+$diff = $diff -replace "2040046000_02.jpg ", ""
+$diff = $diff -replace "2040047000_02.jpg ", ""
+$diff = $diff -replace "empty.jpg", ""
+$diff = $diff -replace "tmp", ""
 $diffLen = $diff.InputObject.Length
 $cli = New-Object System.Net.WebClient
 for($i=0;  $i -lt $diffLen; $i++){
