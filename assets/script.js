@@ -257,7 +257,7 @@ function table_display(){
           }
           if (fclass.match(/^summon$/) && fid.match(/^20400(20|27|28|34|46|47)000$/)) {
             if(summon_rank===void 0) return fid + '.jpg';
-            if(summon_rank.match(/^rank4$/)) return fid + '_02.jpg';
+            if(summon_rank.match(/^rank[45]$/)) return fid + '_02.jpg';
           }
           if (fclass.match(/^summon$/) && fid.match(/^20400(03|56)000$/)) {
             if(summon_rank===void 0) return fid + '.jpg';
