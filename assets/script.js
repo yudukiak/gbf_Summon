@@ -355,7 +355,7 @@ function jsCookie_save(){
   // 🍪「js-cookie用のCookieを全て削除するよ」
   var oldCookie = getCookie('setting');
   if(oldCookie){
-    var removeCookieName = ['setting','type0','type1','type2','type3','type4','type5','type6','type7','type8','type9'];
+    var removeCookieName = ['setting','type0','type1','type2','type3','type4','type5','type6','type7','type8','type9','type1_','type2_','type3_','type4_','type5_','type6_'];
     $.each(removeCookieName, function(i, value) {
       setCookie(value, '');
     });
@@ -665,7 +665,15 @@ $(function(){
     $summon_screeen.append('<p class="add">'+url+'&nbsp;&nbsp;&nbsp;</p>');
     // Twitter用にサイズ変更
     var resize = $('input[name=resize]:checked').val();
-    if (resize == 'yes') $summon_screeen.addClass('picture');
+    //if (resize == 'yes') $summon_screeen.addClass('picture');
+    if (resize == 'yes') {
+      var height = $summon_screeen.height();
+      var diffHeight = (702 - height) / 2;
+      var width = $summon_screeen.width();
+      var diffWidth = (1248 - width) / 2;
+      var padding = diffHeight + 'px ' + diffWidth + 'px';
+      $summon_screeen.css('padding', padding);
+    }
     // 画像生成を開始
     html2canvas($summon_screeen, {
       onrendered: function (canvas) {
@@ -675,7 +683,8 @@ $(function(){
     });
     setTimeout(function(){
       $summon_screeen.find('.add').remove(); // 記載させたURLを削除
-      $summon_screeen.removeClass('picture'); // 追加したClassを削除
+      //$summon_screeen.removeClass('picture'); // 追加したClassを削除
+      $summon_screeen.css('padding', '');
     },100);
   });
   // ツイート

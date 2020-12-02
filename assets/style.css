@@ -169,8 +169,8 @@ main > div {
   background-color: #231E18;
 }
 .screeen.picture {
-  height: calc(540px - 100px); /* 最大540px */
-  padding: 50px 0;
+  /*height: calc(540px - 100px);*/ /* 最大540px */
+  /*padding: 50px 0;*/
 }
 .screeen > .box > div {
   border: solid 1px #4e4830;
@@ -398,6 +398,9 @@ main > div {
   margin: 0;
   padding: 8px 12px;
 }
+#screen_image {
+  max-width: 960px;
+}
 /* ********************
   .title
 ******************** */
@@ -423,6 +426,12 @@ main > div {
 .type4 .type_icon:before {background: url(image/icon_type/icon_type4.png);}
 .type5 .type_icon:before {background: url(image/icon_type/icon_type5.png);}
 .type6 .type_icon:before {background: url(image/icon_type/icon_type6.png);}
+.type1_ .type_icon:before {background: url(image/icon_type/icon_type1.png);}
+.type2_ .type_icon:before {background: url(image/icon_type/icon_type2.png);}
+.type3_ .type_icon:before {background: url(image/icon_type/icon_type3.png);}
+.type4_ .type_icon:before {background: url(image/icon_type/icon_type4.png);}
+.type5_ .type_icon:before {background: url(image/icon_type/icon_type5.png);}
+.type6_ .type_icon:before {background: url(image/icon_type/icon_type6.png);}
 .type7 .type_icon:before, .type8 .type_icon:before {background: url(image/icon_type/icon_type0.png);}
 /* ********************
   .radio

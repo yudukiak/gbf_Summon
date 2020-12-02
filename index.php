@@ -106,6 +106,27 @@
             <div class="spec"><div class="name"></div><div class="info"></div></div>
           </div>
         </div>
+        <div class="type1_">
+          <div class="title type_icon">火属性固定召喚石</div>
+          <div class="content">
+            <div class="image"><img><span class="quality"></span></div>
+            <div class="spec"><div class="name"></div><div class="info"></div></div>
+          </div>
+        </div>
+        <div class="type2_">
+          <div class="title type_icon">水属性固定召喚石</div>
+          <div class="content">
+            <div class="image"><img><span class="quality"></span></div>
+            <div class="spec"><div class="name"></div><div class="info"></div></div>
+          </div>
+        </div>
+        <div class="type3_">
+          <div class="title type_icon">土属性固定召喚石</div>
+          <div class="content">
+            <div class="image"><img><span class="quality"></span></div>
+            <div class="spec"><div class="name"></div><div class="info"></div></div>
+          </div>
+        </div>
         <div class="type4">
           <div class="title type_icon">風属性固定召喚石</div>
           <div class="content">
@@ -121,6 +142,27 @@
           </div>
         </div>
         <div class="type6">
+          <div class="title type_icon">闇属性固定召喚石</div>
+          <div class="content">
+            <div class="image"><img><span class="quality"></span></div>
+            <div class="spec"><div class="name"></div><div class="info"></div></div>
+          </div>
+        </div>
+        <div class="type4_">
+          <div class="title type_icon">風属性固定召喚石</div>
+          <div class="content">
+            <div class="image"><img><span class="quality"></span></div>
+            <div class="spec"><div class="name"></div><div class="info"></div></div>
+          </div>
+        </div>
+        <div class="type5_">
+          <div class="title type_icon">光属性固定召喚石</div>
+          <div class="content">
+            <div class="image"><img><span class="quality"></span></div>
+            <div class="spec"><div class="name"></div><div class="info"></div></div>
+          </div>
+        </div>
+        <div class="type6_">
           <div class="title type_icon">闇属性固定召喚石</div>
           <div class="content">
             <div class="image"><img><span class="quality"></span></div>
@@ -242,6 +284,96 @@
           </div>
         </div>
 
+        <div class="type1_" data-select="summon">
+          <div class="title type_icon">火属性</div>
+          <select class="c_type" name="c_type" style="color:#FF0000;">
+            <option value="type1" selected>火</option>
+            <option value="type2">水</option>
+            <option value="type3">土</option>
+            <option value="type4">風</option>
+            <option value="type5">光</option>
+            <option value="type6">闇</option>
+          </select>
+          <select class="c_rarity" name="c_rarity">
+            <option value="ssr">SSR</option>
+            <option value="sr">SR</option>
+            <option value="r">R</option>
+            <option value="n">N</option>
+          </select>
+          <select class="c_level" name="c_level"></select>
+          <select class="c_quality" name="c_quality"></select>
+          <div class="box select">
+            <div>
+              <select class="c_summon" name="type1_"></select>
+            </div>
+            <div class="radio" onselectstart="return false;" unselectable="on">
+              <label class="r_rank3"><input type="radio" name="type1_" value="rank3" checked=""><span>3凸</span></label>
+              <label class="r_rank4"><input type="radio" name="type1_" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type1_" value="rank5"><span>5凸</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="type2_" data-select="summon">
+          <div class="title type_icon">水属性</div>
+          <select class="c_type" name="c_type" style="color:#00FFFF;">
+            <option value="type1">火</option>
+            <option value="type2" selected>水</option>
+            <option value="type3">土</option>
+            <option value="type4">風</option>
+            <option value="type5">光</option>
+            <option value="type6">闇</option>
+          </select>
+          <select class="c_rarity" name="c_rarity">
+            <option value="ssr">SSR</option>
+            <option value="sr">SR</option>
+            <option value="r">R</option>
+            <option value="n">N</option>
+          </select>
+          <select class="c_level" name="c_level"></select>
+          <select class="c_quality" name="c_quality"></select>
+          <div class="box select">
+            <div>
+              <select class="c_summon" name="type2_"></select>
+            </div>
+            <div class="radio" onselectstart="return false;" unselectable="on">
+              <label class="r_rank3"><input type="radio" name="type2_" value="rank3" checked=""><span>3凸</span></label>
+              <label class="r_rank4"><input type="radio" name="type2_" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type2_" value="rank5"><span>5凸</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="type3_" data-select="summon">
+          <div class="title type_icon">土属性</div>
+          <select class="c_type" name="c_type" style="color:#FF9872;">
+            <option value="type1">火</option>
+            <option value="type2">水</option>
+            <option value="type3" selected>土</option>
+            <option value="type4">風</option>
+            <option value="type5">光</option>
+            <option value="type6">闇</option>
+          </select>
+          <select class="c_rarity" name="c_rarity">
+            <option value="ssr">SSR</option>
+            <option value="sr">SR</option>
+            <option value="r">R</option>
+            <option value="n">N</option>
+          </select>
+          <select class="c_level" name="c_level"></select>
+          <select class="c_quality" name="c_quality"></select>
+          <div class="box select">
+            <div>
+              <select class="c_summon" name="type3_"></select>
+            </div>
+            <div class="radio" onselectstart="return false;" unselectable="on">
+              <label class="r_rank3"><input type="radio" name="type3_" value="rank3" checked=""><span>3凸</span></label>
+              <label class="r_rank4"><input type="radio" name="type3_" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type3_" value="rank5"><span>5凸</span></label>
+            </div>
+          </div>
+        </div>
+
         <div class="type4" data-select="summon">
           <div class="title type_icon">風属性</div>
           <select class="c_type" name="c_type" style="color:#00FF00;">
@@ -326,6 +458,93 @@
               <label class="r_rank3"><input type="radio" name="type6" value="rank3" checked=""><span>3凸</span></label>
               <label class="r_rank4"><input type="radio" name="type6" value="rank4"><span>4凸</span></label>
               <label class="r_rank5"><input type="radio" name="type6" value="rank5"><span>5凸</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="type4_" data-select="summon">
+          <div class="title type_icon">風属性</div>
+          <select class="c_type" name="c_type" style="color:#00FF00;">
+            <option value="type1">火</option>
+            <option value="type2">水</option>
+            <option value="type3">土</option>
+            <option value="type4" selected>風</option>
+            <option value="type5">光</option>
+            <option value="type6">闇</option>
+          </select>
+          <select class="c_rarity" name="c_rarity">
+            <option value="ssr">SSR</option>
+            <option value="sr">SR</option>
+            <option value="r">R</option>
+            <option value="n">N</option>
+          </select>
+          <select class="c_level" name="c_level"></select>
+          <select class="c_quality" name="c_quality"></select>
+          <div class="box select">
+            <div>
+              <select class="c_summon" name="type4_"></select>
+            </div>
+            <div class="radio" onselectstart="return false;" unselectable="on">
+              <label class="r_rank3"><input type="radio" name="type4_" value="rank3" checked=""><span>3凸</span></label>
+              <label class="r_rank4"><input type="radio" name="type4_" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type4_" value="rank5"><span>5凸</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="type5_" data-select="summon">
+          <div class="title type_icon">光属性</div>
+          <select class="c_type" name="c_type" style="color:#FFFF00;">
+            <option value="type1">火</option>
+            <option value="type2">水</option>
+            <option value="type3">土</option>
+            <option value="type4">風</option>
+            <option value="type5" selected>光</option>
+            <option value="type6">闇</option>
+          </select>
+          <select class="c_rarity" name="c_rarity">
+            <option value="ssr">SSR</option>
+            <option value="sr">SR</option>
+            <option value="r">R</option>
+            <option value="n">N</option>
+          </select>
+          <select class="c_level" name="c_level"></select>
+          <select class="c_quality" name="c_quality"></select>
+          <div class="box select">
+            <div>
+              <select class="c_summon" name="type5_"></select>
+            </div>
+            <div class="radio" onselectstart="return false;" unselectable="on">
+              <label class="r_rank3"><input type="radio" name="type5_" value="rank3" checked=""><span>3凸</span></label>
+              <label class="r_rank4"><input type="radio" name="type5_" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type5_" value="rank5"><span>5凸</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="type6_" data-select="summon">
+          <div class="title type_icon">闇属性</div>
+          <select class="c_type" name="c_type" style="color:#FF00FF;">
+            <option value="type1">火</option>
+            <option value="type2">水</option>
+            <option value="type3">土</option>
+            <option value="type4">風</option>
+            <option value="type5">光</option>
+            <option value="type6" selected>闇</option>
+          </select>
+          <select class="c_rarity" name="c_rarity">
+            <option value="ssr">SSR</option>
+            <option value="sr">SR</option>
+            <option value="r">R</option>
+            <option value="n">N</option>
+          </select>
+          <select class="c_level" name="c_level"></select>
+          <select class="c_quality" name="c_quality"></select>
+          <div class="box select">
+            <div>
+              <select class="c_summon" name="type6_"></select>
+            </div>
+            <div class="radio" onselectstart="return false;" unselectable="on">
+              <label class="r_rank3"><input type="radio" name="type6_" value="rank3" checked=""><span>3凸</span></label>
+              <label class="r_rank4"><input type="radio" name="type6_" value="rank4"><span>4凸</span></label>
+              <label class="r_rank5"><input type="radio" name="type6_" value="rank5"><span>5凸</span></label>
             </div>
           </div>
         </div>
@@ -423,7 +642,7 @@
       <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3052144799289425" data-ad-slot="1704901599"></ins>
       <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
       <div class="w640">
-        <p>画像をTwitter向け（960&times;540）にリサイズする？</p>
+        <p>画像をTwitter向け（1248&times;702）にリサイズする？</p>
         <div class="radio resize" onselectstart="return false;" unselectable="on">
           <label class="r_rank3"><input type="radio" name="resize" id="resizeyes" value="yes" checked=""><span>はい</span></label>
           <label class="r_rank4"><input type="radio" name="resize" id="resizeno" value="no"><span>いいえ</span></label>
@@ -449,6 +668,7 @@
               echo file_get_contents("image/copy.svg");
             ?>
           </p>
+          <p>※EdgeやIEなど一部ブラウザでは利用できないケースもあります</p>
         </div>
         <div id="bookmarklet" class="w480 display_none">
           <p>ブックマークレット</p>
