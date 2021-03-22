@@ -84,42 +84,45 @@ echo "create diff_image.txt"
 $diffEcho = Get-Content tmp\diff_echo.txt
 $diffImage = Get-Content tmp\diff_image.txt
 $diff = Compare-Object $diffEcho $diffImage
-$diff = $diff -replace "2030004000.jpg ", ""
-$diff = $diff -replace "2030014000.jpg ", ""
-$diff = $diff -replace "3020065000_02.jpg ", ""
-$diff = $diff -replace "3030158000_02.jpg ", ""
-$diff = $diff -replace "3040097000_02.jpg ", ""
-$diff = $diff -replace "2040020000_02.jpg ", ""
-$diff = $diff -replace "2040027000_02.jpg ", ""
-$diff = $diff -replace "2040028000_02.jpg ", ""
-$diff = $diff -replace "2040034000_02.jpg ", ""
-$diff = $diff -replace "2040046000_02.jpg ", ""
-$diff = $diff -replace "2040047000_02.jpg ", ""
-$diff = $diff -replace "empty.jpg", ""
-$diff = $diff -replace "tmp", ""
-$diffLen = $diff.InputObject.Length
-$cli = New-Object System.Net.WebClient
-for($i=0;  $i -lt $diffLen; $i++){
-  $diffInput = $diff.InputObject[$i]
-  if($diffInput.Length -ne 0){
-    $diffString += $diffInput + "`r`n"
-    # download
-    function dlUrl($diffInputStr){
-      switch -Regex ($diffInputStr){
-        # 2040003000_02, 2040056000_02
-        "20400(03|56)000_02.jpg" {return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/summon/m/" + $diffInputStr}
-        # character
-        "_0[123].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
-        "_0[123]_0?[123456].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
-        # job
-        "_01.png"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/leader/talk/" + $diffInputStr}
-        # summon
-        default {return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/summon/m/" + $diffInputStr}
-      }
+Out-File -InputObject $diff -FilePath tmp\diff_data.txt -Encoding UTF8
+#$diff = $diff -replace "2030004000.jpg ", ""
+#$diff = $diff -replace "2030014000.jpg ", ""
+#$diff = $diff -replace "3020065000_02.jpg ", ""
+#$diff = $diff -replace "3030158000_02.jpg ", ""
+#$diff = $diff -replace "3040097000_02.jpg ", ""
+#$diff = $diff -replace "2040020000_02.jpg ", ""
+#$diff = $diff -replace "2040027000_02.jpg ", ""
+#$diff = $diff -replace "2040028000_02.jpg ", ""
+#$diff = $diff -replace "2040034000_02.jpg ", ""
+#$diff = $diff -replace "2040046000_02.jpg ", ""
+#$diff = $diff -replace "2040047000_02.jpg ", ""
+#$diff = $diff -replace "empty.jpg", ""
+#$diff = $diff -replace "tmp", ""
+# download
+function dlUrl($diffInputStr){
+  switch -Regex ($diffInputStr){
+    # 2040003000_02, 2040056000_02, 2040080000_02, 2040084000_02, 2040090000_02, 2040094000_02, 2040098000_02, 2040100000_02
+    "2040(003|056|080|084|090|094|098|100)000_02.jpg" {return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/summon/m/" + $diffInputStr}
+    # character
+    "_0[123].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
+    "_0[123]_0?[123456].jpg"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/npc/m/" + $diffInputStr}
+    # job
+    "_01.png"{return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/leader/talk/" + $diffInputStr}
+    # summon
+    default {return "http://game-a.granbluefantasy.jp/assets/img/sp/assets/summon/m/" + $diffInputStr}
+  }
+}
+foreach($data in $diff) {
+  if($data.SideIndicator -eq "<=") {
+    $diffInput = $data.InputObject
+    if ([string]::IsNullOrEmpty($diffInput)) {
+      continue
     }
     $url = dlUrl $diffInput
+    echo "[url] $($url)"
     $uri = New-Object System.Uri($url)
     $file = Split-Path $uri.AbsolutePath -Leaf
+    $cli = New-Object System.Net.WebClient
     $cli.DownloadFile($uri, (Join-Path "tmp" $file))
     # resize
     $tmpDiffInput = "tmp\" + $diffInput
@@ -131,6 +134,7 @@ for($i=0;  $i -lt $diffLen; $i++){
     # move
     Move-Item $diffInput "tmp" -force
     Copy-Item $tmpDiffInput "..\image\thumbnail\"
+    $diffString += $diffInput
   }
 }
 Out-File -InputObject $diffString -FilePath tmp\diff.txt -Encoding UTF8
