@@ -259,7 +259,7 @@ function table_display(){
             if(summon_rank===void 0) return fid + '.jpg';
             if(summon_rank.match(/^rank[45]$/)) return fid + '_02.jpg';
           }
-          if (fclass.match(/^summon$/) && fid.match(/^20400(03|56)000$/)) {
+          if (fclass.match(/^summon$/) && fid.match(/^2040(003|056|080|084|090|094|098|100)000$/)) {
             if(summon_rank===void 0) return fid + '.jpg';
             if(summon_rank.match(/^rank5$/)) return fid + '_02.jpg';
           }
