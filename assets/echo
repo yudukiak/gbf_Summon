@@ -73,7 +73,7 @@
     "name": "アイル",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -117,7 +117,7 @@
     "name": "アオイドス",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -420,6 +420,17 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type6",
+    "id": "3040231000",
+    "name": "絢瀬絵里＆矢澤にこ＆東條 希",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type1",
     "id": "3040167000",
     "name": "アラナン",
@@ -546,6 +557,17 @@
     "name": "アルタイル(タクティシャンフォーマル)",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040381000",
+    "name": "アルテミス",
+    "rank0": "メイン装備時：<br>光属性攻撃力が40%UP<br>奥義ダメージ20%UP<br>バトル開始時に光属性キャラの奥義ゲージ20%UP",
+    "rank3": "メイン装備時：<br>光属性攻撃力が60%UP<br>奥義ダメージ30%UP<br>バトル開始時に光属性キャラの奥義ゲージ30%UP",
     "rank4": "",
     "rank5": ""
   },
@@ -739,6 +761,17 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type6",
+    "id": "3040228000",
+    "name": "アンスリア(浴衣Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type4",
     "id": "3040071000",
     "name": "アンチラ",
@@ -854,7 +887,7 @@
     "name": "イオ(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -865,6 +898,17 @@
     "name": "イオ(Rainbow&nbsp;Roller)",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040383000",
+    "name": "イグニスドラゴン ",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
     "rank4": "",
     "rank5": ""
   },
@@ -887,7 +931,7 @@
     "name": "イシュミール",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -1063,7 +1107,7 @@
     "name": "ヴァジラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -1360,7 +1404,7 @@
     "name": "ヴェイン",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -1459,7 +1503,7 @@
     "name": "ウェルダー",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -1622,6 +1666,17 @@
     "type": "type2",
     "id": "3040190000",
     "name": "エウロペ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040226000",
+    "name": "エウロペ(水着Ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -1998,7 +2053,7 @@
     "name": "オーキス(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -2345,6 +2400,17 @@
   {
     "class": "character",
     "rarity": "sr",
+    "type": "type1",
+    "id": "3030273000",
+    "name": "カシウス(浴衣Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
     "type": "type4",
     "id": "3030099000",
     "name": "柏木翼",
@@ -2383,7 +2449,7 @@
     "name": "カタリナ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -2449,7 +2515,7 @@
     "name": "カタリナ(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -2636,6 +2702,17 @@
     "name": "カリオストロ(ブレス・ザ・ぷりてぃアルケミスト☆)",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "3040225000",
+    "name": "カリオストロ(水着Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   },
@@ -3015,6 +3092,17 @@
   },
   {
     "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040391000",
+    "name": "極鋼巨帝グランゴッドカイザー",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
     "rarity": "n",
     "type": "type1",
     "id": "2010003000",
@@ -3117,6 +3205,17 @@
     "rarity": "ssr",
     "type": "type5",
     "id": "3040197000",
+    "name": "クビラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030279000",
     "name": "クビラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
@@ -3296,7 +3395,7 @@
     "name": "クリスティーナ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -3318,6 +3417,17 @@
     "name": "クリュサオル",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030278000",
+    "name": "クルーニ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   },
@@ -3450,7 +3560,7 @@
     "name": "黒騎士(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -3538,6 +3648,17 @@
     "name": "ケツァルカトル",
     "rank0": "風と土属性の攻撃力40%UP",
     "rank3": "風と土属性の攻撃力60%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040380000",
+    "name": "結婚式",
+    "rank0": "水属性攻撃力が40%UP/水属性キャラのダブルアタック確率10%UP",
+    "rank3": "水属性攻撃力が50%UP/水属性キャラのダブルアタック確率15%UP",
     "rank4": "",
     "rank5": ""
   },
@@ -3638,6 +3759,17 @@
     "rank0": "",
     "rank3": "",
     "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040377000",
+    "name": "玄武",
+    "rank0": "水属性攻撃力が40%UP",
+    "rank3": "水属性攻撃力が50%UP",
+    "rank4": "水属性攻撃力が50%UP(初回召喚時は全効果が発動)",
     "rank5": ""
   },
   {
@@ -3950,6 +4082,17 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030275000",
+    "name": "コワフュール",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type3",
     "id": "3020058000",
@@ -4064,6 +4207,17 @@
     "type": "type6",
     "id": "3030059000",
     "name": "ザザ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030276000",
+    "name": "ザザ(ハロウィンVer)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -4610,6 +4764,17 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040236000",
+    "name": "サラ(光属性Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "sr",
     "type": "type3",
     "id": "3030147000",
@@ -4649,6 +4814,17 @@
     "name": "サリエル",
     "rank0": "[メイン]闇属性攻撃力が100%UP<br>[サブ]闇属性キャラのダメージ上限5%UP",
     "rank3": "[メイン]闇属性攻撃力が120%UP<br>[サブ]闇属性キャラのダメージ上限10%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040388000",
+    "name": "サリエル(クリスマスVer)",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
     "rank4": "",
     "rank5": ""
   },
@@ -4797,6 +4973,17 @@
   },
   {
     "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040237000",
+    "name": "ジークフリート(火属性Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710010000",
@@ -4911,6 +5098,17 @@
     "type": "type1",
     "id": "3030030000",
     "name": "ジェシカ(2014年水着ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040227000",
+    "name": "ジェシカ(浴衣Ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -5544,6 +5742,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040396000",
+    "name": "十二神将水浴衣図",
+    "rank0": "水属性攻撃力が40%UP/水属性キャラの奥義ダメージ20%UP/バトル開始時に十二神将の奥義ゲージ10%UP",
+    "rank3": "水属性攻撃力が50%UP/水属性キャラの奥義ダメージ20%UP/バトル開始時に十二神将の奥義ゲージ10%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "job",
     "rarity": "skin",
     "type": "Djeeta Gran",
@@ -5584,6 +5793,17 @@
     "name": "俊秀の義剣士",
     "rank0": "風属性攻撃力が40%UP",
     "rank3": "風属性攻撃力が40%UP/奥義ダメージが10％UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type4",
+    "id": "3030280000",
+    "name": "ジョイ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   },
@@ -5683,6 +5903,17 @@
     "name": "シルヴァ(光属性ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
+    "id": "2040385000",
+    "name": "ジルニトラ",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
     "rank4": "",
     "rank5": ""
   },
@@ -5929,6 +6160,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "2040376000",
+    "name": "朱雀",
+    "rank0": "火属性攻撃力が40%UP",
+    "rank3": "火属性攻撃力が50%UP",
+    "rank4": "火属性攻撃力が50%UP(初回召喚時は全効果が発動)",
+    "rank5": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type6",
@@ -6130,6 +6372,17 @@
     "class": "summon",
     "rarity": "ssr",
     "type": "type4",
+    "id": "2040379000",
+    "name": "青竜",
+    "rank0": "風属性攻撃力が40%UP",
+    "rank3": "風属性攻撃力が50%UP",
+    "rank4": "風属性攻撃力が50%UP(初回召喚時は全効果が発動)",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
     "id": "2040017000",
     "name": "セイレーン",
     "rank0": "風と光属性攻撃力が40%UP",
@@ -6167,6 +6420,17 @@
     "name": "セージ",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040386000",
+    "name": "世界で一番カワイイ黄金像",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
     "rank4": "",
     "rank5": ""
   },
@@ -6211,7 +6475,7 @@
     "name": "ゼタ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -6300,6 +6564,50 @@
     "rank0": "装備している火属性武器の数が多いほど火属性攻撃力がUP(最大80%)",
     "rank3": "装備している火属性武器の数が多いほど火属性攻撃力がUP(最大100%)",
     "rank4": "装備している火属性武器の数が多いほど火属性攻撃力がUP(最大120%)",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040370000",
+    "name": "ゼノ・ウォフマナフ",
+    "rank0": "装備している土属性武器の数が多いほど土属性攻撃力がUP(最大80%)",
+    "rank3": "装備している土属性武器の数が多いほど土属性攻撃力がUP(最大100%)",
+    "rank4": "装備している土属性武器の数が多いほど土属性攻撃力がUP(最大120%)",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040395000",
+    "name": "ゼノ・コキュートス",
+    "rank0": "装備している水属性武器の数が多いほど水属性攻撃力がUP(最大80%)",
+    "rank3": "装備している水属性武器の数が多いほど水属性攻撃力がUP(最大100%)",
+    "rank4": "装備している水属性武器の数が多いほど水属性攻撃力がUP(最大120%)",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040390000",
+    "name": "ゼノ・コロゥ",
+    "rank0": "装備している光属性武器の数が多いほど光属性攻撃力がUP(最大80%)",
+    "rank3": "装備している光属性武器の数が多いほど光属性攻撃力がUP(最大100%)",
+    "rank4": "装備している光属性武器の数が多いほど光属性攻撃力がUP(最大120%)",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040382000",
+    "name": "ゼノ・サジタリウス",
+    "rank0": "装備している風属性武器の数が多いほど風属性攻撃力がUP(最大80%)",
+    "rank3": "装備している風属性武器の数が多いほど風属性攻撃力がUP(最大100%)",
+    "rank4": "装備している風属性武器の数が多いほど風属性攻撃力がUP(最大120%)",
     "rank5": ""
   },
   {
@@ -6618,7 +6926,7 @@
     "name": "ソシエ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -6627,6 +6935,17 @@
     "type": "type1",
     "id": "3040095000",
     "name": "ソシエ(火属性ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "3040230000",
+    "name": "園田海未＆高坂穂乃果＆南ことり",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -6684,7 +7003,7 @@
     "name": "ソリッズ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -6814,6 +7133,17 @@
     "type": "type4",
     "id": "3030181000",
     "name": "タイアー",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type5",
+    "id": "3030300000",
+    "name": "タイアー(浴衣Ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -6966,6 +7296,17 @@
     "class": "summon",
     "rarity": "ssr",
     "type": "type6",
+    "id": "2040394000",
+    "name": "月に降り立ちし三機神",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type6",
     "id": "2040263000",
     "name": "ツクヨミ",
     "rank0": "バトルメンバーの種族数に応じて闇属性攻撃力がUP(最大80％)",
@@ -6992,6 +7333,17 @@
     "name": "土のエレメンタル",
     "rank0": "土属性キャラのHPが10%UP",
     "rank3": "土属性キャラのHPが15%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040392000",
+    "name": "ツチノコ",
+    "rank0": "",
+    "rank3": "",
     "rank4": "",
     "rank5": ""
   },
@@ -7080,7 +7432,7 @@
     "name": "ティアマト",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -7469,6 +7821,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type2",
+    "id": "2040389000",
+    "name": "冨岡義勇",
+    "rank0": "全属性キャラの攻撃力が40%UP",
+    "rank3": "全属性キャラの攻撃力が40%UP/HP10%UP",
+    "rank4": "全属性キャラの攻撃力が40%UP/HP10%UP/パーティメンバー全体に自動復活効果(1回)",
+    "rank5": ""
+  },
+  {
     "class": "job",
     "rarity": "c2",
     "type": "Djeeta Gran",
@@ -7738,6 +8101,17 @@
     "type": "Djeeta Gran",
     "id": "210201_kt",
     "name": "忍者",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "r",
+    "type": "",
+    "id": "3020072000",
+    "name": "猫",
     "rank0": "",
     "rank3": "",
     "rank4": "",
@@ -8273,6 +8647,17 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type3",
+    "id": "3030272000",
+    "name": "白竜の双騎士&nbsp;ランスロット＆ヴェイン",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "ssr",
     "type": "type6",
     "id": "3040029000",
@@ -8481,6 +8866,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "r",
+    "type": "type6",
+    "id": "3020073000",
+    "name": "ビカラ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "sr",
     "type": "type5",
@@ -8544,6 +8940,17 @@
     "rank0": "火属性キャラのHPが10%UP",
     "rank3": "火属性キャラのHPが15%UP",
     "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040378000",
+    "name": "白虎",
+    "rank0": "土属性攻撃力が40%UP",
+    "rank3": "土属性攻撃力が50%UP",
+    "rank4": "土属性攻撃力が50%UP(初回召喚時は全効果が発動)",
     "rank5": ""
   },
   {
@@ -8900,6 +9307,17 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030310000",
+    "name": "フェリ(水着Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "skin",
     "type": "type0",
     "id": "3710013000",
@@ -9163,6 +9581,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040374000",
+    "name": "フレイ(浴衣Ver)",
+    "rank0": "土属性攻撃力が80％UP",
+    "rank3": "土属性攻撃力が100％UP",
+    "rank4": "土属性攻撃力が110％UP\r",
+    "rank5": ""
+  },
+  {
     "class": "character",
     "rarity": "r",
     "type": "type1",
@@ -9190,6 +9619,17 @@
     "type": "type3",
     "id": "3040158000",
     "name": "ブローディア",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "3040232000",
+    "name": "ブローディア(水着Ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -9713,6 +10153,17 @@
     "rank5": ""
   },
   {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "3040229000",
+    "name": "星空 凛＆小泉花陽＆西木野真姫",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "summon",
     "rarity": "ssr",
     "type": "type2",
@@ -9776,6 +10227,17 @@
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "TRUE",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type3",
+    "id": "2040393000",
+    "name": "ぼんやりピカピカの魔法",
+    "rank0": "",
+    "rank3": "",
+    "rank4": "",
     "rank5": ""
   },
   {
@@ -9907,7 +10369,7 @@
     "name": "マキラ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -10006,6 +10468,17 @@
     "name": "マモーナス",
     "rank0": "風属性キャラのHPと攻撃力が20%UP",
     "rank3": "風属性キャラのHPと攻撃力が25%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type4",
+    "id": "2040387000",
+    "name": "護りし者 クー・ケオロエワ",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
     "rank4": "",
     "rank5": ""
   },
@@ -10325,7 +10798,7 @@
     "name": "ミリン",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -10413,6 +10886,17 @@
     "name": "メカニック",
     "rank0": "",
     "rank3": "",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030290000",
+    "name": "メグ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   },
@@ -10512,7 +10996,7 @@
     "name": "メルゥ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -10593,6 +11077,17 @@
     "rank5": ""
   },
   {
+    "class": "summon",
+    "rarity": "ssr",
+    "type": "type5",
+    "id": "2040373000",
+    "name": "灼弩火罹",
+    "rank0": "光属性攻撃力が20%UP/光属性キャラのHPが20%UP/防御力20%UP",
+    "rank3": "光属性攻撃力が30%UP/光属性キャラのHPが30%UP/防御力30%UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
     "class": "character",
     "rarity": "sr",
     "type": "type3",
@@ -10639,6 +11134,17 @@
   {
     "class": "character",
     "rarity": "ssr",
+    "type": "type4",
+    "id": "3040233000",
+    "name": "勇者と姫君 スタン＆アリーザ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
     "type": "type3",
     "id": "3040069000",
     "name": "ユーステス",
@@ -10666,7 +11172,7 @@
     "name": "ユーステス(闇属性ver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -10807,6 +11313,17 @@
     "type": "type4",
     "id": "3040199000",
     "name": "ユリウス",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030277000",
+    "name": "ヨウ",
     "rank0": "TRUE",
     "rank3": "TRUE",
     "rank4": "",
@@ -10985,7 +11502,7 @@
     "name": "ラカム(リミテッドver)",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -11387,6 +11904,17 @@
   {
     "class": "summon",
     "rarity": "ssr",
+    "type": "type2",
+    "id": "2040384000",
+    "name": "竜騰虎闘の氷皇軍",
+    "rank0": "（あとで追記します）",
+    "rank3": "（あとで追記します）",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "summon",
+    "rarity": "ssr",
     "type": "type4",
     "id": "2040214000",
     "name": "リュミエールグルメ",
@@ -11771,6 +12299,17 @@
   },
   {
     "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030274000",
+    "name": "レオナ(浴衣Ver)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
     "rarity": "r",
     "type": "type4",
     "id": "3020026000",
@@ -11854,7 +12393,7 @@
     "name": "レ・フィーエ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -12151,7 +12690,7 @@
     "name": "ロミオ",
     "rank0": "TRUE",
     "rank3": "TRUE",
-    "rank4": "",
+    "rank4": "TRUE",
     "rank5": ""
   },
   {
@@ -12272,6 +12811,61 @@
     "name": "[ラブリーナイト]きらり",
     "rank0": "全属性キャラのHPが15%UP/全属性キャラ防御力10％UP",
     "rank3": "全属性キャラのHPが20%UP/全属性キャラ防御力15％UP",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040234000",
+    "name": "タヴィーナ",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "ssr",
+    "type": "type1",
+    "id": "3040235000",
+    "name": "コロッサス",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type1",
+    "id": "3030271000",
+    "name": "フライデー",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type2",
+    "id": "3030320000",
+    "name": "ジョエル",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
+    "rank4": "",
+    "rank5": ""
+  },
+  {
+    "class": "character",
+    "rarity": "sr",
+    "type": "type6",
+    "id": "3030321000",
+    "name": "ウーフとレニー(ハロウィンVer)",
+    "rank0": "TRUE",
+    "rank3": "TRUE",
     "rank4": "",
     "rank5": ""
   }
