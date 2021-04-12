@@ -84,20 +84,8 @@ echo "create diff_image.txt"
 $diffEcho = Get-Content tmp\diff_echo.txt
 $diffImage = Get-Content tmp\diff_image.txt
 $diff = Compare-Object $diffEcho $diffImage
+$diff = $diff -replace "3020072000_02.jpg", ""
 Out-File -InputObject $diff -FilePath tmp\diff_data.txt -Encoding UTF8
-#$diff = $diff -replace "2030004000.jpg ", ""
-#$diff = $diff -replace "2030014000.jpg ", ""
-#$diff = $diff -replace "3020065000_02.jpg ", ""
-#$diff = $diff -replace "3030158000_02.jpg ", ""
-#$diff = $diff -replace "3040097000_02.jpg ", ""
-#$diff = $diff -replace "2040020000_02.jpg ", ""
-#$diff = $diff -replace "2040027000_02.jpg ", ""
-#$diff = $diff -replace "2040028000_02.jpg ", ""
-#$diff = $diff -replace "2040034000_02.jpg ", ""
-#$diff = $diff -replace "2040046000_02.jpg ", ""
-#$diff = $diff -replace "2040047000_02.jpg ", ""
-#$diff = $diff -replace "empty.jpg", ""
-#$diff = $diff -replace "tmp", ""
 # download
 function dlUrl($diffInputStr){
   switch -Regex ($diffInputStr){
